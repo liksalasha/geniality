@@ -112,7 +112,7 @@ buffer = PackedFloat32Array(0.952165, 0, 0.305584, 101.556, 0, 1, 0, -658.38, -0
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqdfk"]
 size = Vector3(9.1752, 8.36206, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="fase1_3d" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yrdfn")

@@ -1,5 +1,5 @@
-Node3D
 Node2D
+Node3D
 AudioListener2D
 CPUParticles2D
 AnimationPlayer
@@ -12,4 +12,3 @@ Area3D
 Button
 CanvasLayer
 Label
-PointLight2D

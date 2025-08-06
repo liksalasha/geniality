@@ -632,7 +632,7 @@ size = Vector2(51, 691)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_505bf"]
 size = Vector2(899.999, 913.333)
 
-[node name="Node2D" type="Node2D"]
+[node name="fase1" type="Node2D"]
 
 [node name="paralaxes" type="Node2D" parent="."]
 

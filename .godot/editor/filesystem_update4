@@ -3,3 +3,6 @@ res://ui_u/main menu.tres
 res://scripts/slimes_green_3d.gd
 res://fase1.tscn
 res://fase1d.tscn
+res://fase2.tscn
+res://fase2d.tscn
+res://scripts/fase_1_3d.gd

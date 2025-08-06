@@ -1,7 +1,5 @@
-[gd_scene load_steps=57 format=4 uid="uid://cnaol6f2i65ux"]
+[gd_scene load_steps=55 format=4 uid="uid://cnaol6f2i65ux"]
 
-[ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_dee20"]
-[ext_resource type="PackedScene" uid="uid://c2xglux13rca2" path="res://fase2d.tscn" id="2_apiqs"]
 [ext_resource type="Texture2D" uid="uid://ctcgor8nkxe0t" path="res://tilemaps/bakc.png" id="2_iky78"]
 [ext_resource type="Texture2D" uid="uid://fb1x6yrjhbxh" path="res://tilemaps/terraim/sky.png" id="3_sj0r4"]
 [ext_resource type="Texture2D" uid="uid://dcqj8hbeww3c1" path="res://tilemaps/terraim/sun.png" id="4_p8msb"]
@@ -664,184 +662,182 @@ sources/8 = SubResource("TileSetAtlasSource_a0lkf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiv6y"]
 size = Vector2(51, 691)
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_dee20")
-scene_to_instance = ExtResource("2_apiqs")
+[node name="fase2" type="Node2D"]
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax2D"]
+[node name="Parallax2D#ParallaxBackground" type="ParallaxBackground" parent="Parallax2D"]
 visible = false
 
-[node name="back" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#back" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.1, 1)
 
-[node name="Bakc" type="Sprite2D" parent="Parallax2D/ParallaxBackground/back"]
+[node name="Parallax2D_ParallaxBackground_back#Bakc" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(515.75, 377)
 scale = Vector2(58.2969, 36.625)
 texture = ExtResource("2_iky78")
 
-[node name="Sky" type="Sprite2D" parent="Parallax2D/ParallaxBackground/back"]
+[node name="Parallax2D_ParallaxBackground_back#Sky" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(586.5, 258.5)
 scale = Vector2(53.5938, 28.9062)
 texture = ExtResource("3_sj0r4")
 
-[node name="Sun" type="Sprite2D" parent="Parallax2D/ParallaxBackground/back"]
+[node name="Parallax2D_ParallaxBackground_back#Sun" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(161, 513)
 scale = Vector2(3.125, 2.84375)
 texture = ExtResource("4_p8msb")
 
-[node name="PointLight2D" type="PointLight2D" parent="Parallax2D/ParallaxBackground/back/Sun"]
+[node name="Parallax2D_ParallaxBackground_back_Sun#PointLight2D" type="PointLight2D" parent="Parallax2D"]
 energy = 0.1
 texture = ExtResource("5_3rlf2")
 
-[node name="sceneary" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#sceneary" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.15, 1)
 
-[node name="GoodBackground" type="Sprite2D" parent="Parallax2D/ParallaxBackground/sceneary"]
+[node name="Parallax2D_ParallaxBackground_sceneary#GoodBackground" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(371, 492)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_i4grw")
 
-[node name="GoodBackground3" type="Sprite2D" parent="Parallax2D/ParallaxBackground/sceneary"]
+[node name="Parallax2D_ParallaxBackground_sceneary#GoodBackground3" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(12, 492)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_apiqs")
 
-[node name="GoodBackground2" type="Sprite2D" parent="Parallax2D/ParallaxBackground/sceneary"]
+[node name="Parallax2D_ParallaxBackground_sceneary#GoodBackground2" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(711, 492)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_a0lkf")
 
-[node name="montains" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#montains" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.2, 1)
 
-[node name="Montains" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains"]
+[node name="Parallax2D_ParallaxBackground_montains#Montains" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(315, 360.5)
 scale = Vector2(9.6875, 11.2969)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 
-[node name="Montains2" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains"]
+[node name="Parallax2D_ParallaxBackground_montains#Montains2" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(963, 359.75)
 scale = Vector2(10.0938, 11.2734)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 frame = 1
 
-[node name="montains2" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#montains2" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.4, 1)
 
-[node name="Montains3" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains2"]
+[node name="Parallax2D_ParallaxBackground_montains2#Montains3" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(643, 497.25)
 scale = Vector2(20.0313, 6.91406)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 frame = 2
 
-[node name="Montains4" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains2"]
+[node name="Parallax2D_ParallaxBackground_montains2#Montains4" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(1755, 497.25)
 scale = Vector2(20.0313, 6.91406)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 frame = 2
 
-[node name="Montains5" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains2"]
+[node name="Parallax2D_ParallaxBackground_montains2#Montains5" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(4099, 497.25)
 scale = Vector2(20.0313, 6.91406)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 frame = 2
 
-[node name="Montains6" type="Sprite2D" parent="Parallax2D/ParallaxBackground/montains2"]
+[node name="Parallax2D_ParallaxBackground_montains2#Montains6" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(4659, 497.25)
 scale = Vector2(20.0313, 6.91406)
 texture = ExtResource("9_1l2ap")
 hframes = 3
 frame = 2
 
-[node name="tress2" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#tress2" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.5, 1)
 
-[node name="Backbacktrees" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress2"]
+[node name="Parallax2D_ParallaxBackground_tress2#Backbacktrees" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(271, 526)
 scale = Vector2(14.625, 9.6875)
 texture = ExtResource("10_0uien")
 
-[node name="Backbacktrees2" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress2"]
+[node name="Parallax2D_ParallaxBackground_tress2#Backbacktrees2" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(4385, 523)
 scale = Vector2(14.625, 9.6875)
 texture = ExtResource("10_0uien")
 
-[node name="tress" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#tress" type="ParallaxLayer" parent="Parallax2D"]
 motion_scale = Vector2(0.6, 1)
 
-[node name="Backtree2" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree2" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(1097, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree27" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree27" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(2562, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree28" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree28" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(2874, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree29" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree29" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(3194, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree30" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree30" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(3507, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree31" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree31" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(3826, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree32" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree32" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(4146, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree7" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree7" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(4457, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree5" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree5" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(-119, 386)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree3" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree3" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(592, 388)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="Backtree4" type="Sprite2D" parent="Parallax2D/ParallaxBackground/tress"]
+[node name="Parallax2D_ParallaxBackground_tress#Backtree4" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(271, 384)
 scale = Vector2(10, 8.986)
 texture = ExtResource("11_o7i87")
 
-[node name="nuvens2" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#nuvens2" type="ParallaxLayer" parent="Parallax2D"]
 scale = Vector2(1.5, 1.5)
 
-[node name="nuvens3" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens2"]
+[node name="Parallax2D_ParallaxBackground_nuvens2#nuvens3" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(404, 317.667)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("12_o3meh")
 hframes = 3
 script = ExtResource("13_ulow1")
 
-[node name="nuvens4" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens2"]
+[node name="Parallax2D_ParallaxBackground_nuvens2#nuvens4" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(582, 318.667)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("12_o3meh")
@@ -849,7 +845,7 @@ hframes = 3
 frame = 1
 script = ExtResource("13_ulow1")
 
-[node name="nuvens5" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens2"]
+[node name="Parallax2D_ParallaxBackground_nuvens2#nuvens5" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(806, 315.667)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("12_o3meh")
@@ -857,17 +853,17 @@ hframes = 3
 frame = 2
 script = ExtResource("13_ulow1")
 
-[node name="nuvens" type="ParallaxLayer" parent="Parallax2D/ParallaxBackground"]
+[node name="Parallax2D_ParallaxBackground#nuvens" type="ParallaxLayer" parent="Parallax2D"]
 scale = Vector2(1.5, 1.5)
 
-[node name="nuvens" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens"]
+[node name="Parallax2D_ParallaxBackground_nuvens#nuvens" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(503.333, 317)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("14_f33so")
 hframes = 3
 script = ExtResource("15_er1p7")
 
-[node name="nuvens2" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens"]
+[node name="Parallax2D_ParallaxBackground_nuvens#nuvens2" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(681.333, 318)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("14_f33so")
@@ -875,7 +871,7 @@ hframes = 3
 frame = 1
 script = ExtResource("15_er1p7")
 
-[node name="nuvens3" type="Sprite2D" parent="Parallax2D/ParallaxBackground/nuvens"]
+[node name="Parallax2D_ParallaxBackground_nuvens#nuvens3" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(905.333, 315)
 scale = Vector2(3.20833, 3.8125)
 texture = ExtResource("14_f33so")
