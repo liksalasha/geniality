@@ -1,8 +1,10 @@
-res://ui_u/main menu.tscn
+res://maps/experiments/fase1.tscn
 res://ui_u/main menu.tres
 res://scripts/slimes_green_3d.gd
-res://fase1.tscn
-res://fase1d.tscn
-res://fase2.tscn
-res://fase2d.tscn
+res://ui_u/main menu.tscn
+res://maps/experiments/fase1d.tscn
+res://maps/experiments/fase2.tscn
+res://maps/experiments/fase2d.tscn
+res://scripts/tutorial2d.gd
+res://scripts/fase_1_2d.gd
 res://scripts/fase_1_3d.gd

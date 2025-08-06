@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://cnb6tav0eiire"]
+[gd_scene load_steps=49 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/lapidi.png" id="1_qonpf"]
 [ext_resource type="Texture2D" uid="uid://dcqj8hbeww3c1" path="res://tilemaps/terraim/sun.png" id="2_clrsb"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://crystal city.tscn" id="23_xrqkh"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="24_ilqnv"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="25_bjv68"]
+[ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahdhg"]
 texture = ExtResource("2_gmksd")
@@ -627,7 +628,7 @@ sources/5 = SubResource("TileSetAtlasSource_i4c0j")
 [sub_resource type="BoxMesh" id="BoxMesh_k8n5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75l1h"]
-size = Vector2(51, 691)
+size = Vector2(88.5, 691)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_505bf"]
 size = Vector2(899.999, 913.333)
@@ -972,11 +973,10 @@ collision_layer = 16
 script = ExtResource("16_o0ofo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="waterfalling"]
-position = Vector2(81.5, 335.5)
+position = Vector2(60.5, 335.5)
 shape = SubResource("RectangleShape2D_75l1h")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="waterfalling"]
-visible = false
 
 [node name="Dialogue" type="Sprite2D" parent="waterfalling/CanvasLayer"]
 position = Vector2(673, 293)
@@ -1000,6 +1000,7 @@ parameters/looping = true
 [node name="pause" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="pause" instance=ExtResource("19_1fn0m")]
+visible = false
 
 [node name="Quebra" type="Sprite2D" parent="."]
 position = Vector2(689, 610)
@@ -1016,6 +1017,7 @@ texture_scale = 2.48
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Quebra"]
 position = Vector2(-6.6665, -57.6189)
+amount = 15
 emission_shape = 1
 emission_sphere_radius = 128.0
 
@@ -1033,8 +1035,10 @@ position = Vector2(4598, 660)
 fase = ExtResource("23_xrqkh")
 
 [node name="inventário" parent="." instance=ExtResource("24_ilqnv")]
+visible = false
 
 [node name="Magia" parent="." instance=ExtResource("25_bjv68")]
+visible = false
 
 [node name="Label" parent="Magia" index="1"]
 metadata/_edit_use_anchors_ = true
@@ -1051,8 +1055,62 @@ metadata/_edit_use_anchors_ = true
 [node name="Fire magic label" parent="Magia" index="5"]
 metadata/_edit_use_anchors_ = true
 
+[node name="tutorial" type="Node2D" parent="."]
+
+[node name="2d to 3d" type="Area2D" parent="tutorial"]
+collision_layer = 16
+script = ExtResource("37_cvinv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial/2d to 3d"]
+position = Vector2(627.25, 337)
+shape = SubResource("RectangleShape2D_75l1h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="tutorial/2d to 3d"]
+
+[node name="Dialogue" type="Sprite2D" parent="tutorial/2d to 3d/CanvasLayer"]
+position = Vector2(673, 293)
+scale = Vector2(20.0937, 14.9375)
+texture = ExtResource("17_p25wj")
+
+[node name="Label" type="Label" parent="tutorial/2d to 3d/CanvasLayer"]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 558.0
+offset_top = 273.0
+offset_right = 774.0
+offset_bottom = 435.0
+text = "press B or R to change to 3d"
+
+[node name="teleport" type="Area2D" parent="tutorial"]
+collision_layer = 16
+script = ExtResource("37_cvinv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial/teleport"]
+position = Vector2(2211.25, 257)
+shape = SubResource("RectangleShape2D_75l1h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="tutorial/teleport"]
+
+[node name="Dialogue" type="Sprite2D" parent="tutorial/teleport/CanvasLayer"]
+position = Vector2(673, 293)
+scale = Vector2(20.0937, 14.9375)
+texture = ExtResource("17_p25wj")
+
+[node name="Label" type="Label" parent="tutorial/teleport/CanvasLayer"]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 558.0
+offset_top = 273.0
+offset_right = 774.0
+offset_bottom = 435.0
+text = "press Z or Q to teleport"
+
 [connection signal="body_entered" from="waterfalling" to="waterfalling" method="_on_body_entered"]
 [connection signal="body_exited" from="waterfalling" to="waterfalling" method="_on_body_exited"]
+[connection signal="body_entered" from="tutorial/2d to 3d" to="tutorial/2d to 3d" method="_on_body_entered"]
+[connection signal="body_exited" from="tutorial/2d to 3d" to="tutorial/2d to 3d" method="_on_body_exited"]
+[connection signal="body_entered" from="tutorial/teleport" to="tutorial/teleport" method="_on_body_entered"]
+[connection signal="body_exited" from="tutorial/teleport" to="tutorial/teleport" method="_on_body_exited"]
 
 [editable path="player"]
 [editable path="Magia"]
