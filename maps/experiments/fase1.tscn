@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dgtjixdq78qtk" path="res://tilemaps/quebra.png" id="20_m038q"]
 [ext_resource type="Texture2D" uid="uid://bc77s58gp3n1o" path="res://tilemaps/light.png" id="21_42ue5"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="22_fb7lg"]
-[ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://crystal city.tscn" id="23_xrqkh"]
+[ext_resource type="PackedScene" path="res://crystal city.tscn" id="23_xrqkh"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="24_ilqnv"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="25_bjv68"]
 [ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
@@ -971,6 +971,26 @@ mesh = SubResource("BoxMesh_k8n5l")
 visible = false
 modulate = Color(1, 1, 0, 1)
 position = Vector2(876.229, 583)
+scale = Vector2(125, 35)
+mesh = SubResource("BoxMesh_k8n5l")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="sinalisations"]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(1001.23, 583)
+scale = Vector2(125, 35)
+mesh = SubResource("BoxMesh_k8n5l")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="sinalisations"]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(1126.23, 583)
+scale = Vector2(125, 35)
+mesh = SubResource("BoxMesh_k8n5l")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="sinalisations"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(1251.23, 583)
 scale = Vector2(125, 35)
 mesh = SubResource("BoxMesh_k8n5l")
 

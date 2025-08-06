@@ -54,14 +54,11 @@ func _physics_process(delta: float) -> void:
 	# Pular
 	#if Input.is_action_just_pressed("pulo") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
-	if Input.is_action_just_pressed("ui_end"):
-		inventário.visible = true
-	if Input.is_action_just_pressed("ui_home"):
-		inventário.visible = false
-	if Input.is_action_just_pressed("ui_page_up"):
-		magia.visible = true
-	if Input.is_action_just_pressed("ui_page_down"):
-		magia.visible = false
+	if Input.is_action_just_pressed("inventario"):
+		inventário.visible = !inventário.visible
+
+	if Input.is_action_just_pressed("magias"):
+		magia.visible = !magia.visible
 	# Movimento horizontal e virar sprite
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:

@@ -38,7 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://cbo10p0uey77v" path="res://sounds/song1 mp3.mp3" id="33_u7725"]
 [ext_resource type="PackedScene" uid="uid://bcyju62xmxvpu" path="res://ui_u/pause.tscn" id="34_crjvx"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="36_4rv7d"]
-[ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://crystal city.tscn" id="37_ytkhr"]
+[ext_resource type="PackedScene" path="res://crystal city.tscn" id="37_ytkhr"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="38_fq3hx"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="39_jej2o"]
 [ext_resource type="PackedScene" uid="uid://c5jwgpgtb1m7o" path="res://blueprints/pomnte.tscn" id="40_iky78"]
@@ -912,7 +912,7 @@ scale = Vector2(23, 22)
 mesh = SubResource("BoxMesh_6tdgb")
 
 [node name="player" parent="." instance=ExtResource("24_n4c4g")]
-position = Vector2(114, 661)
+position = Vector2(111, 663)
 
 [node name="Camera2D" parent="player" index="2"]
 enabled = true

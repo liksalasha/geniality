@@ -10,3 +10,5 @@ res://scripts/fase_1_2d.gd
 res://scripts/fase_1_3d.gd
 res://global.gd
 res://mage/mage.gd
+res://maps/city/crystal city.tscn
+res://mage/cutscene_mage.gd
