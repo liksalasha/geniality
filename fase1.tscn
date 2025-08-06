@@ -874,28 +874,23 @@ enabled = true
 [node name="blue green zombie" parent="enemys" instance=ExtResource("11_1qjbr")]
 position = Vector2(375, 659)
 
-[node name="blue green zombie2" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("11_1qjbr")]
+[node name="blue green zombie2" parent="enemys" instance=ExtResource("11_1qjbr")]
 position = Vector2(644, 660)
-player = NodePath("")
 enemy_id = "bzombie_02"
 
-[node name="blue green zombie3" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("11_1qjbr")]
+[node name="blue green zombie3" parent="enemys" instance=ExtResource("11_1qjbr")]
 position = Vector2(729, 657)
-player = NodePath("")
 enemy_id = "bzombie_03"
 
-[node name="blue green zombie4" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("11_1qjbr")]
+[node name="blue green zombie4" parent="enemys" instance=ExtResource("11_1qjbr")]
 position = Vector2(806, 658)
-player = NodePath("")
 enemy_id = "bzombie_04"
 
-[node name="red green zombie" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("12_clrsb")]
+[node name="red green zombie" parent="enemys" instance=ExtResource("12_clrsb")]
 position = Vector2(987, 656)
-player = NodePath("")
 
-[node name="slime green" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("13_sfclv")]
+[node name="slime green" parent="enemys" instance=ExtResource("13_sfclv")]
 position = Vector2(509, 659)
-player = NodePath("")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

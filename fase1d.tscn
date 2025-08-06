@@ -1,8 +1,6 @@
-[gd_scene load_steps=41 format=4 uid="uid://1dhwh60sp5nj"]
+[gd_scene load_steps=39 format=4 uid="uid://1dhwh60sp5nj"]
 
 [ext_resource type="Texture2D" uid="uid://7dl2mr8mcium" path="res://tilemaps/terraim/3d/rocky_terrain_02_diff_4k.jpg" id="1_213h1"]
-[ext_resource type="Script" uid="uid://cltef125uogdv" path="res://scripts/fase_1_3d.gd" id="1_ama07"]
-
 [ext_resource type="Texture2D" uid="uid://dds1f252leeee" path="res://tilemaps/terraim/3d/rocky_terrain_02_spec_4k.png" id="2_ama07"]
 [ext_resource type="PackedScene" uid="uid://bmxglv7joyvgv" path="res://mage/mage 3d.tscn" id="3_yrdfn"]
 [ext_resource type="ArrayMesh" uid="uid://joijewrwdsp8" path="res://tilemaps/terraim/3d/tree1.obj" id="5_ama07"]
@@ -114,29 +112,26 @@ buffer = PackedFloat32Array(0.952165, 0, 0.305584, 101.556, 0, 1, 0, -658.38, -0
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqdfk"]
 size = Vector3(9.1752, 8.36206, 1)
 
-#
-#
-#
+[node name="Node3D" type="Node3D"]
 
-[node name="player 3d" parent="." instance=ExtResource("3_yrdfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65191, 16.8877, 668.729)
-
-[node name="WorldEnvironment" type="WorldEnvironment"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yrdfn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.305818, 0.515337, -0.800564, -0.183899, 0.856987, 0.481408, 0.934161, 0, 0.356852, 0, 2.46867, 0)
+transform = Transform3D(0.305818, 0.515337, -0.800564, -0.183899, 0.856988, 0.481408, 0.934161, -2.50562e-07, 0.356852, 0, 2.46867, 0)
 light_energy = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, -3.41743, 9.92254, 0, -27.2969, -1.24225, 118, 0, 615.151)
 visible = false
 mesh = SubResource("PrismMesh_213h1")
+skeleton = NodePath("../WorldEnvironment")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(125, 0, 0, 0, 35, 0, 0, 0, 1, 100.017, -661, 61.9624)
 visible = false
 mesh = SubResource("BoxMesh_213h1")
+skeleton = NodePath("../WorldEnvironment")
 
 [node name="scenary" type="Node" parent="."]
 
@@ -147,7 +142,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 99.7
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D10"]
 collision_layer = 16
@@ -161,7 +156,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, -25.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D11"]
 collision_layer = 16
@@ -175,7 +170,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, -150
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D12"]
 collision_layer = 16
@@ -189,7 +184,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, -274
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D13"]
 collision_layer = 16
@@ -203,7 +198,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, -399
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D14"]
 collision_layer = 16
@@ -217,7 +212,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, -524
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D15"]
 collision_layer = 16
@@ -231,7 +226,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 848.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D16"]
 collision_layer = 16
@@ -245,7 +240,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 973.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D22"]
 collision_layer = 16
@@ -259,7 +254,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 723.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D17"]
 collision_layer = 16
@@ -273,7 +268,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 598.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D18"]
 collision_layer = 16
@@ -287,7 +282,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 473.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D19"]
 collision_layer = 16
@@ -301,7 +296,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 348.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D20"]
 collision_layer = 16
@@ -315,7 +310,7 @@ transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 223.
 layers = 16
 material_override = SubResource("StandardMaterial3D_j61k5")
 mesh = SubResource("BoxMesh_wmnus")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D21"]
 collision_layer = 16
@@ -330,7 +325,7 @@ shape = SubResource("BoxShape3D_yrdfn")
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 146.724, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/trees/Tree1"]
 collision_layer = 16
@@ -344,7 +339,7 @@ shape = SubResource("BoxShape3D_xr3bj")
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 299.485, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/trees/Tree2"]
 collision_layer = 16
@@ -358,19 +353,19 @@ shape = SubResource("BoxShape3D_xr3bj")
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 267.921, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="Tree6" type="MeshInstance3D" parent="scenary/trees"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 712.128, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="Tree3" type="MeshInstance3D" parent="scenary/trees"]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 425.137, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/trees/Tree3"]
 collision_layer = 16
@@ -384,7 +379,7 @@ shape = SubResource("BoxShape3D_xr3bj")
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 586.852, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/trees/Tree4"]
 collision_layer = 16
@@ -398,7 +393,7 @@ shape = SubResource("BoxShape3D_xr3bj")
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 911.028, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="scenary/trees/Tree7"]
 collision_layer = 16
@@ -450,19 +445,19 @@ debug_color = Color(0.717601, 0.481377, 0, 0.42)
 [node name="Nuvem3d" type="MeshInstance3D" parent="scenary/Nuvens"]
 transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 622.926, -583.343, -1.63254)
 mesh = ExtResource("13_dccsv")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 script = ExtResource("9_cdslq")
 
 [node name="Nuvem3d2" type="MeshInstance3D" parent="scenary/Nuvens"]
 transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 707.761, -583.343, -1.63254)
 mesh = ExtResource("13_dccsv")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 script = ExtResource("9_cdslq")
 
 [node name="Nuvem3d3" type="MeshInstance3D" parent="scenary/Nuvens"]
 transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 832.227, -583.343, -1.63254)
 mesh = ExtResource("13_dccsv")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../WorldEnvironment")
 script = ExtResource("9_cdslq")
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="scenary"]
@@ -491,17 +486,17 @@ metadata/SimpleGrassTextured = "2.0.5"
 [node name="Montains" type="MeshInstance3D" parent="scenary"]
 transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 423.615, -978.232, -828.432)
 mesh = ExtResource("15_mqdfk")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../WorldEnvironment")
 
 [node name="Montains2" type="MeshInstance3D" parent="scenary"]
 transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 24.0839, -978.232, -828.432)
 mesh = ExtResource("15_mqdfk")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../WorldEnvironment")
 
 [node name="Montains3" type="MeshInstance3D" parent="scenary"]
 transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, -801.571, -978.232, -828.432)
 mesh = ExtResource("15_mqdfk")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../WorldEnvironment")
 
 [node name="Sprite3D" type="Sprite3D" parent="scenary"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 316, -469, -717.099)
@@ -525,40 +520,34 @@ text = "mana: 5"
 
 [node name="enemys" type="Node" parent="."]
 
-[node name="slime green3d" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("6_j61k5")]
+[node name="slime green3d" parent="enemys" instance=ExtResource("6_j61k5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 473.909, -661, 6.18545)
-player = NodePath("../../player 3d")
 
-[node name="blue green zombie3d" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("6_2hx3q")]
+[node name="blue green zombie3d" parent="enemys" instance=ExtResource("6_2hx3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.326, -661, 5.83242)
-player = NodePath("../../player 3d")
 
-[node name="red green zombie" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("8_r4eeo")]
+[node name="red green zombie" parent="enemys" instance=ExtResource("8_r4eeo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 942.928, -658.38, 4.38325)
-player = NodePath("../../player 3d")
 
-[node name="blue green zombie3d2" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("6_2hx3q")]
+[node name="blue green zombie3d2" parent="enemys" instance=ExtResource("6_2hx3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 642.916, -658.38, 1.46028)
-player = NodePath("../../player 3d")
 enemy_id = "bzombie_02"
 
-[node name="blue green zombie3d3" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("6_2hx3q")]
+[node name="blue green zombie3d3" parent="enemys" instance=ExtResource("6_2hx3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 719.48, -658.38, 1.24991)
-player = NodePath("../../player 3d")
 enemy_id = "bzombie_03"
 
-[node name="blue green zombie3d4" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("6_2hx3q")]
+[node name="blue green zombie3d4" parent="enemys" instance=ExtResource("6_2hx3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 780.899, -658.38, -11.5404)
-player = NodePath("../../player 3d")
 enemy_id = "bzombie_04"
 
-[node name="giant goblin" parent="enemys" node_paths=PackedStringArray("player") instance=ExtResource("8_1kvhl")]
+[node name="giant goblin" parent="enemys" instance=ExtResource("8_1kvhl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1006.02, -658.38, -6.48184)
-player = NodePath("../../player 3d")
 
 [node name="Cam" type="MeshInstance3D" parent="."]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 32.2168, -661, 670.573)
 mesh = ExtResource("7_2ypnc")
+skeleton = NodePath("../WorldEnvironment")
 
 [node name="itens" type="Node" parent="."]
 
@@ -588,6 +577,9 @@ shape = SubResource("BoxShape3D_mqdfk")
 [node name="Magia" parent="." instance=ExtResource("24_vbd8c")]
 
 [node name="pause" parent="." instance=ExtResource("25_vbd8c")]
+
+[node name="player3d" parent="." instance=ExtResource("3_yrdfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.925, -647.38, 3.55484)
 
 [connection signal="body_entered" from="scenary/Waterfallll/Area3D" to="scenary/Waterfallll" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="scenary/Waterfallll/Area3D" to="scenary/Waterfallll" method="_on_area_3d_body_exited"]
