@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://1urcx6gqescw"]
+
+[ext_resource type="Script" uid="uid://bdhrdrbd07l8k" path="res://scripts/loja_de_equipamentos.gd" id="1_64vpv"]
+[ext_resource type="Texture2D" uid="uid://c42sv1l4qjoma" path="res://tilemaps/dialogue.png" id="1_gat25"]
+[ext_resource type="Texture2D" uid="uid://b8pgm1q5pqqom" path="res://tilemaps/itens/poção de vida.png" id="2_xiysv"]
+[ext_resource type="Texture2D" uid="uid://blukfm4l7u7q7" path="res://tilemaps/itens/poção de mana.png" id="3_6huql"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_64vpv")
+
+[node name="Dialogue" type="Sprite2D" parent="."]
+position = Vector2(638, 351)
+scale = Vector2(40, 40)
+texture = ExtResource("1_gat25")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 78.0
+offset_right = 728.0
+offset_bottom = 101.0
+text = "loja de equipamentos"
+
+[node name="life potion" type="Button" parent="."]
+offset_left = 156.0
+offset_top = 261.0
+offset_right = 189.0
+offset_bottom = 292.0
+text = "life"
+autowrap_mode = 2
+
+[node name="PoçãoDeVida" type="Sprite2D" parent="life potion"]
+position = Vector2(21, -45)
+scale = Vector2(10, 10)
+texture = ExtResource("2_xiysv")
+
+[node name="mana potion" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 261.0
+offset_right = 305.0
+offset_bottom = 292.0
+text = "mana
+"
+autowrap_mode = 2
+
+[node name="Poção de mana" type="Sprite2D" parent="mana potion"]
+position = Vector2(32, -45)
+scale = Vector2(10, 10)
+texture = ExtResource("3_6huql")
+
+[connection signal="pressed" from="life potion" to="." method="_on_life_potion_pressed"]
+[connection signal="pressed" from="mana potion" to="." method="_on_mana_potion_pressed"]

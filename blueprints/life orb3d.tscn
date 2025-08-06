@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvlreylesokv2"]
+
+[ext_resource type="Script" uid="uid://ig2vdatm4vkt" path="res://scripts/life_orb_3d.gd" id="1_2n25t"]
+[ext_resource type="ArrayMesh" uid="uid://ba5jy4qlvskpi" path="res://blueprints/3d/life orb.obj" id="1_t4mtq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2n25t"]
+radius = 4.56687
+
+[node name="Area3D" type="Area3D" groups=["LifeOrb"]]
+collision_layer = 2
+script = ExtResource("1_2n25t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.738652, 9.77268, 0.301998)
+shape = SubResource("SphereShape3D_2n25t")
+
+[node name="LifeOrb" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_t4mtq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

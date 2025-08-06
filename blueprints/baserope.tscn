@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://g5t8ukyvw23g"]
+
+[ext_resource type="Texture2D" uid="uid://can0g5fgfn3p0" path="res://tilemaps/furniture/no rope.png" id="1_tkuv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipa68"]
+size = Vector2(6, 34)
+
+[node name="rope" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ipa68")
+
+[node name="NoRope" type="Sprite2D" parent="."]
+texture = ExtResource("1_tkuv3")

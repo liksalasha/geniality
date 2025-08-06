@@ -1,0 +1,149 @@
+[gd_scene load_steps=19 format=3 uid="uid://chs0lffdypdqk"]
+
+[ext_resource type="Texture2D" uid="uid://dgpxifxps03p3" path="res://blueprints/enemys/anim/green slime.png" id="1_g1ukw"]
+[ext_resource type="Script" uid="uid://bl55emnqdsdus" path="res://scripts/slimes_green.gd" id="1_tomub"]
+[ext_resource type="Texture2D" uid="uid://dmirsfq86vmqt" path="res://blueprints/enemys/anim/green slime hurt.png" id="2_8n1i1"]
+[ext_resource type="Texture2D" uid="uid://dgoow0i1c221g" path="res://tilemaps/OH.png" id="3_u2lx5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8n1i1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8l2f"]
+size = Vector2(12, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgpn2"]
+atlas = ExtResource("2_8n1i1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j174v"]
+atlas = ExtResource("2_8n1i1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbwwv"]
+atlas = ExtResource("2_8n1i1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tomub"]
+atlas = ExtResource("1_g1ukw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2lx5"]
+atlas = ExtResource("1_g1ukw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n1i1"]
+atlas = ExtResource("1_g1ukw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6fqv"]
+atlas = ExtResource("1_g1ukw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8l2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgpn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j174v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbwwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j174v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgpn2")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tomub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2lx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n1i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6fqv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su347"]
+atlas = ExtResource("3_u2lx5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdil2"]
+atlas = ExtResource("3_u2lx5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgpn2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su347")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdil2")
+}],
+"loop": true,
+"name": &"Oh",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2lx5"]
+size = Vector2(14, 15)
+
+[node name="slime green" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_tomub")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(-1, -1.5)
+scale = Vector2(14, 9)
+mesh = SubResource("BoxMesh_8n1i1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_y8l2f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_y8l2f")
+animation = &"hurt"
+autoplay = "run"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(100, 0)
+
+[node name="JumpTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+sprite_frames = SubResource("SpriteFrames_dgpn2")
+animation = &"Oh"
+frame_progress = 0.0115316
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="hurt" type="CollisionShape2D" parent="Area2D"]
+light_mask = 8
+visibility_layer = 4
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_u2lx5")
+debug_color = Color(0.994171, 0, 0.226339, 0.42)

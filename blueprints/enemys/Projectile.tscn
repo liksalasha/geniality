@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://vgw4qvpp17pk"]
+
+[ext_resource type="Script" uid="uid://clquayarry1ht" path="res://scripts/projectile.gd" id="1_xuv4f"]
+[ext_resource type="Texture2D" uid="uid://srkt26v6csbh" path="res://blueprints/project.png" id="2_xuv4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2emg"]
+size = Vector2(20, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5p2h"]
+atlas = ExtResource("2_xuv4f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12qpj"]
+atlas = ExtResource("2_xuv4f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_282ul"]
+atlas = ExtResource("2_xuv4f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2emg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5p2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12qpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_282ul")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Projectile" type="Area2D" groups=["projects"]]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_xuv4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_s2emg")
+
+[node name="animm" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s2emg")
+animation = &"idle"
+frame_progress = 0.0978877
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

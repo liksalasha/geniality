@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bn2qt3wiigrj4"
+path="res://.godot/imported/run green slime2.obj-b63e0d995eeeebbe586ef09bc9f7b912.mesh"
+
+[deps]
+
+files=["res://.godot/imported/run green slime2.obj-b63e0d995eeeebbe586ef09bc9f7b912.mesh"]
+
+source_file="res://blueprints/3d/enemys/green slime/run green slime2.obj"
+dest_files=["res://.godot/imported/run green slime2.obj-b63e0d995eeeebbe586ef09bc9f7b912.mesh", "res://.godot/imported/run green slime2.obj-b63e0d995eeeebbe586ef09bc9f7b912.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

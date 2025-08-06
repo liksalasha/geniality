@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmrjrrmsvvbbb"]
+
+[ext_resource type="Script" uid="uid://d2fb1gitcs2m1" path="res://scripts/red_green_zombie_3d.gd" id="1_fa5on"]
+[ext_resource type="ArrayMesh" uid="uid://dq8p8bahpns2q" path="res://blueprints/3d/enemys/red green zombie/idle.obj" id="1_u4cwv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fa5on"]
+size = Vector3(12.1854, 23.3359, 12.7701)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5s3e"]
+size = Vector3(12.7527, 23.4278, 13.4638)
+
+[node name="red green zombie" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_fa5on")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0801086, 11.168, -1.97086)
+shape = SubResource("BoxShape3D_fa5on")
+
+[node name="Idle" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.0549804, 1.19209e-07, 0.0300362)
+mesh = ExtResource("1_u4cwv")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00500488, 11.2139, -1.89915)
+shape = SubResource("BoxShape3D_p5s3e")
+debug_color = Color(0.672399, 0, 0.164095, 0.42)

@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://10n266kxri4j"]
+
+[ext_resource type="Texture2D" uid="uid://dhxsnn44xnwro" path="res://blueprints/enemys/anim/gieantgolblin.png" id="1_6b2ow"]
+[ext_resource type="Script" uid="uid://qgpnxpq6xtrd" path="res://scripts/giant_goblin.gd" id="1_f1ffx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ffx"]
+size = Vector2(33, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70e7d"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdsgx"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oswvl"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jmcb"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8upg"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vky4h"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbpmd"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh0lu"]
+atlas = ExtResource("1_6b2ow")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wiwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70e7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdsgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oswvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jmcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8upg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vky4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbpmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh0lu")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70e7d"]
+size = Vector2(35, 46)
+
+[node name="giant goblin" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_f1ffx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_f1ffx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0wiwk")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.472351
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_70e7d")
+debug_color = Color(0.702882, 0, 0.109291, 0.42)

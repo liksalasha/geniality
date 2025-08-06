@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2o3f073njv44"]
+
+[ext_resource type="Script" uid="uid://clquayarry1ht" path="res://scripts/projectile.gd" id="1_7mpc7"]
+[ext_resource type="Texture2D" uid="uid://y8jcfo6drupe" path="res://blueprints/ice project.png" id="2_7mpc7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2emg"]
+size = Vector2(20, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxweq"]
+atlas = ExtResource("2_7mpc7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq7y2"]
+atlas = ExtResource("2_7mpc7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kg02"]
+atlas = ExtResource("2_7mpc7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2emg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxweq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq7y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kg02")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Projectile" type="Area2D" groups=["projects"]]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_7mpc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_s2emg")
+
+[node name="animm" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s2emg")
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

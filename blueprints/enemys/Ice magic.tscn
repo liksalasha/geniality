@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5wbb6j3ug6y7"]
+
+[ext_resource type="Script" uid="uid://bc40hql0246e1" path="res://scripts/magic.gd" id="1_cawdj"]
+[ext_resource type="Texture2D" uid="uid://cocvyqntfstn2" path="res://blueprints/ice super.png" id="2_cawdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0yge"]
+size = Vector2(33, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddatk"]
+atlas = ExtResource("2_cawdj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3tj0"]
+atlas = ExtResource("2_cawdj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ureqb"]
+atlas = ExtResource("2_cawdj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eyjxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddatk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3tj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ureqb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[node name="magic" type="Area2D" groups=["magics"]]
+scale = Vector2(2.5, 2.5)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_cawdj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_j0yge")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eyjxc")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0345383
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

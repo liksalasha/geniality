@@ -1,0 +1,14 @@
+Node2D
+AudioListener2D
+CPUParticles2D
+AnimationPlayer
+CollisionShape2D
+StaticBody2D
+Area2D
+CollisionShape3D
+Sprite3D
+Area3D
+Button
+CanvasLayer
+Label
+PointLight2D

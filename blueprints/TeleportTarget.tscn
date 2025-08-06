@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://b6g1ubso447cw"]
+
+[ext_resource type="Script" uid="uid://df74qdkkeqdqs" path="res://scripts/furniture/teleport_target.gd" id="1_4xpnf"]
+[ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Orb de Teleport.png" id="2_xdmtw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4xpnf"]
+radius = 29.0043
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50sm5"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsydx"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivmka"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2quo"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtntu"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bi3f"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv6ti"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abouo"]
+atlas = ExtResource("2_xdmtw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxwnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50sm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsydx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivmka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2quo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtntu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bi3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv6ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abouo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="TeleportTarget" type="Node2D" groups=["teleportable"]]
+light_mask = 2
+script = ExtResource("1_4xpnf")
+
+[node name="Area2D" type="Area2D" parent="." groups=["teleportable"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["teleportable"]]
+position = Vector2(0, -0.5)
+shape = SubResource("CircleShape2D_4xpnf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bxwnp")
+animation = &"idle"
+frame_progress = 0.663713

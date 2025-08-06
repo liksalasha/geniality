@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfd7bv7pbpucu"
+path="res://.godot/imported/mira.obj-e9d5cf1d5afc044926e3e3d486ee91d1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mira.obj-e9d5cf1d5afc044926e3e3d486ee91d1.mesh"]
+
+source_file="res://blueprints/3d/mira.obj"
+dest_files=["res://.godot/imported/mira.obj-e9d5cf1d5afc044926e3e3d486ee91d1.mesh", "res://.godot/imported/mira.obj-e9d5cf1d5afc044926e3e3d486ee91d1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

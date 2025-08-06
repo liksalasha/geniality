@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://dc2xschkk6uj8"]
+
+[ext_resource type="Script" uid="uid://duret81t55iwu" path="res://scripts/slimes_green_3d.gd" id="1_hbcq6"]
+[ext_resource type="ArrayMesh" uid="uid://dgibinhirmbnj" path="res://blueprints/3d/enemys/green slime/run green slime.obj" id="2_eldr8"]
+[ext_resource type="ArrayMesh" uid="uid://bn2qt3wiigrj4" path="res://blueprints/3d/enemys/green slime/run green slime2.obj" id="3_641yd"]
+[ext_resource type="ArrayMesh" uid="uid://bh45eey26m5bq" path="res://blueprints/3d/enemys/green slime/run green slime3.obj" id="4_nsl3g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kf766"]
+size = Vector3(5.79633, 6.41645, 12.2341)
+
+[sub_resource type="Animation" id="Animation_rd62h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RunGreenSlime:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_eldr8")]
+}
+
+[sub_resource type="Animation" id="Animation_wm26h"]
+resource_name = "run"
+length = 0.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RunGreenSlime:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_eldr8"), ExtResource("3_641yd"), ExtResource("4_nsl3g")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pu2jh"]
+_data = {
+&"RESET": SubResource("Animation_rd62h"),
+&"run": SubResource("Animation_wm26h")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_641yd"]
+size = Vector3(6.05933, 6.27737, 13.7764)
+
+[sub_resource type="BoxMesh" id="BoxMesh_641yd"]
+
+[node name="slime green3d" type="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_hbcq6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104666, 15.579, 0.778909)
+shape = SubResource("BoxShape3D_kf766")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="RunGreenSlime" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.8, 0, 0, 0, 7.8, 0, 0, 0, 7.8, 0, 0, 0)
+mesh = ExtResource("2_eldr8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pu2jh")
+}
+autoplay = "run"
+
+[node name="Jump_timer" type="Timer" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0714104, 15.6227, 0.562103)
+shape = SubResource("BoxShape3D_641yd")
+debug_color = Color(0.7494, 0, 0.134357, 0.42)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.11959e-07, 0, 1, 0, 9, 0, -14, 0, -4.37114e-08, 0, 13.9138, 0)
+visible = false
+mesh = SubResource("BoxMesh_641yd")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

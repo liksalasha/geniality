@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=3 uid="uid://smave13k548a"]
+
+[ext_resource type="Texture2D" uid="uid://dbkoosac2cf8s" path="res://tilemaps/furniture/mana orb.png" id="1_exvk5"]
+[ext_resource type="Script" uid="uid://dokn4y10evkxn" path="res://scripts/mana_orb.gd" id="1_fekm2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nm1mv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fekm2"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apgwc"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q186x"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs7lw"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2sem"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6px1l"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2nr0"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6prgk"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3l6a"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyxae"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tee3s"]
+atlas = ExtResource("1_exvk5")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nm1mv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fekm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apgwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q186x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs7lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2sem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6px1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2nr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6prgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3l6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyxae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tee3s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Area2D" type="Area2D" groups=["ManaOrb"]]
+collision_layer = 2
+script = ExtResource("1_fekm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nm1mv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nm1mv")
+animation = &"idle"
+frame_progress = 0.426609
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

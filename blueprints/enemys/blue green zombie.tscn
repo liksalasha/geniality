@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxvqh5ghjp3ge"]
+
+[ext_resource type="Texture2D" uid="uid://cxi8slmr80iv1" path="res://blueprints/enemys/anim/blue green zombie.png" id="1_bf2dj"]
+[ext_resource type="Script" uid="uid://dsvittjbef4rw" path="res://scripts/blue_green_zombie.gd" id="1_iwtxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ty4cj"]
+size = Vector2(12, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwtxo"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hpn5"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7unf0"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1bsp"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkrba"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tb1l"]
+atlas = ExtResource("1_bf2dj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpevn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwtxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hpn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7unf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1bsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkrba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tb1l")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf2dj"]
+size = Vector2(14, 22)
+
+[node name="blue green zombie" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_iwtxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ty4cj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jpevn")
+animation = &"run"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="hurt" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_bf2dj")
+debug_color = Color(0.982003, 0, 0.36608, 0.42)

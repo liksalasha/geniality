@@ -1,0 +1,323 @@
+[gd_scene load_steps=22 format=3 uid="uid://vk4q2twuqwu4"]
+
+[ext_resource type="Script" uid="uid://kvwd8o0dlal4" path="res://ui_u/main buttons.gd" id="1_cf6vv"]
+[ext_resource type="ArrayMesh" uid="uid://roq0tih33hp7" path="res://blueprints/3d/forth square.obj" id="1_gyd0g"]
+[ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Orb de Teleport.png" id="1_hwibk"]
+[ext_resource type="Script" uid="uid://bhqrt3752hdx0" path="res://ui_u/forth_square.gd" id="2_cpk7c"]
+[ext_resource type="Theme" uid="uid://c71hbxb3vs4cr" path="res://ui_u/main menu.tres" id="2_kgyfl"]
+[ext_resource type="Texture2D" uid="uid://ckrjpimm2np42" path="res://tilemaps/test2.png" id="3_n8o6b"]
+[ext_resource type="ArrayMesh" uid="uid://c6h26xy37nvcu" path="res://blueprints/3d/untitled.obj" id="4_2pnkx"]
+[ext_resource type="Script" uid="uid://c3gxkhvygcj35" path="res://ui_u/untitled.gd" id="5_hwibk"]
+[ext_resource type="ArrayMesh" uid="uid://cilcypdiy8orn" path="res://blueprints/3d/part.obj" id="8_0xh2l"]
+[ext_resource type="AudioStream" uid="uid://dfw7y8wmwjo1d" path="res://sounds/menu-sound.mp3" id="9_yg1ck"]
+[ext_resource type="Texture2D" uid="uid://dvf8ylikfsfyv" path="res://tilemaps/title.png" id="11_eee13"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf6vv"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xh2l"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg1ck"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgyfl"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eee13"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6af1"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q4u3"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tbvj"]
+atlas = ExtResource("1_hwibk")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fxnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf6vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xh2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg1ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgyfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eee13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6af1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q4u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tbvj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Environment" id="Environment_n8o6b"]
+background_mode = 1
+background_color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_cf6vv")
+
+[node name="ng" type="Button" parent="CanvasLayer"]
+offset_left = -28.0
+offset_top = 290.0
+offset_right = 108.0
+offset_bottom = 426.0
+theme = ExtResource("2_kgyfl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/ng"]
+position = Vector2(140, 61)
+sprite_frames = SubResource("SpriteFrames_7fxnb")
+autoplay = "default"
+frame_progress = 0.0132149
+
+[node name="Label" type="Label" parent="CanvasLayer/ng"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 51.0
+offset_right = 117.0
+offset_bottom = 74.0
+text = "NEW GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue" type="Button" parent="CanvasLayer"]
+offset_left = -25.0
+offset_top = 382.0
+offset_right = 176.0
+offset_bottom = 510.0
+theme = ExtResource("2_kgyfl")
+
+[node name="cont" type="AnimatedSprite2D" parent="CanvasLayer/continue"]
+position = Vector2(140, 55)
+sprite_frames = SubResource("SpriteFrames_7fxnb")
+autoplay = "default"
+frame_progress = 0.672318
+
+[node name="Label" type="Label" parent="CanvasLayer/continue"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 47.0
+offset_right = 113.0
+offset_bottom = 70.0
+text = "CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="credits" type="Button" parent="CanvasLayer"]
+offset_left = -24.0
+offset_top = 465.0
+offset_right = 161.0
+offset_bottom = 593.0
+theme = ExtResource("2_kgyfl")
+
+[node name="cred" type="AnimatedSprite2D" parent="CanvasLayer/credits"]
+position = Vector2(140, 57)
+sprite_frames = SubResource("SpriteFrames_7fxnb")
+autoplay = "default"
+frame_progress = 0.845085
+
+[node name="Label" type="Label" parent="CanvasLayer/credits"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 45.0
+offset_right = 119.0
+offset_bottom = 68.0
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="Button" parent="CanvasLayer"]
+offset_left = -22.0
+offset_top = 561.0
+offset_right = 139.0
+offset_bottom = 689.0
+theme = ExtResource("2_kgyfl")
+
+[node name="ex" type="AnimatedSprite2D" parent="CanvasLayer/exit"]
+position = Vector2(140, 57)
+sprite_frames = SubResource("SpriteFrames_7fxnb")
+autoplay = "default"
+frame_progress = 0.689352
+
+[node name="Label" type="Label" parent="CanvasLayer/exit"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 47.0
+offset_right = 133.0
+offset_bottom = 70.0
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87162, 6.0219)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89255, 0)
+script = ExtResource("2_cpk7c")
+
+[node name="ForthSquare" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.89255, 0)
+mesh = ExtResource("1_gyd0g")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.471811, 0.165512, 0, -0.165512, 0.471811, 0, 0, 0, 0.5, 0.943142, 1.71063, 3.16392)
+texture = ExtResource("3_n8o6b")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.471811, 0.165512, 0, -0.165512, 0.471811, 0, 0, 0, 0.5, -0.71605, 2.06828, 3.14521)
+flip_h = true
+flip_v = true
+texture = ExtResource("3_n8o6b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n8o6b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.995453, 0, -0.0952552, 0, 1, 0, 0.0952552, 0, 0.995453, 0, 0, 0)
+
+[node name="Untitled" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23.8342, 0, -15.1378)
+visible = false
+mesh = ExtResource("4_2pnkx")
+script = ExtResource("5_hwibk")
+
+[node name="Untitled2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.801, -8.54561, -15.1378)
+visible = false
+mesh = ExtResource("4_2pnkx")
+script = ExtResource("5_hwibk")
+
+[node name="Untitled3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.3974, 12.2104, -22.5914)
+visible = false
+mesh = ExtResource("4_2pnkx")
+script = ExtResource("5_hwibk")
+
+[node name="parts" type="Node" parent="."]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -9.896, 12.9759, -3.88755)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D2" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -11.0311, 12.9759, -2.6546)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D3" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -12.1566, 12.9759, -1.43213)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D4" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -13.202, 12.9759, -0.296533)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D5" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -8.82244, 12.9759, -5.05364)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D6" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-1.63627, 0, -0.735695, 0, 1, 0, 1.77731, 0, -0.677313, -7.67862, 12.9759, -6.29606)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D7" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 10.2691, 12.9759, -6.29606)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D11" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 8.69091, 12.9759, -6.97939)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D12" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 7.12761, 12.9759, -7.52686)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D8" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 11.6818, 12.9759, -5.75449)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D9" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 13.2796, 12.9759, -5.1571)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="CPUParticles3D10" type="CPUParticles3D" parent="parts"]
+transform = Transform3D(-2.27149, 0, 0.340478, 0, 1, 0, -0.822536, 0, -0.940252, 14.8295, 12.9759, -4.49904)
+amount = 15
+lifetime = 3.0
+mesh = ExtResource("8_0xh2l")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89021, 0)
+omni_attenuation = 10.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+stream = ExtResource("9_yg1ck")
+autoplay = true
+parameters/looping = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(0.171003, 0, 0.182368, 0, 0.25, 0, -0.182368, 0, 0.171003, -8.58997, 5.56157, -2.04054)
+texture = ExtResource("11_eee13")
+
+[connection signal="mouse_entered" from="CanvasLayer/ng" to="CanvasLayer" method="_on_ng_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ng" to="CanvasLayer" method="_on_ng_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/ng" to="CanvasLayer" method="_on_ng_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/continue" to="CanvasLayer" method="_on_continue_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/continue" to="CanvasLayer" method="_on_continue_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/credits" to="CanvasLayer" method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/credits" to="CanvasLayer" method="_on_credits_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/exit" to="CanvasLayer" method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/exit" to="CanvasLayer" method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/exit" to="CanvasLayer" method="_on_exit_pressed"]

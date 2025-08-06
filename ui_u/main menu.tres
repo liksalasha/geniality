@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c71hbxb3vs4cr"]
+
+[ext_resource type="Texture2D" uid="uid://7c3vpgg3171i" path="res://tilemaps/mes.png" id="1_xipfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kgyfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eee13"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tbvj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6af1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8q4u3"]
+
+[resource]
+Button/icons/icon = ExtResource("1_xipfo")
+Button/styles/disabled = SubResource("StyleBoxEmpty_kgyfl")
+Button/styles/focus = SubResource("StyleBoxEmpty_eee13")
+Button/styles/hover = SubResource("StyleBoxEmpty_1tbvj")
+Button/styles/normal = SubResource("StyleBoxEmpty_c6af1")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8q4u3")

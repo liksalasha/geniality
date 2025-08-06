@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://eeny8fniisns"]
+
+[ext_resource type="Script" uid="uid://cp084ve6b3xc5" path="res://scripts/projectile_3d.gd" id="1_das0p"]
+[ext_resource type="ArrayMesh" uid="uid://bdwpr6c2w5epa" path="res://blueprints/3d/projectile.obj" id="1_i26tl"]
+[ext_resource type="ArrayMesh" uid="uid://f1jijfhoukhe" path="res://blueprints/3d/projectile2anim.obj" id="2_ey63g"]
+[ext_resource type="ArrayMesh" uid="uid://op0cy2hfnpv8" path="res://blueprints/3d/projectile3anim.obj" id="3_das0p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i26tl"]
+size = Vector3(6.22199, 3.98657, 17.9358)
+
+[sub_resource type="Animation" id="Animation_syx6g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Projectile:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_i26tl")]
+}
+
+[sub_resource type="Animation" id="Animation_ntghw"]
+resource_name = "idle"
+length = 0.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Projectile:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_i26tl"), ExtResource("2_ey63g"), ExtResource("3_das0p")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_602jr"]
+_data = {
+&"RESET": SubResource("Animation_syx6g"),
+&"idle": SubResource("Animation_ntghw")
+}
+
+[node name="Area3D" type="Area3D" groups=["projects"]]
+collision_layer = 4
+collision_mask = 24
+script = ExtResource("1_das0p")
+
+[node name="Projectile" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, -1.73323, -2, 0.189334)
+mesh = ExtResource("1_i26tl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.62157, 12.0366, -2.09421)
+shape = SubResource("BoxShape3D_i26tl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_602jr")
+}
+autoplay = "idle"

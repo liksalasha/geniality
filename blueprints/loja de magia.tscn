@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckq57dxqiwcp3"]
+
+[ext_resource type="Texture2D" uid="uid://c42sv1l4qjoma" path="res://tilemaps/dialogue.png" id="1_3njcx"]
+[ext_resource type="Script" uid="uid://d0nw7rvpyxqsi" path="res://scripts/loja_de_magia.gd" id="1_l1lev"]
+[ext_resource type="Texture2D" uid="uid://y8jcfo6drupe" path="res://blueprints/ice project.png" id="3_l1lev"]
+[ext_resource type="Texture2D" uid="uid://cocvyqntfstn2" path="res://blueprints/ice super.png" id="4_f66qw"]
+
+[node name="loja de magia" type="CanvasLayer"]
+script = ExtResource("1_l1lev")
+
+[node name="Dialogue" type="Sprite2D" parent="."]
+position = Vector2(638, 351)
+scale = Vector2(40, 40)
+texture = ExtResource("1_3njcx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 78.0
+offset_right = 768.0
+offset_bottom = 101.0
+text = "loja de magia"
+
+[node name="ice projectile" type="Button" parent="."]
+offset_left = 108.0
+offset_top = 261.0
+offset_right = 189.0
+offset_bottom = 315.0
+text = "Ice Projectile"
+autowrap_mode = 2
+
+[node name="ice projectile" type="Sprite2D" parent="ice projectile"]
+position = Vector2(45, -29)
+scale = Vector2(5, 5)
+texture = ExtResource("3_l1lev")
+hframes = 3
+
+[node name="ice magic" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 261.0
+offset_right = 324.0
+offset_bottom = 315.0
+text = "Ice Magic"
+autowrap_mode = 2
+
+[node name="ice magic" type="Sprite2D" parent="ice magic"]
+position = Vector2(56, -37)
+scale = Vector2(5, 5)
+texture = ExtResource("4_f66qw")
+hframes = 3
+
+[connection signal="pressed" from="ice projectile" to="." method="_on_life_potion_pressed"]
+[connection signal="pressed" from="ice magic" to="." method="_on_mana_potion_pressed"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5jwgpgtb1m7o"]
+
+[ext_resource type="Script" uid="uid://8ah3xyn5f1g5" path="res://scripts/pomnte.gd" id="1_fgyu1"]
+[ext_resource type="Texture2D" uid="uid://cdpa7kvgqv82y" path="res://tilemaps/furniture/pomnte.png" id="1_nxppw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxppw"]
+size = Vector2(7, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk047"]
+size = Vector2(2, 32)
+
+[sub_resource type="Animation" id="Animation_fgyu1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nxppw"]
+resource_name = "fall"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgyu1"]
+_data = {
+&"RESET": SubResource("Animation_fgyu1"),
+&"fall": SubResource("Animation_nxppw")
+}
+
+[node name="pomt" type="StaticBody2D"]
+collision_layer = 16
+script = ExtResource("1_fgyu1")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -16)
+shape = SubResource("RectangleShape2D_nxppw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_hk047")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fgyu1")
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -30)
+amount = 100
+emission_shape = 3
+emission_rect_extents = Vector2(3, 5)
+gravity = Vector2(0, -15)
+
+[node name="Pomnte" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_nxppw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

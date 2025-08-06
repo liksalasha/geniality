@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://1a4x72ghrmy3"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd3ysfvgof6uy" path="res://blueprints/3d/enemys/blue green zombie/blue green zombie.obj" id="1_56y2b"]
+[ext_resource type="Script" uid="uid://0p83r3mco8go" path="res://scripts/blue_green_zombie_3d.gd" id="1_ywpoo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ywpoo"]
+size = Vector3(12.5004, 23.1915, 11.0855)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7x5v"]
+size = Vector3(12.7527, 23.4278, 13.4638)
+
+[node name="blue green zombie3d" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 21
+script = ExtResource("1_ywpoo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240738, 11.561, -1.74238)
+shape = SubResource("BoxShape3D_ywpoo")
+
+[node name="BlueGreenZombie" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = ExtResource("1_56y2b")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, -8.74228e-07, -20, 0, 20, -8.74228e-07, 0, 2.63213, -1)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00500488, 11.2139, -1.89915)
+shape = SubResource("BoxShape3D_c7x5v")
+debug_color = Color(0.672399, 0, 0.164095, 0.42)

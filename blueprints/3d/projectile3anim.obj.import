@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://op0cy2hfnpv8"
+path="res://.godot/imported/projectile3anim.obj-da7a7c5a100d27a84d737b4cd585aefa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/projectile3anim.obj-da7a7c5a100d27a84d737b4cd585aefa.mesh"]
+
+source_file="res://blueprints/3d/projectile3anim.obj"
+dest_files=["res://.godot/imported/projectile3anim.obj-da7a7c5a100d27a84d737b4cd585aefa.mesh", "res://.godot/imported/projectile3anim.obj-da7a7c5a100d27a84d737b4cd585aefa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

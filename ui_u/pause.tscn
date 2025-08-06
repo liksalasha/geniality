@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcyju62xmxvpu"]
+
+[ext_resource type="Script" uid="uid://5awadocr7gxb" path="res://scripts/pause.gd" id="1_5lxtt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5lxtt"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_5lxtt"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_r2npy"]
+events = [SubResource("InputEventKey_5lxtt")]
+
+[node name="pause" type="CanvasLayer"]
+script = ExtResource("1_5lxtt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 0.235294)
+position = Vector2(642.25, 363.25)
+scale = Vector2(1285.5, 727.5)
+mesh = SubResource("BoxMesh_5lxtt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 612.0
+offset_top = 268.0
+offset_right = 759.0
+offset_bottom = 315.0
+text = "PAUSED"
+
+[node name="main" type="Button" parent="."]
+process_mode = 3
+offset_left = 573.0
+offset_top = 402.0
+offset_right = 723.0
+offset_bottom = 433.0
+text = "exit to main menu"
+
+[node name="resume" type="Button" parent="."]
+process_mode = 3
+offset_left = 599.0
+offset_top = 312.0
+offset_right = 690.0
+offset_bottom = 343.0
+shortcut = SubResource("Shortcut_r2npy")
+text = "Resume"
+
+[node name="settings" type="Button" parent="."]
+process_mode = 3
+offset_left = 600.0
+offset_top = 355.0
+offset_right = 691.0
+offset_bottom = 386.0
+text = "settings
+"
+
+[connection signal="pressed" from="main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]

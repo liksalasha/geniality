@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmxglv7joyvgv"]
+
+[ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/mage_3d.gd" id="1_5hfrm"]
+[ext_resource type="ArrayMesh" uid="uid://cyyhrrxtgfub0" path="res://mage/mage-1-1.obj" id="1_ldsfo"]
+[ext_resource type="PackedScene" uid="uid://eeny8fniisns" path="res://blueprints/enemys/projectile3d.tscn" id="2_krkmx"]
+[ext_resource type="ArrayMesh" uid="uid://bfd7bv7pbpucu" path="res://blueprints/3d/mira.obj" id="4_i104l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldsfo"]
+size = Vector3(13.763, 21.3472, 19.956)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5hfrm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hfrm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_krkmx"]
+
+[node name="player3d" type="CharacterBody3D"]
+collision_mask = 26
+script = ExtResource("1_5hfrm")
+projectile_scene = ExtResource("2_krkmx")
+
+[node name="Mage3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.5, 0, 0, 0, 5.5, 0, 0, 0, 5.5, 0, -9.11767, 0)
+mesh = ExtResource("1_ldsfo")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.269784, 1.5119, 1.03669)
+shape = SubResource("BoxShape3D_ldsfo")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 0.956935, 0.290301, 0, -0.290301, 0.956935, 5.78743, 14.2979, 31.8639)
+fov = 58.1
+
+[node name="Mira" type="MeshInstance3D" parent="Pivot/Camera3D"]
+transform = Transform3D(1.2, 0, 0, 0, 1.14832, -0.348361, 0, 0.348361, 1.14832, -1.58168, -1.54763, -52.1779)
+mesh = ExtResource("4_i104l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.00536e-06, 0, 1, 0, 22, 0, -23, 0, -4.37114e-08, -5.65005, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_5hfrm")
+
+[node name="anim" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5hfrm")
+
+[node name="hurtarea" type="Area3D" parent="."]
+
+[node name="hurt" type="CollisionShape3D" parent="hurtarea"]
+shape = SubResource("BoxShape3D_krkmx")
+
+[connection signal="body_entered" from="hurtarea" to="." method="_on_area_3d_body_entered"]

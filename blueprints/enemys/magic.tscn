@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmvg15wwgi7nu"]
+
+[ext_resource type="Texture2D" uid="uid://cb6upund66krl" path="res://blueprints/super.png" id="1_j0yge"]
+[ext_resource type="Script" uid="uid://bc40hql0246e1" path="res://scripts/magic.gd" id="1_yeq1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0yge"]
+size = Vector2(33, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d41xb"]
+atlas = ExtResource("1_j0yge")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4uo2"]
+atlas = ExtResource("1_j0yge")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajyh1"]
+atlas = ExtResource("1_j0yge")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eyjxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d41xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4uo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajyh1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[node name="magic" type="Area2D" groups=["magics"]]
+scale = Vector2(2.5, 2.5)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_yeq1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_j0yge")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eyjxc")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0345383
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
