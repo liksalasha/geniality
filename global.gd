@@ -39,7 +39,6 @@ func get_position_3d() -> Vector3:
 func set_position_from_3d(pos_3d: Vector3):
 	last_player_position = pos_3d
 
-
 func _ready():
 	# Timer automático a cada 2 segundos (ajuste como quiser)
 	var timer = Timer.new()

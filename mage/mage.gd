@@ -207,12 +207,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_hurtarea_body_entered(body: Node2D) -> void:
-	Global.life -= 1
+	Global.all_life -= 1
 	print("-hp")
 	update_life_label()
 	if Global.life == 0:
 		_on_death()
-		Global.life = 3
+		Global.life = Global.life
 		Global.mana = 5
 		update_life_label()
 		update_mana_label()
@@ -259,3 +259,7 @@ func set_magic(name: String, path: String) -> void:
 func _on_rope_body_entered(body: Node2D) -> void:
 	#if Input.is_action_pressed("down"):
 		velocity -= get_gravity() * .2
+
+
+func _on_out_body_entered(body: Node2D) -> void:
+	_on_death()

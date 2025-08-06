@@ -115,6 +115,7 @@ size = Vector3(9.1752, 8.36206, 1)
 
 [node name="fase2_3D" type="Node3D"]
 script = ExtResource("1_6qpbo")
+next_scene_path = "res://maps/experiments/fase2.tscn"
 
 [node name="player 3d" parent="." instance=ExtResource("3_wjiw2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65191, 16.8877, 668.729)

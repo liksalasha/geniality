@@ -8,3 +8,5 @@ res://maps/experiments/fase2d.tscn
 res://scripts/tutorial2d.gd
 res://scripts/fase_1_2d.gd
 res://scripts/fase_1_3d.gd
+res://global.gd
+res://mage/mage.gd

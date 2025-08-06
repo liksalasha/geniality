@@ -1,5 +1,6 @@
-[gd_scene load_steps=55 format=4 uid="uid://cnaol6f2i65ux"]
+[gd_scene load_steps=57 format=4 uid="uid://cnaol6f2i65ux"]
 
+[ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_ibtcp"]
 [ext_resource type="Texture2D" uid="uid://ctcgor8nkxe0t" path="res://tilemaps/bakc.png" id="2_iky78"]
 [ext_resource type="Texture2D" uid="uid://fb1x6yrjhbxh" path="res://tilemaps/terraim/sky.png" id="3_sj0r4"]
 [ext_resource type="Texture2D" uid="uid://dcqj8hbeww3c1" path="res://tilemaps/terraim/sun.png" id="4_p8msb"]
@@ -662,7 +663,12 @@ sources/8 = SubResource("TileSetAtlasSource_a0lkf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiv6y"]
 size = Vector2(51, 691)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibtcp"]
+size = Vector2(8282, 4342.5)
+
 [node name="fase2" type="Node2D"]
+script = ExtResource("1_ibtcp")
+next_scene_path = "res://maps/experiments/fase2d.tscn"
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 
@@ -1070,6 +1076,13 @@ visible = false
 [node name="pomt" parent="." instance=ExtResource("40_iky78")]
 position = Vector2(1197, 703)
 scale = Vector2(8, 8)
+
+[node name="out" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="out"]
+position = Vector2(1942, 3047.75)
+shape = SubResource("RectangleShape2D_ibtcp")
 
 [connection signal="body_entered" from="waterfalling" to="waterfalling" method="_on_body_entered"]
 [connection signal="body_exited" from="waterfalling" to="waterfalling" method="_on_body_exited"]

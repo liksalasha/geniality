@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=4 uid="uid://1dhwh60sp5nj"]
+[gd_scene load_steps=40 format=4 uid="uid://1dhwh60sp5nj"]
 
 [ext_resource type="Texture2D" uid="uid://7dl2mr8mcium" path="res://tilemaps/terraim/3d/rocky_terrain_02_diff_4k.jpg" id="1_213h1"]
+[ext_resource type="Script" uid="uid://cltef125uogdv" path="res://scripts/fase_1_3d.gd" id="1_ksukc"]
 [ext_resource type="Texture2D" uid="uid://dds1f252leeee" path="res://tilemaps/terraim/3d/rocky_terrain_02_spec_4k.png" id="2_ama07"]
 [ext_resource type="PackedScene" uid="uid://bmxglv7joyvgv" path="res://mage/mage 3d.tscn" id="3_yrdfn"]
 [ext_resource type="ArrayMesh" uid="uid://joijewrwdsp8" path="res://tilemaps/terraim/3d/tree1.obj" id="5_ama07"]
@@ -113,6 +114,8 @@ buffer = PackedFloat32Array(0.952165, 0, 0.305584, 101.556, 0, 1, 0, -658.38, -0
 size = Vector3(9.1752, 8.36206, 1)
 
 [node name="fase1_3d" type="Node3D"]
+script = ExtResource("1_ksukc")
+next_scene_path = "res://maps/experiments/fase1.tscn"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yrdfn")
