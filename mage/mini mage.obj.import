@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wo4raqq1pns"
+path="res://.godot/imported/mini mage.obj-6f21494b560f8e24144097b0ae1fa4ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mini mage.obj-6f21494b560f8e24144097b0ae1fa4ad.mesh"]
+
+source_file="res://mage/mini mage.obj"
+dest_files=["res://.godot/imported/mini mage.obj-6f21494b560f8e24144097b0ae1fa4ad.mesh", "res://.godot/imported/mini mage.obj-6f21494b560f8e24144097b0ae1fa4ad.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

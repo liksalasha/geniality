@@ -293,6 +293,90 @@ collision_mask = 15
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D25/StaticBody3D"]
 shape = SubResource("BoxShape3D_yrdfn")
 
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 1471.39, -630.252, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D26"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D26/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 1533.9, -580.836, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D27"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D27/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 1658.85, -580.836, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D28"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D28/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 1783.04, -580.836, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D30"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D30/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 1857.06, -541.151, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D31"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D31/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="scenary/chao"]
+transform = Transform3D(-0.0614773, 0, 40.4675, 0, 5.24, 0, -80.0497, 0, -0.0310786, 1703.76, -567.702, -2.906)
+layers = 16
+material_override = SubResource("StandardMaterial3D_j61k5")
+mesh = SubResource("BoxMesh_wmnus")
+skeleton = NodePath("../../../WorldEnvironment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="scenary/chao/MeshInstance3D29"]
+collision_layer = 16
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scenary/chao/MeshInstance3D29/StaticBody3D"]
+shape = SubResource("BoxShape3D_yrdfn")
+
 [node name="MeshInstance3D17" type="MeshInstance3D" parent="scenary/chao"]
 transform = Transform3D(-0.0614392, 0, 125, 0, 5.24, 0, -80, 0, -0.0959987, 723.337, -661, -2.54356)
 layers = 16
@@ -448,7 +532,7 @@ transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.005432
 shape = SubResource("BoxShape3D_xr3bj")
 
 [node name="Tree8" type="MeshInstance3D" parent="scenary/trees"]
-transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 1285.97, -661, -39.1665)
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 1180.06, -661, -39.1665)
 layers = 16
 mesh = ExtResource("5_ama07")
 skeleton = NodePath("../../../WorldEnvironment")

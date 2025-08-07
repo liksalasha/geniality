@@ -34,9 +34,9 @@
 [ext_resource type="Texture2D" uid="uid://dgtjixdq78qtk" path="res://tilemaps/quebra.png" id="20_m038q"]
 [ext_resource type="Texture2D" uid="uid://bc77s58gp3n1o" path="res://tilemaps/light.png" id="21_42ue5"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="22_fb7lg"]
-[ext_resource type="PackedScene" path="res://crystal city.tscn" id="23_xrqkh"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="24_ilqnv"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="25_bjv68"]
+[ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://maps/city/crystal city.tscn" id="35_hc241"]
 [ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahdhg"]
@@ -1058,7 +1058,7 @@ shape = SubResource("RectangleShape2D_505bf")
 
 [node name="nestmap" parent="." instance=ExtResource("22_fb7lg")]
 position = Vector2(4598, 660)
-fase = ExtResource("23_xrqkh")
+fase = ExtResource("35_hc241")
 
 [node name="inventário" parent="." instance=ExtResource("24_ilqnv")]
 visible = false

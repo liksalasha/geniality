@@ -38,7 +38,6 @@
 [ext_resource type="AudioStream" uid="uid://cbo10p0uey77v" path="res://sounds/song1 mp3.mp3" id="33_u7725"]
 [ext_resource type="PackedScene" uid="uid://bcyju62xmxvpu" path="res://ui_u/pause.tscn" id="34_crjvx"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="36_4rv7d"]
-[ext_resource type="PackedScene" path="res://crystal city.tscn" id="37_ytkhr"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="38_fq3hx"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="39_jej2o"]
 [ext_resource type="PackedScene" uid="uid://c5jwgpgtb1m7o" path="res://blueprints/pomnte.tscn" id="40_iky78"]
@@ -663,6 +662,9 @@ sources/8 = SubResource("TileSetAtlasSource_a0lkf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiv6y"]
 size = Vector2(51, 691)
 
+[sub_resource type="Resource" id="Resource_0vl5f"]
+metadata/__load_path__ = "res://crystal city.tscn"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibtcp"]
 size = Vector2(8282, 4342.5)
 
@@ -1065,7 +1067,7 @@ visible = false
 [node name="nestmap" parent="." instance=ExtResource("36_4rv7d")]
 visible = false
 position = Vector2(4598, 660)
-fase = ExtResource("37_ytkhr")
+fase = SubResource("Resource_0vl5f")
 
 [node name="inventário" parent="." instance=ExtResource("38_fq3hx")]
 visible = false

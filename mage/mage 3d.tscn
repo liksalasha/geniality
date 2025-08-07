@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmxglv7joyvgv"]
+[gd_scene load_steps=10 format=3 uid="uid://bmxglv7joyvgv"]
 
 [ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/mage_3d.gd" id="1_5hfrm"]
 [ext_resource type="ArrayMesh" uid="uid://cyyhrrxtgfub0" path="res://mage/mage-1-1.obj" id="1_ldsfo"]
 [ext_resource type="PackedScene" uid="uid://eeny8fniisns" path="res://blueprints/enemys/projectile3d.tscn" id="2_krkmx"]
 [ext_resource type="ArrayMesh" uid="uid://bfd7bv7pbpucu" path="res://blueprints/3d/mira.obj" id="4_i104l"]
+[ext_resource type="ArrayMesh" uid="uid://wo4raqq1pns" path="res://mage/mini mage.obj" id="5_776fn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldsfo"]
 size = Vector3(13.763, 21.3472, 19.956)
@@ -21,6 +22,7 @@ projectile_scene = ExtResource("2_krkmx")
 
 [node name="Mage3d" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.5, 0, 0, 0, 5.5, 0, 0, 0, 5.5, 0, -9.11767, 0)
+visible = false
 mesh = ExtResource("1_ldsfo")
 skeleton = NodePath("")
 
@@ -50,5 +52,9 @@ sprite_frames = SubResource("SpriteFrames_5hfrm")
 
 [node name="hurt" type="CollisionShape3D" parent="hurtarea"]
 shape = SubResource("BoxShape3D_krkmx")
+
+[node name="MiniMage" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.43094e-07, 0, 17, 0, 17, 0, -17, 0, -7.43094e-07, 0, -23.142, 0)
+mesh = ExtResource("5_776fn")
 
 [connection signal="body_entered" from="hurtarea" to="." method="_on_area_3d_body_entered"]

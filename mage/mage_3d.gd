@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 const SPEED = 130
-const JUMP_VELOCITY = 100
-const GRAVITY = Vector3.DOWN * 110.0  # Mais forte que o padrão
+const JUMP_VELOCITY = 130
+const GRAVITY = Vector3.DOWN * 140.0  # Mais forte que o padrão
 const MOUSE_SENSITIVITY = 0.002
 const ROTATION_LERP_SPEED = 8.0
 
@@ -143,7 +143,7 @@ func shoot_projectile():
 		
 		# Define direção e posição do projétil
 		var dir: Vector3 = -camera.global_transform.basis.z  # Frente da câmera
-		projectile.global_transform.origin = global_transform.origin + dir * 2.0  # Na frente do personagem
+		projectile.global_transform.origin = global_transform.origin + dir * 50.0  # Na frente do personagem
 
 		# Define a direção se ela existir no script
 		if "direction" in projectile:
