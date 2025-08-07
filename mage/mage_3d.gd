@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 const SPEED = 130
-const JUMP_VELOCITY = 130
-const GRAVITY = Vector3.DOWN * 140.0  # Mais forte que o padrão
+const JUMP_VELOCITY = 150
+const GRAVITY = Vector3.DOWN * 200.0  # Mais forte que o padrão
 const MOUSE_SENSITIVITY = 0.002
 const ROTATION_LERP_SPEED = 8.0
 
