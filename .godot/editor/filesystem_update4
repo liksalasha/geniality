@@ -1,13 +1,8 @@
-res://maps/experiments/fase1d.tscn
-res://scripts/slimes_green_3d.gd
-res://blueprints/change.tscn
-res://maps/experiments/fase1.tscn
-res://mage/mage 3d.tscn
 res://maps/city/crystal city.tscn
-res://mage/cutscene_mage.gd
+res://scripts/slimes_green_3d.gd
 res://mage/cutscene_mage.tscn
-res://scripts/pause.gd
-res://maps/castleroom/castle.tscn
-res://ui_u/main menu.tscn
-res://ui_u/main menu.tres
-res://ui_u/main buttons.gd
+res://maps/experiments/fase1.tscn
+res://blueprints/map.tscn
+res://scripts/carruage.gd
+res://select_map.gd
+res://maps/experiments/fase2.tscn

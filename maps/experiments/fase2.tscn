@@ -673,6 +673,7 @@ script = ExtResource("1_ibtcp")
 next_scene_path = "res://maps/experiments/fase2d.tscn"
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
+visible = false
 
 [node name="Parallax2D#ParallaxBackground" type="ParallaxBackground" parent="Parallax2D"]
 visible = false

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cws4g1m0cvsyg" path="res://mage/magicbomb.png" id="6_q61s0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2d7i"]
-size = Vector2(9, 14)
+size = Vector2(9, 11.6667)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q2v0x"]
 atlas = ExtResource("1_q2d7i")
@@ -135,7 +135,7 @@ collision_mask = 30
 script = ExtResource("1_oylbw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, -1.16667)
 shape = SubResource("RectangleShape2D_q2d7i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

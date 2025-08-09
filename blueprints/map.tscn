@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce7kw3yl6pbby"]
+
+[ext_resource type="Texture2D" uid="uid://876ss6uskoba" path="res://tilemaps/map.png" id="1_psjax"]
+[ext_resource type="Script" uid="uid://dv55ndsbbtut6" path="res://select_map.gd" id="1_w1y2v"]
+
+[node name="mapa" type="CanvasLayer"]
+script = ExtResource("1_w1y2v")
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(638, 360.5)
+scale = Vector2(1, 0.563281)
+texture = ExtResource("1_psjax")
+
+[node name="west area experiments" type="Button" parent="."]
+offset_left = 712.0
+offset_top = 601.0
+offset_right = 818.0
+offset_bottom = 656.0
+text = "west area experiments"
+autowrap_mode = 2
+
+[node name="utilities experiments" type="Button" parent="."]
+offset_left = 1019.0
+offset_top = 457.0
+offset_right = 1125.0
+offset_bottom = 512.0
+text = "utilities experiments"
+autowrap_mode = 2
+
+[node name="comercial area" type="Button" parent="."]
+offset_left = 1011.0
+offset_top = 392.0
+offset_right = 1117.0
+offset_bottom = 447.0
+text = "comercial area"
+autowrap_mode = 2
+
+[node name="crystal city" type="Button" parent="."]
+offset_left = 944.0
+offset_top = 518.0
+offset_right = 1089.0
+offset_bottom = 553.0
+text = "crystal city"
+autowrap_mode = 2
+
+[node name="mage castle" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 585.0
+offset_right = 1209.0
+offset_bottom = 677.0
+text = "mage castle"
+autowrap_mode = 2
+
+[node name="South area experiments" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 394.0
+offset_right = 966.0
+offset_bottom = 449.0
+text = "South area experiments"
+autowrap_mode = 2
+
+[connection signal="pressed" from="utilities experiments" to="." method="_on_utilities_experiments_pressed"]
+[connection signal="pressed" from="crystal city" to="." method="_on_crystal_city_pressed"]
