@@ -1,8 +1,7 @@
-res://maps/experiments/fase1d.tscn
-res://scripts/slimes_green_3d.gd
 res://maps/experiments/fase1.tscn
+res://scripts/slimes_green_3d.gd
+res://maps/experiments/fase1d.tscn
 res://maps/experiments/fase2d.tscn
 res://maps/city/crystal city.tscn
 res://maps/experiments/fase2.tscn
 res://mage/mage 3d.tscn
-res://mage/mage_3d.gd
