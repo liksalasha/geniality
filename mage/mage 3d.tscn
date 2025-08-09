@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmxglv7joyvgv"]
+[gd_scene load_steps=11 format=3 uid="uid://bmxglv7joyvgv"]
 
 [ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/mage_3d.gd" id="1_5hfrm"]
 [ext_resource type="ArrayMesh" uid="uid://cyyhrrxtgfub0" path="res://mage/mage-1-1.obj" id="1_ldsfo"]
 [ext_resource type="PackedScene" uid="uid://eeny8fniisns" path="res://blueprints/enemys/projectile3d.tscn" id="2_krkmx"]
 [ext_resource type="ArrayMesh" uid="uid://bfd7bv7pbpucu" path="res://blueprints/3d/mira.obj" id="4_i104l"]
 [ext_resource type="ArrayMesh" uid="uid://wo4raqq1pns" path="res://mage/mini mage.obj" id="5_776fn"]
+[ext_resource type="PackedScene" uid="uid://dvsb4wh2oxnyn" path="res://blueprints/change.tscn" id="6_yk1qt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldsfo"]
 size = Vector3(13.763, 21.3472, 19.956)
@@ -34,6 +35,7 @@ shape = SubResource("BoxShape3D_ldsfo")
 
 [node name="Camera3D" type="Camera3D" parent="Pivot"]
 transform = Transform3D(1, 0, 0, 0, 0.956935, 0.290301, 0, -0.290301, 0.956935, 5.78743, 14.2979, 31.8639)
+current = true
 fov = 58.1
 
 [node name="Mira" type="MeshInstance3D" parent="Pivot/Camera3D"]
@@ -57,4 +59,11 @@ shape = SubResource("BoxShape3D_krkmx")
 transform = Transform3D(-7.43094e-07, 0, 17, 0, 17, 0, -17, 0, -7.43094e-07, 0, -23.142, 0)
 mesh = ExtResource("5_776fn")
 
+[node name="change" parent="." instance=ExtResource("6_yk1qt")]
+
+[node name="Camera3D" parent="change" index="2"]
+transform = Transform3D(0.412454, 0, -0.910978, 0, 1, 0, 0.910978, 0, 0.412454, -2.50441, 2.09361, 1.19439)
+
 [connection signal="body_entered" from="hurtarea" to="." method="_on_area_3d_body_entered"]
+
+[editable path="change"]

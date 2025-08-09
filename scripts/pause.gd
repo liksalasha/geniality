@@ -4,6 +4,8 @@ extends CanvasLayer
 @onready var control: CanvasLayer = $"."
 @onready var resume: Button = $resume
 @onready var scene_to_instance : PackedScene = load("res://ui_u/main menu.tscn")
+@onready var cut_player: CharacterBody2D = $"../cut_player"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	control.visible = false
@@ -20,6 +22,8 @@ func _process(delta: float) -> void:
 	if control.visible:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	elif player is CharacterBody2D and player.is_inside_tree():
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif cut_player is CharacterBody2D and cut_player.is_inside_tree():
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

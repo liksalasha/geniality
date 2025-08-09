@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bc77s58gp3n1o" path="res://tilemaps/light.png" id="5_231t4"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="6_2drs5"]
 [ext_resource type="Texture2D" uid="uid://bw7jda1lqt3an" path="res://tilemaps/wood_door.png" id="7_7lyqe"]
-[ext_resource type="PackedScene" uid="uid://33aqndo2vymi" path="res://fase1.tscn" id="7_ml41p"]
+[ext_resource type="PackedScene" uid="uid://cnb6tav0eiire" path="res://maps/experiments/fase1.tscn" id="7_tnkky"]
 [ext_resource type="PackedScene" uid="uid://d12rxxsrsv0jo" path="res://mage/cutscene_mage.tscn" id="8_2ij18"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="10_sv7do"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="11_0phrv"]
@@ -1424,7 +1424,7 @@ texture = ExtResource("5_231t4")
 [node name="nestmap" parent="." instance=ExtResource("6_2drs5")]
 position = Vector2(102, 569)
 scale = Vector2(10, 10)
-fase = ExtResource("7_ml41p")
+fase = ExtResource("7_tnkky")
 
 [node name="WoodDoor" type="Sprite2D" parent="."]
 position = Vector2(81.001, 549)

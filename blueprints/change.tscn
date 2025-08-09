@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvsb4wh2oxnyn"]
+
+[ext_resource type="ArrayMesh" uid="uid://wo4raqq1pns" path="res://mage/mini mage.obj" id="1_44nx6"]
+[ext_resource type="Script" uid="uid://bhqrt3752hdx0" path="res://ui_u/forth_square.gd" id="2_8hcjo"]
+[ext_resource type="ArrayMesh" uid="uid://roq0tih33hp7" path="res://blueprints/3d/forth square.obj" id="3_175hf"]
+
+[sub_resource type="Animation" id="Animation_8hcjo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("change/CPUParticles3D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("change/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.364034, 2.13635, 3.44173)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("change/Camera3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.544768, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sn5ya"]
+resource_name = "change"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("change/CPUParticles3D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("change/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2.07053, 1),
+"update": 0,
+"values": [Vector3(-2.50441, 2.09361, 1.19439), Vector3(0.364034, 2.13635, 3.44173)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("change/Camera3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.68302, 1),
+"update": 0,
+"values": [Vector3(0, -1.14565, 0), Vector3(0, -0.544768, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_44nx6"]
+_data = {
+&"RESET": SubResource("Animation_8hcjo"),
+&"change": SubResource("Animation_sn5ya")
+}
+
+[sub_resource type="Environment" id="Environment_38et0"]
+background_mode = 1
+background_color = Color(1.2514e-06, 0.583734, 0.652592, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_8hcjo"]
+radius = 0.05
+height = 0.1
+
+[node name="change" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_44nx6")
+}
+
+[node name="MiniMage" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_44nx6")
+skeleton = NodePath("")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.412454, 0, -0.910978, 0, 1, 0, 0.910978, 0, 0.412454, -2.50441, 2.09361, 1.19439)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_38et0")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53905, 1.89255, 0)
+script = ExtResource("2_8hcjo")
+
+[node name="ForthSquare" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.89255, 0)
+mesh = ExtResource("3_175hf")
+skeleton = NodePath("")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(13.5348, 0, 0, 0, 1, 0, 0, 0, 12.1336, 5.79991, -3.25157, 0)
+emitting = false
+amount = 2000
+lifetime = 2.0
+mesh = SubResource("SphereMesh_8hcjo")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 10, 0)

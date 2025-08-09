@@ -1,6 +1,6 @@
 extends Node
 
-var save_path := "C:/Users/luiz/Documents/geniality/save_game.json"  # Use 'user://' para poder salvar de verdade no disco do jogador
+var save_path := "user://save_game.json"  # Use 'user://' para poder salvar de verdade no disco do jogador
 var player_scene: PackedScene = load("res://mage/mage.tscn")
 var player: Node = player_scene.instantiate()
 

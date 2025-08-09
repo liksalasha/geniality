@@ -23,6 +23,7 @@ var is_playing_magic_animation: bool = false
 @onready var inventário: CanvasLayer = $"../inventário"
 @onready var magia: CanvasLayer = $"../Magia"
 @onready var control: CanvasLayer = $"../pause"
+@onready var camera_3d: Camera3D = $change/Camera3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -126,14 +127,14 @@ func _physics_process(delta: float) -> void:
 	#if control.visible == true:
 		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	if Input.is_action_just_pressed("ui_end"):
-		inventário.visible = true
-	if Input.is_action_just_pressed("ui_home"):
-		inventário.visible = false
-	if Input.is_action_just_pressed("ui_page_up"):
-		magia.visible = true
-	if Input.is_action_just_pressed("ui_page_down"):
-		magia.visible = false
+	if Input.is_action_just_pressed("inventario"):
+		inventário.visible = !inventário.visible
+
+	if Input.is_action_just_pressed("magias"):
+		magia.visible = !magia.visible
+	
+	if Input.is_action_just_pressed("change"):
+		camera_3d.current = true
 	
 	move_and_slide()
 func shoot_projectile():

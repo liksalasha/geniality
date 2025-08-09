@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://c2xglux13rca2"]
+[gd_scene load_steps=35 format=4 uid="uid://c2xglux13rca2"]
 
 [ext_resource type="Script" uid="uid://cltef125uogdv" path="res://scripts/fase_1_3d.gd" id="1_6qpbo"]
 [ext_resource type="PackedScene" uid="uid://bmxglv7joyvgv" path="res://mage/mage 3d.tscn" id="3_wjiw2"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dbgnom7bswcia" path="res://blueprints/enemys/giant goblin3d.tscn" id="20_k5y0b"]
 [ext_resource type="ArrayMesh" uid="uid://p12gcmd8ed1o" path="res://blueprints/3d/cam.obj" id="21_twix8"]
 [ext_resource type="PackedScene" uid="uid://cvlreylesokv2" path="res://blueprints/life orb3d.tscn" id="22_6bmjb"]
+[ext_resource type="PackedScene" uid="uid://dvsb4wh2oxnyn" path="res://blueprints/change.tscn" id="22_pwl8b"]
 [ext_resource type="PackedScene" uid="uid://bcyju62xmxvpu" path="res://ui_u/pause.tscn" id="39_ucopa"]
 [ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="42_vamrk"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="43_ng8dj"]
@@ -104,7 +105,6 @@ buffer = PackedFloat32Array(0.952165, 0, 0.305584, 101.556, 0, 1, 0, -658.38, -0
 
 [node name="fase2_3D" type="Node3D"]
 script = ExtResource("1_6qpbo")
-next_scene_path = "res://maps/experiments/fase2.tscn"
 
 [node name="player 3d" parent="." instance=ExtResource("3_wjiw2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65191, 16.8877, 668.729)
@@ -532,3 +532,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 315.31, -661, 3.48843)
 [node name="Magia" parent="." instance=ExtResource("43_ng8dj")]
 
 [node name="pause" parent="." instance=ExtResource("39_ucopa")]
+
+[node name="change" parent="." instance=ExtResource("22_pwl8b")]
+
+[connection signal="animation_finished" from="change" to="." method="_on_change_animation_finished"]
