@@ -956,6 +956,7 @@ position = Vector2(-20, -9.5)
 shape = SubResource("RectangleShape2D_fmhrg")
 
 [node name="mapa" parent="Carruage" instance=ExtResource("35_262v2")]
+visible = false
 
 [connection signal="body_entered" from="npcs/Native/Area2D" to="npcs/Native" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="npcs/Native/Area2D" to="npcs/Native" method="_on_area_2d_body_exited"]

@@ -24,6 +24,7 @@ var is_playing_magic_animation: bool = false
 @onready var magia: CanvasLayer = $"../Magia"
 @onready var control: CanvasLayer = $"../pause"
 @onready var camera_3d: Camera3D = $change/Camera3D
+@onready var playercam3ed: Camera3D = $Pivot/Camera3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -135,8 +136,20 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("change"):
 		camera_3d.current = true
+		playercam3ed.current = false
+		var time = Timer.new()
+		time.wait_time = 4
+		time.one_shot = false
+		time.autostart = true
+		time.timeout.connect(_on_time_timeout)
+		add_child(time)
 	
 	move_and_slide()
+	
+func _on_time_timeout():
+		camera_3d.current = false
+		playercam3ed.current = true
+
 func shoot_projectile():
 	if projectile_scene:
 		var projectile = projectile_scene.instantiate()

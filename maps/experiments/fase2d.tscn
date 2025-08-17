@@ -105,9 +105,13 @@ buffer = PackedFloat32Array(0.952165, 0, 0.305584, 101.556, 0, 1, 0, -658.38, -0
 
 [node name="fase2_3D" type="Node3D"]
 script = ExtResource("1_6qpbo")
+next_scene_path = "res://maps/experiments/fase2.tscn"
 
 [node name="player 3d" parent="." instance=ExtResource("3_wjiw2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65191, 16.8877, 668.729)
+
+[node name="Camera3D" parent="player 3d/change" index="1"]
+transform = Transform3D(0.855247, 0, -0.518219, 0, 1, 0, 0.518219, 0, 0.855247, 0.364034, 2.13635, 3.44173)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yrdfn")
@@ -536,3 +540,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 315.31, -661, 3.48843)
 [node name="change" parent="." instance=ExtResource("22_pwl8b")]
 
 [connection signal="animation_finished" from="change" to="." method="_on_change_animation_finished"]
+
+[editable path="player 3d"]
+[editable path="player 3d/change"]
