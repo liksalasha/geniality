@@ -1095,4 +1095,5 @@ shape = SubResource("RectangleShape2D_ibtcp")
 [connection signal="pressed" from="Magia/fire projectile/fire_projectile" to="player" method="_on_fire_projectile_pressed"]
 
 [editable path="player"]
+[editable path="player/change"]
 [editable path="Magia"]

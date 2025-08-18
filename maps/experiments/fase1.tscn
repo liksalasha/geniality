@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://cnb6tav0eiire"]
+[gd_scene load_steps=53 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_hc241"]
 [ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/lapidi.png" id="1_qonpf"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="25_bjv68"]
 [ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://maps/city/crystal city.tscn" id="35_hc241"]
 [ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
+[ext_resource type="Texture2D" uid="uid://ctcgor8nkxe0t" path="res://tilemaps/bakc.png" id="39_ibctv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahdhg"]
 texture = ExtResource("2_gmksd")
@@ -637,6 +638,8 @@ size = Vector2(899.999, 913.333)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hc241"]
 size = Vector2(8282, 4342.5)
 
+[sub_resource type="QuadMesh" id="QuadMesh_rbgyd"]
+
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_hc241")
 next_scene_path = "res://maps/experiments/fase1d.tscn"
@@ -1144,6 +1147,15 @@ collision_layer = 16
 position = Vector2(1942, 2887.75)
 shape = SubResource("RectangleShape2D_hc241")
 
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D"]
+position = Vector2(-206.5, -45.5)
+scale = Vector2(1281, 589)
+mesh = SubResource("QuadMesh_rbgyd")
+texture = ExtResource("39_ibctv")
+
+[connection signal="animation_finished" from="player/change" to="." method="_on_change_animation_finished"]
 [connection signal="body_entered" from="waterfalling" to="waterfalling" method="_on_body_entered"]
 [connection signal="body_exited" from="waterfalling" to="waterfalling" method="_on_body_exited"]
 [connection signal="body_entered" from="tutorial/2d to 3d" to="tutorial/2d to 3d" method="_on_body_entered"]
@@ -1153,4 +1165,5 @@ shape = SubResource("RectangleShape2D_hc241")
 [connection signal="body_entered" from="out" to="player" method="_on_out_body_entered"]
 
 [editable path="player"]
+[editable path="player/change"]
 [editable path="Magia"]

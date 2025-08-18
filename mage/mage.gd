@@ -11,6 +11,8 @@ extends CharacterBody2D
 @onready var mana_label: Label = $"../CanvasLayer/mana label"
 @onready var inventário: CanvasLayer = $"../inventário"
 @onready var magia: CanvasLayer = $"../Magia"
+@onready var playercam2d: Camera2D = $Camera2D
+@onready var camera_2d: Camera2D = $change/Camera2D
 
 var SPEED = 200.0
 var checkpoint_position: Vector2
@@ -204,8 +206,19 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#_________________________________________________
+	if Input.is_action_just_pressed("change"):
+		camera_2d.make_current()
+		var time = Timer.new()
+		time.wait_time = 4
+		time.one_shot = false
+		time.autostart = true
+		time.timeout.connect(_on_time_timeout)
+		add_child(time)
+	
 	move_and_slide()
-
+	
+func _on_time_timeout():
+		playercam2d.make_current()
 func _on_hurtarea_body_entered(body: Node2D) -> void:
 	Global.all_life -= 1
 	print("-hp")

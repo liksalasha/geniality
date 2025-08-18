@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://brd3tdtw4mbfb"]
+[gd_scene load_steps=35 format=3 uid="uid://brd3tdtw4mbfb"]
 
 [ext_resource type="Texture2D" uid="uid://ykqcp7w5lhj8" path="res://mage/idle.png" id="1_q2d7i"]
 [ext_resource type="Script" uid="uid://dwy8thxiieqkh" path="res://mage/mage.gd" id="1_q2v0x"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cvkb6hir1mjn8" path="res://mage/jump.png" id="3_s01eo"]
 [ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Orb de Teleport.png" id="4_n2i8k"]
 [ext_resource type="Texture2D" uid="uid://cws4g1m0cvsyg" path="res://mage/magicbomb.png" id="6_q61s0"]
+[ext_resource type="PackedScene" uid="uid://dsyh6fiuyaa2" path="res://blueprints/change2d.tscn" id="8_timko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2d7i"]
 size = Vector2(9, 14)
@@ -246,5 +247,9 @@ debug_color = Color(0.812096, 0, 0.120126, 0.42)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+[node name="change" parent="." instance=ExtResource("8_timko")]
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="hurtarea" to="." method="_on_hurtarea_body_entered"]
+
+[editable path="change"]
