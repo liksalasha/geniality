@@ -48,6 +48,7 @@ func _ready() -> void:
 	magia.visible = false
 	SaveManager.set_player_reference(self)
 	SaveManager.load_game()
+	modulate.a
 func _on_timer_timeout():
 	var pos_2d = global_position
 	#print("Salvando pos2D:", global_position)
@@ -220,6 +221,7 @@ func _physics_process(delta: float) -> void:
 func _on_time_timeout():
 		playercam2d.make_current()
 func _on_hurtarea_body_entered(body: Node2D) -> void:
+	modulate.r
 	Global.all_life -= 1
 	print("-hp")
 	update_life_label()
