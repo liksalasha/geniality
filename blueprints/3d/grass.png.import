@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crnvn68ml2y4"
-path.s3tc="res://.godot/imported/grass.png-fd2a59657699f18bdda53bf57fd81bb1.s3tc.ctex"
+path.etc2="res://.godot/imported/grass.png-fd2a59657699f18bdda53bf57fd81bb1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/grass.png"
-dest_files=["res://.godot/imported/grass.png-fd2a59657699f18bdda53bf57fd81bb1.s3tc.ctex"]
+dest_files=["res://.godot/imported/grass.png-fd2a59657699f18bdda53bf57fd81bb1.etc2.ctex"]
 
 [params]
 

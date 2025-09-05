@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx7kup3n1e1la"
-path.s3tc="res://.godot/imported/part.png-b7183d8fbf73f8c2e19e1c51a403a15c.s3tc.ctex"
+path.etc2="res://.godot/imported/part.png-b7183d8fbf73f8c2e19e1c51a403a15c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/part.png"
-dest_files=["res://.godot/imported/part.png-b7183d8fbf73f8c2e19e1c51a403a15c.s3tc.ctex"]
+dest_files=["res://.godot/imported/part.png-b7183d8fbf73f8c2e19e1c51a403a15c.etc2.ctex"]
 
 [params]
 

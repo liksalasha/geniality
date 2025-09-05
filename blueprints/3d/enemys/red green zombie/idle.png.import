@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqwwdlsdpi0o7"
-path.s3tc="res://.godot/imported/idle.png-5566faf48d3c1c47388041af24a2aedd.s3tc.ctex"
+path.etc2="res://.godot/imported/idle.png-5566faf48d3c1c47388041af24a2aedd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/enemys/red green zombie/idle.png"
-dest_files=["res://.godot/imported/idle.png-5566faf48d3c1c47388041af24a2aedd.s3tc.ctex"]
+dest_files=["res://.godot/imported/idle.png-5566faf48d3c1c47388041af24a2aedd.etc2.ctex"]
 
 [params]
 

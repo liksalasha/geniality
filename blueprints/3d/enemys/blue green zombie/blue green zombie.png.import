@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7s1hyh4ldnph"
-path.s3tc="res://.godot/imported/blue green zombie.png-6b5376088b4f353a8a6c1920248e70fa.s3tc.ctex"
+path.etc2="res://.godot/imported/blue green zombie.png-6b5376088b4f353a8a6c1920248e70fa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/enemys/blue green zombie/blue green zombie.png"
-dest_files=["res://.godot/imported/blue green zombie.png-6b5376088b4f353a8a6c1920248e70fa.s3tc.ctex"]
+dest_files=["res://.godot/imported/blue green zombie.png-6b5376088b4f353a8a6c1920248e70fa.etc2.ctex"]
 
 [params]
 

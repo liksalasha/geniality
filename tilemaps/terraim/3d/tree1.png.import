@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvvh86blkj1kj"
-path.s3tc="res://.godot/imported/tree1.png-2caf6e3e9e58099cc4d0d68ecf269b8b.s3tc.ctex"
+path.etc2="res://.godot/imported/tree1.png-2caf6e3e9e58099cc4d0d68ecf269b8b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://tilemaps/terraim/3d/tree1.png"
-dest_files=["res://.godot/imported/tree1.png-2caf6e3e9e58099cc4d0d68ecf269b8b.s3tc.ctex"]
+dest_files=["res://.godot/imported/tree1.png-2caf6e3e9e58099cc4d0d68ecf269b8b.etc2.ctex"]
 
 [params]
 
