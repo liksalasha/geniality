@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cws4g1m0cvsyg"
-path="res://.godot/imported/magicbomb.png-a82b96761927a006a9df1b2e6f38f2ba.ctex"
+uid="uid://dhq2apdpi7grq"
+path="res://.godot/imported/sun.png-75efc98660f7ac5926dcd61ed813610f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mage/magicbomb.png"
-dest_files=["res://.godot/imported/magicbomb.png-a82b96761927a006a9df1b2e6f38f2ba.ctex"]
+source_file="res://tilemaps/sun.png"
+dest_files=["res://.godot/imported/sun.png-75efc98660f7ac5926dcd61ed813610f.ctex"]
 
 [params]
 

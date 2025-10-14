@@ -917,8 +917,8 @@ mesh = SubResource("BoxMesh_6tdgb")
 [node name="player" parent="." instance=ExtResource("24_n4c4g")]
 position = Vector2(111, 663)
 
-[node name="Camera2D" parent="player" index="2"]
-enabled = true
+[node name="Idle" parent="player/change" index="3"]
+texture = null
 
 [node name="enemys" type="Node2D" parent="."]
 

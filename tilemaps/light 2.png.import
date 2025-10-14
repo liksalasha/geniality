@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg14jh76trom1"
-path="res://.godot/imported/new mage run.png-fd20acd6775602d55816234355d02e96.ctex"
+uid="uid://cckjvjgyg3jn1"
+path="res://.godot/imported/light 2.png-30a73efac76c5c0e6f275b6d13079a5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mage/new mage run.png"
-dest_files=["res://.godot/imported/new mage run.png-fd20acd6775602d55816234355d02e96.ctex"]
+source_file="res://tilemaps/light 2.png"
+dest_files=["res://.godot/imported/light 2.png-30a73efac76c5c0e6f275b6d13079a5a.ctex"]
 
 [params]
 

@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blytm2abs6pyl"
-path.etc2="res://.godot/imported/forth square.png-23159671bca76e045df7a70489f1f419.etc2.ctex"
+path.s3tc="res://.godot/imported/forth square.png-23159671bca76e045df7a70489f1f419.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/forth square.png"
-dest_files=["res://.godot/imported/forth square.png-23159671bca76e045df7a70489f1f419.etc2.ctex"]
+dest_files=["res://.godot/imported/forth square.png-23159671bca76e045df7a70489f1f419.s3tc.ctex"]
 
 [params]
 

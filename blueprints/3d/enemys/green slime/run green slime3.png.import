@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3kjwo6mu4byp"
-path.etc2="res://.godot/imported/run green slime3.png-b4a795644c8b60d6a9b96f6c9d4eccc2.etc2.ctex"
+path.s3tc="res://.godot/imported/run green slime3.png-b4a795644c8b60d6a9b96f6c9d4eccc2.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/enemys/green slime/run green slime3.png"
-dest_files=["res://.godot/imported/run green slime3.png-b4a795644c8b60d6a9b96f6c9d4eccc2.etc2.ctex"]
+dest_files=["res://.godot/imported/run green slime3.png-b4a795644c8b60d6a9b96f6c9d4eccc2.s3tc.ctex"]
 
 [params]
 

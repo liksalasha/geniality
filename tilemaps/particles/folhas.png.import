@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvkb6hir1mjn8"
-path="res://.godot/imported/jump.png-7043a63902ce48a93df91df96ebe5f1c.ctex"
+uid="uid://h46swbeg70qy"
+path="res://.godot/imported/folhas.png-5af5451c61fef083e5e39b2b87f43d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mage/jump.png"
-dest_files=["res://.godot/imported/jump.png-7043a63902ce48a93df91df96ebe5f1c.ctex"]
+source_file="res://tilemaps/particles/folhas.png"
+dest_files=["res://.godot/imported/folhas.png-5af5451c61fef083e5e39b2b87f43d01.ctex"]
 
 [params]
 

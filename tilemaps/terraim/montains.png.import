@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mowwq7v4dyqk"
-path.etc2="res://.godot/imported/montains.png-11d3e677f605765b2196bbb2b509a61a.etc2.ctex"
+path.s3tc="res://.godot/imported/montains.png-11d3e677f605765b2196bbb2b509a61a.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://tilemaps/terraim/montains.png"
-dest_files=["res://.godot/imported/montains.png-11d3e677f605765b2196bbb2b509a61a.etc2.ctex"]
+dest_files=["res://.godot/imported/montains.png-11d3e677f605765b2196bbb2b509a61a.s3tc.ctex"]
 
 [params]
 

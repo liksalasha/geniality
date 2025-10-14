@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb28v0dcbv70f"
-path="res://.godot/imported/new mage idle contorned.png-4e7a1a73c5b7cadd4eede4e3e0a90588.ctex"
+uid="uid://chydiwm6mue24"
+path="res://.godot/imported/sun shine.png-29f05159a912e81cc19b976b104cb38c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mage/new mage idle contorned.png"
-dest_files=["res://.godot/imported/new mage idle contorned.png-4e7a1a73c5b7cadd4eede4e3e0a90588.ctex"]
+source_file="res://tilemaps/sun shine.png"
+dest_files=["res://.godot/imported/sun shine.png-29f05159a912e81cc19b976b104cb38c.ctex"]
 
 [params]
 

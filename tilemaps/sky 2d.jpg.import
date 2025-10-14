@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5yl6vckmu6yx"
-path="res://.godot/imported/new mage idle.png-41954620f450287cb7ea038a241419a2.ctex"
+uid="uid://d0ucd3nt05rbo"
+path="res://.godot/imported/sky 2d.jpg-6c227d0b27124b65e1ebcde2f4b0ef2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mage/new mage idle.png"
-dest_files=["res://.godot/imported/new mage idle.png-41954620f450287cb7ea038a241419a2.ctex"]
+source_file="res://tilemaps/sky 2d.jpg"
+dest_files=["res://.godot/imported/sky 2d.jpg-6c227d0b27124b65e1ebcde2f4b0ef2c.ctex"]
 
 [params]
 
