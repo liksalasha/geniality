@@ -1,8 +1,9 @@
-res://maps/city/crystal city.tscn
+res://maps/experiments/fase1.tscn
 res://scripts/slimes_green_3d.gd
+res://maps/city/crystal city.tscn
 res://maps/experiments/fase2.tscn
 res://maps/experiments/fase2d.tscn
-res://maps/experiments/fase1.tscn
 res://maps/experiments/fase1d.tscn
 res://mage/mage.tscn
-res://blueprints/change2d.tscn
+res://blueprints/enemys/blue green zombie.tscn
+res://mage/cutscene_mage.tscn

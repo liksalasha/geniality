@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpri1ubpdxneo"
-path.s3tc="res://.godot/imported/nuvem 3d.png-aca07248500aef101e22bc8bacc3e94c.s3tc.ctex"
+path.etc2="res://.godot/imported/nuvem 3d.png-aca07248500aef101e22bc8bacc3e94c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/nuvem 3d.png"
-dest_files=["res://.godot/imported/nuvem 3d.png-aca07248500aef101e22bc8bacc3e94c.s3tc.ctex"]
+dest_files=["res://.godot/imported/nuvem 3d.png-aca07248500aef101e22bc8bacc3e94c.etc2.ctex"]
 
 [params]
 

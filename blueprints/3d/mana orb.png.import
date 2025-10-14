@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gu7pdf08l2i"
-path.s3tc="res://.godot/imported/mana orb.png-a317ca4bfade5c73933c63c7db37f526.s3tc.ctex"
+path.etc2="res://.godot/imported/mana orb.png-a317ca4bfade5c73933c63c7db37f526.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/mana orb.png"
-dest_files=["res://.godot/imported/mana orb.png-a317ca4bfade5c73933c63c7db37f526.s3tc.ctex"]
+dest_files=["res://.godot/imported/mana orb.png-a317ca4bfade5c73933c63c7db37f526.etc2.ctex"]
 
 [params]
 

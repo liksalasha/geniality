@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxvg3n1myubm7"
-path.s3tc="res://.godot/imported/projectile2anim.png-5f4872575c80369bb04e31e9d100357d.s3tc.ctex"
+path.etc2="res://.godot/imported/projectile2anim.png-5f4872575c80369bb04e31e9d100357d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blueprints/3d/projectile2anim.png"
-dest_files=["res://.godot/imported/projectile2anim.png-5f4872575c80369bb04e31e9d100357d.s3tc.ctex"]
+dest_files=["res://.godot/imported/projectile2anim.png-5f4872575c80369bb04e31e9d100357d.etc2.ctex"]
 
 [params]
 
