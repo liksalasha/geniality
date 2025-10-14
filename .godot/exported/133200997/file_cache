@@ -1,0 +1,52 @@
+res://addons/examples/terrain.tscn::2cb6e362ac1075075eb58531a28ad9df::1753579267::res://.godot/exported/133200997/export-d448cd586ae75f5d39d5f72902fe04e5-terrain.scn
+res://addons/simplegrasstextured/gui/about.tscn::620aed2d55994b20f04cf149b3c2b199::1753551669::res://.godot/exported/133200997/export-aac634a283f5f8a4e2ef8c004d58afc7-about.scn
+res://addons/simplegrasstextured/gui/clear_all_confirmation_dialog.tscn::e6697fc00a41d82ad1f2c85c727da57c::1753551669::res://.godot/exported/133200997/export-e46e8cfe306ec4947e5f1d6f9b8d8972-clear_all_confirmation_dialog.scn
+res://addons/simplegrasstextured/gui/domain_range.tscn::a098fc1056d5663642d0173935787f31::1753551669::res://.godot/exported/133200997/export-7b33c8638f18041912112e331cc50318-domain_range.scn
+res://addons/simplegrasstextured/gui/global_parameters.tscn::57bba3bc47114a9fa48777eb2b81d6ce::1753551669::res://.godot/exported/133200997/export-3ca556905d5d9a5f1c99e74631e13463-global_parameters.scn
+res://addons/simplegrasstextured/gui/toolbar.tscn::b77c9ed25a076aad0dc6f61a8c571275::1753551669::res://.godot/exported/133200997/export-47585e2d3ecbc2302a41f6134c926ebe-toolbar.scn
+res://addons/simplegrasstextured/gui/toolbar_menu.tscn::73f3549839892a1ca5ffc4fe5fd0d6cc::1753551670::res://.godot/exported/133200997/export-755bb98814b6b1b3390879c2493bcff8-toolbar_menu.scn
+res://addons/simplegrasstextured/gui/toolbar_up.tscn::b0cade4bd963f659c81ea9a07e60bccc::1753551670::res://.godot/exported/133200997/export-d63b99ce427b26554a82becf636335c1-toolbar_up.scn
+res://addons/simplegrasstextured/default_mesh.tres::6c437230d92c55d7d919cc6f1fc36d07::1760467627::res://.godot/exported/133200997/export-3bb30cd30a1d7fd12041dc77c009a780-default_mesh.res
+res://addons/simplegrasstextured/singleton.tscn::11096dd5894c4f1a354b34805bdfe5d1::1753551671::res://.godot/exported/133200997/export-b05e6e57bd379680262d6551ea8fc158-singleton.scn
+res://blueprints/enemys/blue green zombie3d.tscn::f76ac36c2963c5e0eb2493549cdb82dd::1753543657::res://.godot/exported/133200997/export-0007955ad13ff42e26854c2d04062ebf-blue green zombie3d.scn
+res://blueprints/enemys/blue green zombie.tscn::b99e659147dac187b5d25f69dccfec42::1760466521::res://.godot/exported/133200997/export-c0677fc152a44bb6fcc901eebe69ee6f-blue green zombie.scn
+res://blueprints/enemys/giant goblin3d.tscn::210750ba46fcd51102e38049b86905f8::1753583472::res://.godot/exported/133200997/export-36bda0ff227e0314c253fc011719de34-giant goblin3d.scn
+res://blueprints/enemys/giant goblin.tscn::dabd3c52ff1b0f84cc63cc1a3480583b::1753583472::res://.godot/exported/133200997/export-98293bda42063a5f37e011148750e7cd-giant goblin.scn
+res://blueprints/enemys/Ice magic.tscn::2d219cc4ee2210a6ee6c6fcf4443842e::1754236509::res://.godot/exported/133200997/export-513c15f6850bf4047d6798e74eeca56b-Ice magic.scn
+res://blueprints/enemys/Ice Projectile.tscn::0827dade7f89eea35732162c67bec490::1754236411::res://.godot/exported/133200997/export-bba76003f5a94dcf77a38d495f2a825f-Ice Projectile.scn
+res://blueprints/enemys/magic.tscn::4630c103e5f59bb7a9d9e6ccad0e3f6e::1753474125::res://.godot/exported/133200997/export-3beb49992e8c047221eb2bda0df2c868-magic.scn
+res://blueprints/enemys/projectile3d.tscn::c0cf671baffa951fb09fce444a9460f4::1753485000::res://.godot/exported/133200997/export-0a1842d4eb6553de54bb69742e37b251-projectile3d.scn
+res://blueprints/enemys/Projectile.tscn::4f57569e2fe1b0c263cb8d654a40001e::1753474125::res://.godot/exported/133200997/export-039bb102d45924d352ee1969b970e67f-Projectile.scn
+res://blueprints/enemys/red green zombie3d.tscn::1bafea4a127996d5320ffcbb698647f2::1753543657::res://.godot/exported/133200997/export-cb98208c6ef6df0708d6b3a8d53d4c77-red green zombie3d.scn
+res://blueprints/enemys/red green zombie.tscn::edb4fe2feb45faf955ee2394f544648e::1753024177::res://.godot/exported/133200997/export-cbf8cf0abc87d1f527b54d75e37b8c01-red green zombie.scn
+res://blueprints/enemys/slimes green3d.tscn::64bdd00cc0b125ed12eba4cbec33af37::1753543657::res://.godot/exported/133200997/export-5a0978306fd4748820d2ce26592f1f42-slimes green3d.scn
+res://blueprints/enemys/slimes green.tscn::c323c0f58de159ffd1de09be143f905d::1753486515::res://.godot/exported/133200997/export-4b012ce966b2798b69d4ecbd694df959-slimes green.scn
+res://blueprints/baserope.tscn::cf5a72c472dff7bdf2087b0987ef0763::1754433039::res://.godot/exported/133200997/export-cf4654392ede03165b21b8a27012d3bd-baserope.scn
+res://blueprints/change2d.tscn::462a92358ff18c7b06af11133e147ee7::1760451822::res://.godot/exported/133200997/export-51fffffed1ad5f574847d3616ec508ae-change2d.scn
+res://blueprints/change.tscn::b7c2d340404fa3f04fda491ea996373f::1754753262::res://.godot/exported/133200997/export-6283b62e96b4119bcbf2e2248abc4b80-change.scn
+res://blueprints/dialogue.tscn::0a38a0b729acf6c4cca6f26386e6d06e::1753544947::res://.godot/exported/133200997/export-76285301245512638a7a907ed4ac60c9-dialogue.scn
+res://blueprints/inventário.tscn::6b402775403ad71c60863359581eb5b3::1760467896::res://.godot/exported/133200997/export-9990ecaa154a5e66b0ee37226f28653a-inventário.scn
+res://blueprints/life orb3d.tscn::f38fb3704c1d4108bfc8f8d767afc553::1753543657::res://.godot/exported/133200997/export-01b2558c42a55de16cafa569d065a780-life orb3d.scn
+res://blueprints/life orb.tscn::5cfdf9b0e83095d3c74d37211ce17690::1753487335::res://.godot/exported/133200997/export-8247e305da86cbde162213eec3b66788-life orb.scn
+res://blueprints/loja de equipamentos.tscn::619266d31ee2ce0c65d058b2884b4264::1754353111::res://.godot/exported/133200997/export-7328772f13efebaeb9298ad7a9592984-loja de equipamentos.scn
+res://blueprints/loja de magia.tscn::e592499d47309a866982e330a117f2d2::1754353112::res://.godot/exported/133200997/export-3cccb2bfc20e8abd51199cb6f2264672-loja de magia.scn
+res://blueprints/magia.tscn::ceb13c0eabbc2f14c82fb32265ed1418::1754353392::res://.godot/exported/133200997/export-a3b390b728927e097616324e527fff05-magia.scn
+res://blueprints/mana orb.tscn::e1a395bb5fec296a61b400a50cf3956e::1753474125::res://.godot/exported/133200997/export-dee7613b59d8c525e1b130a051d223f3-mana orb.scn
+res://blueprints/map.tscn::0aa63150a9f784e340c622f7d8c31f0e::1754790146::res://.godot/exported/133200997/export-07975062531267a83f2e8dff0a8a3b82-map.scn
+res://blueprints/pomnte.tscn::3515dda7a02dfc65fc6d865e9ab775a2::1754434402::res://.godot/exported/133200997/export-fc82311a02b05835c685018c761b9458-pomnte.scn
+res://blueprints/rope3d.tscn::c86367995d8f3cfba0dce9de3696dc3f::1754433039::res://.godot/exported/133200997/export-4034d5544ce862f4d881c7285ffb6494-rope3d.scn
+res://blueprints/TeleportTarget.tscn::188d3938f1831e924ceb737689b68a7a::1753548371::res://.godot/exported/133200997/export-9b7a23f2dd1f54a4491538a7c0a6112e-TeleportTarget.scn
+res://blueprints/tocha.tscn::80463d82d9fb3d0cd4fa113d7ff67751::1753012027::res://.godot/exported/133200997/export-2e2f25e4c84649b0f428de36fa8505e7-tocha.scn
+res://mage/cutscene_mage.tscn::8561eb536edda94acf96667f698075d6::1760466521::res://.godot/exported/133200997/export-e9f60d295d76818f50b7bd6ebfc9fe81-cutscene_mage.scn
+res://mage/mage 3d.tscn::3236a806fbe9ee15beb904bd756b3492::1754753262::res://.godot/exported/133200997/export-29fae5dda921c49bff928e564d61e8f8-mage 3d.scn
+res://mage/mage.tscn::2d169d698eaddb0fae30cd901c8217b2::1760469529::res://.godot/exported/133200997/export-484377d4538ef0a3c57dc2439d67eb85-mage.scn
+res://maps/castleroom/castle.tscn::ec9b1a58896d80ebec569b7522b124e0::1760459380::res://.godot/exported/133200997/export-76dabedddddf83aa0fb9bf9ff942ab5b-castle.scn
+res://maps/city/crystal city.tscn::96e0507bbe1153aad2fdd99eac624aad::1760466519::res://.godot/exported/133200997/export-8ca83f306e456c4fabbb603a04582c98-crystal city.scn
+res://maps/experiments/fase1.tscn::10b95306b1a1f7b5dd39b4ba1502bb81::1760477575::res://.godot/exported/133200997/export-1cbc772eb599addbd1c18150089f1223-fase1.scn
+res://maps/experiments/fase1d.tscn::be9bca1f2680ee6a5df161785dd4fa4e::1760466520::res://.godot/exported/133200997/export-0683b17df57718f9202d40ea398bd44d-fase1d.scn
+res://maps/experiments/fase2.tscn::ac729cfbeb1a127f0629e61b71d80de5::1760466519::res://.godot/exported/133200997/export-98152963ad559f57c336535e908d9f57-fase2.scn
+res://maps/experiments/fase2d.tscn::c3a81ae0617af32cef488ab88923f3a8::1760466520::res://.godot/exported/133200997/export-01beb5a69217018a195c450e92ec7655-fase2d.scn
+res://ui_u/main menu.tres::a907c0522c87315f46811040d0f6f785::1754754781::res://.godot/exported/133200997/export-08db459957989e0517d0879aa43e0b1e-main menu.res
+res://ui_u/main menu.tscn::08644fc4d85066034d01ba6b8dee0c66::1760469409::res://.godot/exported/133200997/export-c7b394c41f4175e10b8e6c901b8d9f84-main menu.scn
+res://ui_u/pause.tscn::20cd429f9efa1cb5578b900862e317c8::1754353112::res://.godot/exported/133200997/export-8ff220b225dfa33265879a3808515f87-pause.scn
+res://nextmap.tscn::85a9cab8a72d5d6f035bdffb0f309cb2::1753835412::res://.godot/exported/133200997/export-c52f4db6b41fa33d20c113329f38fb53-nextmap.scn

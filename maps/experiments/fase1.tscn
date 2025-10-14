@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://cnb6tav0eiire"]
+[gd_scene load_steps=69 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_hc241"]
 [ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/lapidi.png" id="1_qonpf"]
@@ -13,14 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://ddgx04kwfbk6n" path="res://tilemaps/terraim/2bakcground.png" id="6_y5q6m"]
 [ext_resource type="Texture2D" uid="uid://fb1x6yrjhbxh" path="res://tilemaps/terraim/sky.png" id="7_dgfoj"]
 [ext_resource type="Texture2D" uid="uid://mowwq7v4dyqk" path="res://tilemaps/terraim/montains.png" id="7_o0ofo"]
-[ext_resource type="Texture2D" uid="uid://c82ymt531vbht" path="res://tilemaps/terraim/backbacktrees.png" id="8_p25wj"]
 [ext_resource type="PackedScene" uid="uid://b6g1ubso447cw" path="res://blueprints/TeleportTarget.tscn" id="8_uhwm6"]
-[ext_resource type="Texture2D" uid="uid://b3upspkr2ayup" path="res://tilemaps/terraim/backtree.png" id="9_2f8hp"]
+[ext_resource type="Texture2D" uid="uid://b7eovoj2r4reb" path="res://tilemaps/terraim/tree.png" id="9_8wvxy"]
 [ext_resource type="PackedScene" uid="uid://bcbd6q0ocowjx" path="res://blueprints/tocha.tscn" id="9_o8ebv"]
 [ext_resource type="Texture2D" uid="uid://dhrbx8lpnfw8g" path="res://tilemaps/terraim/backnuvens.png" id="10_1fn0m"]
+[ext_resource type="Texture2D" uid="uid://bvca8f4veo0ng" path="res://tilemaps/terraim/àrvore 2.png" id="10_el8vr"]
 [ext_resource type="PackedScene" uid="uid://brd3tdtw4mbfb" path="res://mage/mage.tscn" id="10_h5j36"]
 [ext_resource type="PackedScene" uid="uid://bxvqh5ghjp3ge" path="res://blueprints/enemys/blue green zombie.tscn" id="11_1qjbr"]
 [ext_resource type="Script" uid="uid://ce4ydf2nb6sxp" path="res://scripts/backnuvens.gd" id="11_m038q"]
+[ext_resource type="Texture2D" uid="uid://c83uwumvs31kb" path="res://tilemaps/terraim/back trees.png" id="11_ocelq"]
 [ext_resource type="Texture2D" uid="uid://b4qagu8hn0qpi" path="res://tilemaps/terraim/nuvens.png" id="12_42ue5"]
 [ext_resource type="PackedScene" uid="uid://c6of0pir3bvlv" path="res://blueprints/enemys/red green zombie.tscn" id="12_clrsb"]
 [ext_resource type="Script" uid="uid://bmvdgm6cpoctm" path="res://scripts/nuvens.gd" id="13_fb7lg"]
@@ -43,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://h46swbeg70qy" path="res://tilemaps/particles/folhas.png" id="41_blywk"]
 [ext_resource type="Texture2D" uid="uid://bj2qxcj8uytwo" path="res://tilemaps/furniture/arbustos.png" id="42_8wvxy"]
 [ext_resource type="Texture2D" uid="uid://ikp1dk2vy3rb" path="res://tilemaps/furniture/flor.png" id="43_8wvxy"]
+[ext_resource type="Texture2D" uid="uid://u5ofvcx1cn02" path="res://tilemaps/furniture/front front tree.png" id="45_ocelq"]
 
 [sub_resource type="Environment" id="Environment_rbgyd"]
 ssr_enabled = true
@@ -67,11 +69,14 @@ polygon = PackedVector2Array(-32.0989, 32.2219, -32.0989, 30.98, -28.9287, 28.23
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8wvxy"]
 polygon = PackedVector2Array(-32.0498, 31.9277, -31.9999, 27.878, -30.9516, 28.0226, -31.0015, 23.1051, -29.9531, 22.9605, -30.003, 16.7412, -29.0545, 16.8859, -28.9048, 13.9932, -28.0062, 13.9932, -27.9063, 11.9684, -27.0077, 11.9684, -26.9079, 8.93107, -26.1091, 8.78644, -25.8595, 7.91865, -24.911, 7.48475, -24.911, 6.03842, -24.0124, 5.74916, -24.0124, 4.15819, -21.117, 3.86893, -21.067, 2.71186, -20.1684, 2.56723, -20.0187, 1.69943, -17.1232, 1.84407, -16.8736, 3.00113, -12.0312, 2.71186, -12.0811, 3.86893, -11.0327, 3.86893, -10.9329, 4.73672, -10.234, 4.73672, -10.0343, 5.89379, -8.28703, 5.89379, -7.9875, 6.76158, -7.03899, 6.90622, -6.88922, 8.49718, -5.04211, 8.78644, -4.94227, 11.6791, -3.09516, 11.8237, -3.04523, 9.79887, -2.09672, 10.0881, -2.0468, 8.49718, -0.0499268, 8.93107, -0.0499268, 7.34012, 4.99219, 7.91865, 5.19187, 8.64181, 6.09047, 8.78644, 6.34007, 9.94351, 7.93758, 9.65424, 8.53664, 10.3774, 11.9812, 10.6667, 11.9812, 10.0881, 12.8798, 9.79887, 12.8798, 9.07571, 13.6786, 8.64181, 13.8783, 7.48475, 16.9235, 7.62938, 16.8736, 6.76158, 18.8205, 6.61695, 19.0202, 5.45989, 20.9173, 5.60452, 21.117, 6.61695, 22.9141, 6.90622, 23.014, 7.77401, 24.8112, 7.77401, 25.0608, 9.94351, 25.9594, 9.79887, 26.0093, 13.704, 27.0077, 13.9932, 27.0077, 15.2949, 27.9562, 16.0181, 28.106, 18.3322, 28.9547, 18.4768, 29.0545, 25.4192, 29.9032, 25.5638, 30.003, 29.6136, 31.1512, 29.7582, 31.1512, 30.9153, 32.0998, 31.4938, 31.9999, 32.0723)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p10co"]
-polygon = PackedVector2Array(-16, 16, -12.0342, 16, -11.9658, 14.9677, -12.9915, 14.9677, -12.9915, 13.9355, -12.0342, 13.9355, -12.0342, 10.0129, -12.9915, 10.0129, -12.9915, 12.8, -12.9915, 13.0065, -13.9487, 13.0065, -14.0171, 11.0452, -12.9915, 10.9419, -12.9915, 10.0129, -12.1026, 10.0129, -12.0342, 13.9355, -12.9915, 13.9355, -12.9915, 14.9677, -11.9658, 14.9677, -12.0342, 16, -8, 16, -8, 13.0065, -7.04273, 13.0065, -7.04273, 11.9742, -8, 11.9742, -8, 10.0129, -6.97436, 10.0129, -6.97436, 16, -4.99145, 16, -4.99145, 11.9742, -4.03419, 11.9742, -4.03419, 16, -1.9829, 16, -1.9829, 13.0065, -1.02564, 13.0065, -1.02564, 11.9742, -1.9829, 11.9742, -1.9829, 10.9419, -1.02564, 11.0452, -1.02564, 16, 3.00855, 16, 3.00855, 11.0452, 2.05128, 11.0452, 2.05128, 11.9742, 1.02564, 11.9742, 1.02564, 11.0452, 3.96581, 11.0452, 3.96581, 12.9032, 4.99146, 13.0065, 4.99146, 16, 7.04274, 16, 7.04274, 12.9032, 8.95727, 12.9032, 9.02564, 10.9419, 8, 11.0452, 8, 11.9742, 7.04274, 11.9742, 7.04274, 10.9419, 9.02564, 10.9419, 9.02564, 15.8968, 11.0085, 15.8968, 11.0085, 13.0065, 12.0342, 13.0065, 12.0342, 15.8968, 13.9487, 15.8968, 14.0171, 12.9032, 12.9915, 12.9032, 12.9915, 11.0452, 13.9487, 11.0452, 14.0171, 12.9032, 15.0427, 13.0065, 14.9744, 15.8968, 16.0684, 16, 16.0684, 4.95484, -16, 4.54194)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iudqq"]
+polygon = PackedVector2Array(32, 15.75, 28.75, 11.75, 25.5, 8.25, 26.25, 3.25, 25, 1.75, 26.25, 1.5, 26.5, -1, 28.75, -1.25, 29.25, -5, 30.75, -4, 31.25, -6.75, 29, -7.25, 29.25, -9, 30, -9, 29, -10, 29.5, -11.25, 32.5, -11, 30.25, -13.25, 30.5, -14, 31.25, -14.25, 27.25, -15.25, 27, -16.25, 25, -15.75, 25, -14.25, 24, -15, 24, -15.75, 23, -15.25, 21, -15.25, 21, -16.25, 19.75, -15.5, 17.25, -15.25, 17, -14, 15.75, -15, 14.5, -14.25, 14, -13.25, 12.25, -13, 12.25, -13.75, 14, -14, 14.25, -15, 11.75, -15, 11.75, -14.25, 9.75, -13, 9.25, -13.75, 10.25, -15, 6, -15.25, 5.75, -14, 4.75, -15, 3.5, -14, 1, -14, 0.5, -13.25, -3, -13, -3, -11.25, -3.75, -11.25, -4, -13, -2, -15, -1.75, -16.25, -4, -15.25, -6, -15.25, -6.25, -14, -8, -14.25, -8.5, -13, -9, -14.25, -10.75, -14.25, -11.25, -15.25, -12, -14.25, -13, -15, -14.75, -14.25, -17.5, -14.5, -18.25, -15.25, -20.25, -14.75, -20.75, -14.25, -23.25, -14, -23.5, -13.25, -24.5, -14.25, -26, -13.75, -26.25, -13, -27.75, -13.25, -28, -12, -29.5, -13.25, -32.25, -13, -32, -11, -30.25, -9.75, -32, -7.75, -32, -3.25, -29.25, -2.75, -26, -4, -25.75, -5, -25, -5, -25, -4.25, -26, -4, -29.25, -2.75, -29.5, 0.5, -30, 3, -28, 4.5, -28.25, 6, -29.25, 4.75, -32.25, 5, -31.25, 7.75, -29.25, 8, -29.25, 10.75, -31.25, 11.5, -31.5, 13.5, -32.25, 15, -31.75, 16.25, -25.75, 10, -25.75, 6, -25.75, 3.75, -26, 2, -25.25, 2, -25, 3.75, -25.75, 4, -25.75, 6, -24, 6, -24.25, 7.75, -25.5, 10, -31.75, 16.25, -22.25, 16, -22, 10.75, -21.75, 8.5, -20, 6.25, -19.5, 7.25, -20.5, 10.75, -22, 11, -22.25, 16, -18, 16, -18, 12, -16.25, 12, -16.25, 13, -18, 13, -18, 16, -8, 16, -8, 15, -8, 14, -10, 14, -9, 13, -9, 12.25, -10, 11.75, -11.5, 14, -12, 12, -14, 12.75, -14, 9.75, -17, 8.5, -15.5, 7.5, -16, 2.25, -19, 2, -19.25, 2.75, -20, 3.75, -21, 4, -21, 2, -19, 2, -16, 2.25, -16, -0.75, -16, 0, -18, -0.25, -18, -2, -20, -3, -20.25, -1, -21, -1.25, -21, -3, -20, -3, -18, -2, -17.5, -2, -13.75, -4, -13, -4, -11.75, -4, -11, -4, -9.75, -4, -9, -4, -7.75, -5, -6.25, -5, -6, -1.25, -3, -1, -0.75, 1, 0, 1, 0, 2, -1, 2, -0.75, 1, -3, -1, -3, 0.75, -3.75, 1, -4.25, 0, -5.75, 0, -6, -1, -6.75, -1.25, -7, -2, -7.75, -2.25, -7.75, -5, -9, -4, -9, -3, -10, -3, -9.75, -4, -11, -4, -11, -3, -11.876051, -3.0000005, -11.75, -4, -13, -4, -13.25, -3, -13.75, -3, -13.75, -4, -17.5, -2, -16, -0.75, -16, 2.25, -14, 2, -13.75, 1, -13, 1.25, -13.25, 2, -14.25, 2.75, -13.25, 3.25, -13.25, 4.75, -14, 5.75, -11.25, 6.25, -11.5, 7, -12.25, 8.25, -11, 9.5, -8.5, 12.5, -8, 14, -7, 14, -7, 15, -8, 15, -8, 16, -0.8082962, 15.955053, -1, 14, -3, 13, -4, 13, -4, 12, -3, 12, -5, 11, -5, 9, -7, 7.75, -6.75, 5.75, -5.75, 6.75, -4.5, 6, -4, 6.5, -4, 7.75, -5.25, 8.25, -5, 9, -4, 9, -4, 11, -5, 11, -3, 12, -3, 13, -1, 14, 0, 14, 0, 15, -1, 15, -0.75, 15.75, 9.245555, 15.750002, 9, 13, 6, 13, 6, 11, 5.25, 11, 3, 12, 2, 12, 1.75, 12.75, 0, 13, 0, 11, -1.75, 9.75, -2, 8, -0.75, 8, -0.75, 5.25, 0.25, 7, 1, 7.5, 1, 10, 3, 12, 5.25, 11, 5, 7.75, 4, 8, 4, 5, 6, 5, 6, 4, 7, 4, 7, 0, 6, 0, 6, -1, 4, -1, 4, -2, 7, -2, 8, -3.75, 7, -5, 7, -4, 5.25, -4, 5.25, -5, 7, -5, 8, -3.75, 10, -4, 10, -5, 11, -4.5, 14.25, -6, 15, -6, 16, -5, 17, -5, 17, -4, 16.25, -4, 16, -5, 15, -6, 15, -4, 14, -4, 14.25, -6, 11, -4.5, 10, -4, 10, -2.25, 9, -2, 9, -1, 10, -1, 10, 0, 9, 0, 9, 1, 8, 1, 8, 2, 9, 2, 9, 3, 10, 3, 10, 2, 12, 2, 12, 3, 11, 3, 11, 4, 12, 4, 12, 5, 13, 5.5, 13, 8, 14, 8.25, 14.75, 9.5, 13, 10.75, 12.75, 12.75, 11.5, 12, 10.75, 14, 10.75, 15, 9, 15, 9.25, 15.75, 17, 15.75, 17, 13, 17.75, 13, 18.75, 11, 19, 7, 21, 6, 21, 5, 18.75, 6, 17.25, 5.75, 17, 3, 18.75, 2, 20, 0, 22, 0, 22.75, -1, 23, 0.25, 22.75, 1.75, 22, 1, 20, 1, 20, 0, 18.75, 2, 20, 4, 23, 4, 23, 5.25, 23.75, 5.5, 23, 6, 23, 10.75, 24, 11.5, 23.25, 12, 20, 12, 19.5, 12.75, 17.75, 13, 17.75, 13.75, 17, 14, 17, 15.75)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rbgyd"]
-polygon = PackedVector2Array(-19, 31.9386, -17.05, 31.9386, -17, 28.9895, -16.05, 28.9895, -15.95, 31.9386, -14, 31.8829, -13.95, 29.9911, -13, 29.9911, -13, 31.9386, -10.1, 31.9942, -10, 29.9911, -9.05, 29.9911, -8.95, 31.9386, -8.05, 31.9386, -7.95, 28.9339, -7.05, 28.9895, -7, 32.0499, -5, 31.9386, -4.95, 30.1024, -3.05, 30.0467, -3, 31.9942, -2.05, 31.9386, -2, 29.9911, -1, 30.0467, -1.05, 31.9386, 1.05, 31.9386, 1, 30.0467, 1.95, 30.0467, 2.05, 31.9386, 3, 31.9386, 3, 29.9911, 3.95, 30.0467, 4, 31.8829, 6.95, 31.9386, 7.05, 30.937, 8, 30.937, 8.05, 29.9911, 8.95, 30.0467, 8.95, 31.9386, 10.95, 32.0499, 11.1, 29.9355, 11.9, 29.9911, 12, 31.9942, 13.05, 31.9942, 13.05, 29.9911, 13.95, 29.9911, 14, 31.9386, 15.95, 31.9942, 16, 30.9927, 17, 30.9927, 17, 31.9942, 17.95, 31.9942, 18, 30.0467, 18.95, 29.9911, 19, 31.9942, 21, 31.9942, 21, 28.9895, 23, 28.9895, 22.9, 26.9308, 22, 26.9308, 22, 25.9292, 21.05, 26.0405, 20.95, 24.9277, 19.95, 24.9833, 19.9, 23.9261, 19, 23.8705, 18.95, 24.9833, 18.05, 24.9833, 18, 25.9849, 17, 25.9292, 17, 26.9864, 15.95, 27.0421, 16, 23.9817, 15.05, 23.9261, 15.05, 22.9802, 12.95, 22.9802, 12.95, 23.9261, 11.9, 23.9817, 11.9, 24.9277, 10.05, 24.9277, 10, 23.9261, 7, 23.9261, 7, 24.9833, 6, 24.9833, 5.95, 25.9849, 5.05, 25.9849, 5.05, 22.9802, 4, 22.9245, 3.95, 23.9817, 3, 23.9261, 3, 22.9802, 2.05, 22.9802, 2, 21.9786, 1, 21.9786, 1, 20.9771, 0, 20.9771, 0, 19.9755, -1, 19.9755, -1, 20.9771, -2, 20.9771, -2, 21.9786, -3, 21.9786, -3, 23.9817, -4, 23.9817, -4, 22.9802, -6, 22.9802, -6, 23.9817, -7, 23.9817, -7, 22.9802, -8, 22.9802, -8, 21.9786, -10, 21.9786, -10, 20.9771, -13, 20.9771, -13, 21.9786, -15, 21.9786, -15, 22.9802, -16, 22.9802, -16, 23.9817, -15, 23.9817, -15, 24.9833, -16, 24.9833, -16, 25.9849, -17, 25.9849, -17, 24.9833, -19, 24.9833, -19, 25.9849, -20, 25.9849, -20, 26.9864, -21, 26.9864, -21, 28.9895, -20, 28.9895, -20.05, 30.1024, -19.1, 30.0467)
+polygon = PackedVector2Array(-3, 16, -3, 10, -7, 10, -8.25, 8.25, -11, 8, -11.5, 7, -12, 4, -8.75, 4.25, -7.75, 7, -6.75, 7.75, -5, 7.75, -5, 5, -12, 2.25, -11.75, -5.25, -11, -10, -7.25, -13.25, -3.75, -14, 1, -14.75, 5.5, -15, 10, -12.75, 11, 2, 10, 4, 6.25, 4, 4, 6.25, 4, 8, 6.25, 7, 8, 7.5, 4.25, 11.5, 5, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wg575"]
+polygon = PackedVector2Array(5, 16, -3, 16, -4, 14.75, -4, 8.75, -2, 7.5, -6.25, 6, -7.75, 6, -7.75, 3, -6.75, 1.75, -4, 3, -2.25, 5, -2.25, 2, -3.25, 0.25, -5, 1, -7, 0.25, -8, 1.75, -10.25, 2, -9.75, -1.25, -9.25, -2, -12.25, -4, -12, -9.25, -9, -11, -4, -11.5, -1.75, -13, 6, -13, 6.5, -12.25, 7.25, -13.25, 10, -12.75, 9.75, -11.25, 8, -9.5, 11, -9, 11, -8.25, 9, -7, 7.25, -6.5, 7.25, -5.25, 12, -5, 13.75, -3, 14.25, -0.75, 11, -1, 10.5, -2, 9.25, -2, 9, 0.25, 6.25, 1.75, 2.25, 2.25, 2, 7, 3, 7, 3.25, 11, 1.25, 12, 1, 12.75, 2, 13, 2.75, 13.75, 4, 14, 5, 15.25)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ahdhg"]
 texture = ExtResource("2_gmksd")
@@ -659,7 +664,7 @@ sources/4 = SubResource("TileSetAtlasSource_ywlyx")
 sources/5 = SubResource("TileSetAtlasSource_i4c0j")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_blywk"]
-polygon = PackedVector2Array(-1224, 671, 1280, 671, 1281, 670, 1282, 669, 1282, 666, 1281, 665, 1281, 656, 1378, 656, 1377, 624, 1473, 624, 1473, 576, 1681, 576, 1681, 560, 1726, 560, 1726, 576, 1794, 576, 1794, 528, 2254, 527, 2254, 689, 2482, 710, 2481, 527, 2544, 528, 2544, 512, 2672, 512, 2672, 528, 2897, 528, 2897, 480, 3456, 480, 3456, 528, 3664, 528, 3664, 592, 4272, 592, 4272, 672, 5008, 672, 5006, 1153, -1226, 1180)
+polygon = PackedVector2Array(-1224, 670, 1280, 670, 1280, 669, 1281.1613, 669.00006, 1281, 666, 1280, 666, 1280, 654, 1378, 654, 1376, 621, 1473, 622, 1473, 574, 1681, 574, 1681, 558, 1728, 558, 1728, 574, 1794, 573, 1794, 526, 2256, 525, 2254, 689, 2482, 710, 2481, 526, 2545, 526, 2545, 510, 2672, 510, 2672, 527, 2897, 526, 2897, 478, 3456, 478, 3456, 526, 3664, 526, 3664, 590, 4272, 590, 4272, 670, 5008, 672, 5006, 1153, -1226, 1180)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nbdbq"]
 
@@ -704,8 +709,7 @@ texture = ExtResource("7_dgfoj")
 motion_scale = Vector2(0.1, 1)
 
 [node name="sun" type="Sprite2D" parent="paralaxes/ParallaxBackground/bakc"]
-position = Vector2(153, 449)
-scale = Vector2(3.125, 2.84375)
+position = Vector2(128, 505)
 texture = ExtResource("3_blywk")
 
 [node name="montoin" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
@@ -728,6 +732,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_y5q6m")
 
 [node name="montains" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
+visible = false
 motion_scale = Vector2(0.2, 1)
 
 [node name="front montain" type="Sprite2D" parent="paralaxes/ParallaxBackground/montains"]
@@ -789,158 +794,306 @@ frame = 2
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/montains/front montain6"]
 occluder = SubResource("OccluderPolygon2D_8wvxy")
 
-[node name="trees" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
+[node name="back back tree" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+
+[node name="BackTrees" type="Sprite2D" parent="paralaxes/ParallaxBackground/back back tree"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(-83, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back back tree/BackTrees"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees2" type="Sprite2D" parent="paralaxes/ParallaxBackground/back back tree"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(197, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back back tree/BackTrees2"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees3" type="Sprite2D" parent="paralaxes/ParallaxBackground/back back tree"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(541, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back back tree/BackTrees3"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees4" type="Sprite2D" parent="paralaxes/ParallaxBackground/back back tree"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(869, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back back tree/BackTrees4"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="back lil tree" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
+motion_scale = Vector2(0.35, 1)
+
+[node name="árvore" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-47, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore2" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(265, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore2"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore3" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(425, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore3"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore4" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(633, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore4"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore5" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(809, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore5"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore6" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(969, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/árvore6"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(283, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore2" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-77, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore2"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore3" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-205, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore3"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore4" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(371, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore4"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore5" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(483, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore5"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore6" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(651, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore6"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore7" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(771, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore7"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore8" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(851, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore8"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore9" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(939, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore9"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore10" type="Sprite2D" parent="paralaxes/ParallaxBackground/back lil tree"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1027, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back lil tree/Àrvore10"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="back treees" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 motion_scale = Vector2(0.4, 1)
 
-[node name="back tree" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(695, 526)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
+[node name="BackTrees" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(-131, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree"]
-occluder = SubResource("OccluderPolygon2D_p10co")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
 
-[node name="back tree3" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(735, 526)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
+[node name="BackTrees2" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(221, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree3"]
-occluder = SubResource("OccluderPolygon2D_p10co")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees2"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
 
-[node name="back tree4" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(-193, 526)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
+[node name="BackTrees3" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(493, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree4"]
-occluder = SubResource("OccluderPolygon2D_p10co")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees3"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
 
-[node name="back tree5" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(1207, 526)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
+[node name="BackTrees4" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(701, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree5"]
-occluder = SubResource("OccluderPolygon2D_p10co")
-
-[node name="back tree6" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(1679, 526)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree6"]
-occluder = SubResource("OccluderPolygon2D_p10co")
-
-[node name="back tree2" type="Sprite2D" parent="paralaxes/ParallaxBackground/trees"]
-position = Vector2(4385, 523)
-scale = Vector2(14.625, 9.6875)
-texture = ExtResource("8_p25wj")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/trees/back tree2"]
-occluder = SubResource("OccluderPolygon2D_p10co")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees4"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
 
 [node name="front trees" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 position = Vector2(1, 1)
 motion_scale = Vector2(0.5, 1)
 
 [node name="árvore" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-position = Vector2(1393, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(201, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore"]
 occluder = SubResource("OccluderPolygon2D_rbgyd")
 
 [node name="árvore2" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(2562, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(97, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore2"]
 occluder = SubResource("OccluderPolygon2D_rbgyd")
 
 [node name="árvore3" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(2874, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(145, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore3"]
 occluder = SubResource("OccluderPolygon2D_rbgyd")
 
 [node name="árvore4" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(3194, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-23, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore4"]
 occluder = SubResource("OccluderPolygon2D_rbgyd")
 
 [node name="árvore5" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(3507, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-119, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore5"]
 occluder = SubResource("OccluderPolygon2D_rbgyd")
 
-[node name="árvore6" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(3826, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+[node name="Àrvore" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(283, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore6"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore"]
+occluder = SubResource("OccluderPolygon2D_wg575")
 
-[node name="árvore7" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(4146, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+[node name="Àrvore2" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-69, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore7"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore2"]
+occluder = SubResource("OccluderPolygon2D_wg575")
 
-[node name="árvore8" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(4457, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
+[node name="Àrvore3" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(-173, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore8"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
-
-[node name="árvore9" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(-119, 106)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore9"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
-
-[node name="árvore10" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.756863, 0.756863, 0.756863, 1)
-position = Vector2(592, 108)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore10"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
-
-[node name="árvore11" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
-modulate = Color(0.758192, 0.758192, 0.758192, 1)
-position = Vector2(271, 104)
-scale = Vector2(20, 17.972)
-texture = ExtResource("9_2f8hp")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore11"]
-occluder = SubResource("OccluderPolygon2D_rbgyd")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore3"]
+occluder = SubResource("OccluderPolygon2D_wg575")
 
 [node name="nuvem 1" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 position = Vector2(1, 1)
@@ -1001,7 +1154,7 @@ motion_scale = Vector2(0.1, 1)
 
 [node name="sun light" type="PointLight2D" parent="paralaxes/ParallaxBackground/sun light"]
 z_index = -10
-position = Vector2(151.5, 449)
+position = Vector2(128.50002, 502)
 scale = Vector2(1.22168, 1)
 energy = 0.5
 range_z_min = -2000
@@ -2437,7 +2590,7 @@ mesh = SubResource("QuadMesh_rbgyd")
 texture = ExtResource("39_ibctv")
 
 [node name="shadow" type="PointLight2D" parent="."]
-position = Vector2(1168, 568)
+position = Vector2(1146, 556)
 energy = 0.3
 blend_mode = 1
 texture = ExtResource("15_rbgyd")
@@ -2463,7 +2616,7 @@ angle_max = 30.0
 
 [node name="Arbustos" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(156, 660)
+position = Vector2(156, 664)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos2" type="Sprite2D" parent="front camera/arbustos"]
@@ -2505,7 +2658,7 @@ flip_h = true
 
 [node name="Arbustos9" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-44, 660)
+position = Vector2(-44, 663)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos10" type="Sprite2D" parent="front camera/arbustos"]
@@ -2526,7 +2679,7 @@ flip_h = true
 
 [node name="Arbustos13" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-196, 660)
+position = Vector2(-196, 664)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos14" type="Sprite2D" parent="front camera/arbustos"]
@@ -2547,7 +2700,7 @@ flip_h = true
 
 [node name="Arbustos17" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(276, 660)
+position = Vector2(276, 663)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos18" type="Sprite2D" parent="front camera/arbustos"]
@@ -2563,6 +2716,510 @@ texture = ExtResource("42_8wvxy")
 [node name="Arbustos20" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
 position = Vector2(368, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos21" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(400, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos22" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(480, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos23" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(496, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos24" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(520, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos25" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(576, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos26" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(616, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos27" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(776, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos28" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(808, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos29" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(816, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos30" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(920, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos31" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(983, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos32" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(960, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos33" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1032, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos34" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1096, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos35" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1104, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos36" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1160, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos37" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1240, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos38" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1264, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos39" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1304, 646)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos40" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1328, 646)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos41" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1352, 646)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos42" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1416, 614)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos43" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1448, 614)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos44" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1496, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos45" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1520, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos46" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1560, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos47" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1568, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos48" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1592, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos49" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1608, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos50" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1659, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos51" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1635, 566)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos52" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1708, 550)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos53" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1828, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos54" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1876, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos55" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1900, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos56" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1925, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos57" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(1949, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos58" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2006, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos59" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2047, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos60" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2063, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos61" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2096, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos62" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2208, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos63" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2232, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos64" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2576, 502)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos65" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2600, 502)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos66" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2632, 502)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos67" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3152, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos68" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3128, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos69" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3112, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos70" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3168, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos71" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3192, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos72" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3232, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos73" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3248, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos74" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3264, 470)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos75" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3624, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos76" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3600, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos77" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3592, 518)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos78" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3930, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos79" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3954, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos80" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(3994, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos81" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4018, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos82" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4042, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos83" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4082, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos84" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4099, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos85" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4124, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos86" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4157, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos87" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4157, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos88" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4133, 582)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos89" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4413, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos90" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4437, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos91" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4469, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos92" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4518, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos93" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4527, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos94" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4575, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos95" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4608, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos96" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4625, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos97" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4657, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos98" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4682, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos99" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4723, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos100" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4748, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos101" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4774, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos102" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4801, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos103" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(4834, 662)
+texture = ExtResource("42_8wvxy")
+flip_h = true
+
+[node name="Arbustos104" type="Sprite2D" parent="front camera/arbustos"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
+position = Vector2(2, 0)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
@@ -2607,6 +3264,291 @@ texture = ExtResource("43_8wvxy")
 [node name="Flor10" type="Sprite2D" parent="front camera/flores"]
 position = Vector2(176, 667)
 texture = ExtResource("43_8wvxy")
+
+[node name="Flor11" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(232, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor12" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(240, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor13" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(257, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor14" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(263, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor15" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(261, 666)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor16" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(266, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor17" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(291, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor18" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(294, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor19" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(297, 672)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor20" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(321, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor21" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(323, 671)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor22" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(328, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor23" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(334, 672)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor24" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(339, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor25" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(363, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor26" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(387, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor27" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(392, 672)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor28" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(424, 672)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor29" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(430, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor30" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(446, 670)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor31" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(452, 672)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor32" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(492, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor33" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(500, 667)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor34" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(507, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor35" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(563, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor36" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(891, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor38" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(915, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor39" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1003, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor40" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1006, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor41" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1029, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor42" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1125, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor43" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1229, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor44" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1309, 653)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor45" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1333, 653)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor46" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1413, 621)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor47" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1453, 621)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor48" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1448, 621)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor49" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1504, 573)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor50" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1512, 573)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor51" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1553, 573)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor52" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1557, 573)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor53" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1561, 576)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor54" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1566, 573)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor55" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1638, 574)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor56" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(1879, 526)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor57" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(2007, 526)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor58" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(2047, 526)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor59" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(2054, 526)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor60" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(2110, 526)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor61" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(2614, 510)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor62" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3150, 478)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor63" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3155, 478)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor64" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3160, 477)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor65" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3164, 480)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor66" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3196, 480)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor67" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3212, 478)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor68" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3244, 478)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor69" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3250, 478)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor70" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3986, 590)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor71" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(3992, 590)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor73" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(4104, 590)
+texture = ExtResource("43_8wvxy")
+
+[node name="Flor74" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(4104, 590)
+texture = ExtResource("43_8wvxy")
+flip_h = true
+
+[node name="Flor72" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(4008, 590)
+texture = ExtResource("43_8wvxy")
+flip_h = true
+
+[node name="Flor37" type="Sprite2D" parent="front camera/flores"]
+position = Vector2(795, 669)
+texture = ExtResource("43_8wvxy")
+
+[node name="trees" type="Node2D" parent="front camera"]
+
+[node name="FrontFrontTree" type="Sprite2D" parent="front camera/trees"]
+modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
+position = Vector2(194, 649)
+scale = Vector2(2, 2)
+texture = ExtResource("45_ocelq")
+
+[node name="FrontFrontTree2" type="Sprite2D" parent="front camera/trees"]
+modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
+position = Vector2(514, 649)
+scale = Vector2(2, 2)
+texture = ExtResource("45_ocelq")
+
+[node name="FrontFrontTree3" type="Sprite2D" parent="front camera/trees"]
+modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
+position = Vector2(778, 649)
+scale = Vector2(2, 2)
+texture = ExtResource("45_ocelq")
+flip_h = true
+
+[node name="FrontFrontTree4" type="Sprite2D" parent="front camera/trees"]
+modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
+position = Vector2(874, 649)
+scale = Vector2(2, 2)
+texture = ExtResource("45_ocelq")
 
 [connection signal="animation_finished" from="player/change" to="." method="_on_change_animation_finished"]
 [connection signal="body_entered" from="waterfalling" to="waterfalling" method="_on_body_entered"]

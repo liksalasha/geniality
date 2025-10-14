@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://vk4q2twuqwu4"]
+[gd_scene load_steps=23 format=3 uid="uid://vk4q2twuqwu4"]
 
 [ext_resource type="Script" uid="uid://kvwd8o0dlal4" path="res://ui_u/main buttons.gd" id="1_cf6vv"]
 [ext_resource type="ArrayMesh" uid="uid://roq0tih33hp7" path="res://blueprints/3d/forth square.obj" id="1_gyd0g"]
@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cilcypdiy8orn" path="res://blueprints/3d/part.obj" id="8_0xh2l"]
 [ext_resource type="AudioStream" uid="uid://dfw7y8wmwjo1d" path="res://sounds/menu-sound.mp3" id="9_yg1ck"]
 [ext_resource type="Texture2D" uid="uid://dvf8ylikfsfyv" path="res://tilemaps/title.png" id="11_eee13"]
+[ext_resource type="Texture2D" uid="uid://c42sv1l4qjoma" path="res://tilemaps/dialogue.png" id="12_c6af1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cf6vv"]
 atlas = ExtResource("1_hwibk")
@@ -85,11 +86,38 @@ background_color = Color(0.114897, 0.114897, 0.114897, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_cf6vv")
 
+[node name="options" type="Button" parent="CanvasLayer"]
+offset_left = -24.0
+offset_top = 384.0
+offset_right = 104.0
+offset_bottom = 512.0
+theme = ExtResource("2_kgyfl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/options"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.22600001
+anchor_top = 0.18
+anchor_right = -0.22600001
+anchor_bottom = 0.18
+offset_left = 73.928
+offset_top = 23.96
+offset_right = 132.92801
+offset_bottom = 46.96
+text = "options"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/options"]
+position = Vector2(140, 61)
+sprite_frames = SubResource("SpriteFrames_7fxnb")
+autoplay = "default"
+frame_progress = 0.0132149
+
 [node name="ng" type="Button" parent="CanvasLayer"]
 offset_left = -28.0
-offset_top = 290.0
+offset_top = 234.0
 offset_right = 108.0
-offset_bottom = 426.0
+offset_bottom = 370.0
 theme = ExtResource("2_kgyfl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/ng"]
@@ -110,9 +138,9 @@ vertical_alignment = 1
 
 [node name="continue" type="Button" parent="CanvasLayer"]
 offset_left = -25.0
-offset_top = 382.0
+offset_top = 310.0
 offset_right = 176.0
-offset_bottom = 510.0
+offset_bottom = 438.0
 theme = ExtResource("2_kgyfl")
 
 [node name="cont" type="AnimatedSprite2D" parent="CanvasLayer/continue"]
@@ -176,6 +204,20 @@ offset_bottom = 70.0
 text = "EXIT"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Opitions" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(639, 361)
+scale = Vector2(40, 40)
+texture = ExtResource("12_c6af1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Opitions"]
+offset_left = -1.3751221
+offset_top = -6.82502
+offset_right = 63.624878
+offset_bottom = 19.67498
+scale = Vector2(0.05, 0.05)
+text = "Options"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87162, 6.0219)

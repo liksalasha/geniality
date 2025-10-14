@@ -15,11 +15,11 @@ func _input(event):
 	if event is InputEventJoypadButton and event.device != G29_ID:
 		pass
 
-#func _change_scene():
-	#var next_scene = load(next_scene_path)
-	#if next_scene:
-		#get_tree().change_scene_to_packed(next_scene)
-		#
+func _change_scene():
+	var next_scene = load(next_scene_path)
+	if next_scene:
+		get_tree().change_scene_to_packed(next_scene)
+		
 func _on_change_animation_finished(change) -> void:
 	scene_changed = true  # evita loop
 	call_deferred("_change_scene")
