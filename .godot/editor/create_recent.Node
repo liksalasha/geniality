@@ -1,3 +1,7 @@
+CollisionShape3D
+StaticBody3D
+MeshInstance3D
+TileMap
 Button
 RichTextLabel
 Sprite2D
@@ -6,9 +10,6 @@ AnimationPlayer
 Sprite3D
 CPUParticles3D
 GPUParticles3D
-MeshInstance3D
 Node
 Node2D
 ParallaxLayer
-LightOccluder2D
-Label
