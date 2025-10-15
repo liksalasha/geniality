@@ -1,7 +1,7 @@
 extends Node
 
 var save_path := "user://save_game.json"  # Use 'user://' para poder salvar de verdade no disco do jogador
-var player_scene: PackedScene = load("res://mage/mage.tscn")
+var player_scene: PackedScene = load("res://mage/2d/mage.tscn")
 var player: Node = player_scene.instantiate()
 
 func save_game():

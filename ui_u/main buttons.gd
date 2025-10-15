@@ -4,28 +4,34 @@ extends CanvasLayer
 @onready var cont: AnimatedSprite2D = $continue/cont
 @onready var cred: AnimatedSprite2D = $credits/cred
 @onready var ex: AnimatedSprite2D = $exit/ex
+@onready var option: AnimatedSprite2D = $options/option
 @onready var scene_to_instance: PackedScene = load("res://maps/castleroom/castle.tscn")
 @onready var ng: Button = $ng
 @onready var conti: Button = $continue
 @onready var credits: Button = $credits
 @onready var exit: Button = $exit
+@onready var options: Button = $options
+@onready var opitions: Sprite2D = $Opitions
 
 var pos_ng: Vector2
 var pos_cont: Vector2
 var pos_cred: Vector2
 var pos_exit: Vector2
+var pos_option: Vector2
 
 func _ready() -> void:
 	pos_ng = ng.position
 	pos_cont = conti.position
 	pos_cred = credits.position
 	pos_exit = exit.position
+	pos_option = options.position
 	
 	animated_sprite_2d.visible = false
 	cont.visible = false
 	cred.visible = false
 	ex.visible = false
-
+	option.visible = false
+	opitions.visible = false
 # Novo Jogo
 func _on_ng_mouse_entered() -> void:
 	animated_sprite_2d.visible = true
@@ -76,3 +82,20 @@ func _on_exit_mouse_exited() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_options_mouse_entered() -> void:
+	option.visible = true
+	var tween = create_tween()
+	tween.tween_property(options, "position", pos_option + Vector2(10, 0), 0.15)
+
+func _on_options_mouse_exited() -> void:
+	option.visible = false
+	var tween = create_tween()
+	tween.tween_property(options, "position", pos_option, 0.15)
+
+func _on_options_pressed() -> void:
+	opitions.visible = true
+	
+func _on_x_pressed() -> void:
+	opitions.visible = false

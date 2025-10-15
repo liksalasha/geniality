@@ -1,15 +1,15 @@
 [gd_scene load_steps=69 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_hc241"]
-[ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/lapidi.png" id="1_qonpf"]
+[ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/Interactions/lapidi.png" id="1_qonpf"]
 [ext_resource type="Texture2D" uid="uid://yw7nmsfbibhp" path="res://tilemaps/terraim/terrain.png" id="2_gmksd"]
 [ext_resource type="Texture2D" uid="uid://dhq2apdpi7grq" path="res://tilemaps/sun.png" id="3_blywk"]
-[ext_resource type="Texture2D" uid="uid://tqqkv6ujnvrp" path="res://tilemaps/furniture/treee.png" id="3_e7rwn"]
-[ext_resource type="Texture2D" uid="uid://caa6inp0ftvcu" path="res://tilemaps/furniture/plants.png" id="4_gh0pe"]
+[ext_resource type="Texture2D" uid="uid://tqqkv6ujnvrp" path="res://tilemaps/furniture/cenário/treee.png" id="3_e7rwn"]
+[ext_resource type="Texture2D" uid="uid://caa6inp0ftvcu" path="res://tilemaps/furniture/cenário/plants.png" id="4_gh0pe"]
 [ext_resource type="Texture2D" uid="uid://dvpy4etpl8psu" path="res://tilemaps/terraim/good background.png" id="4_sfclv"]
 [ext_resource type="Texture2D" uid="uid://y1tkm2slhc3p" path="res://tilemaps/terraim/esquerladoback.png" id="5_84ywn"]
-[ext_resource type="Texture2D" uid="uid://bll1rfj2kw5yd" path="res://tilemaps/furniture/trees.png" id="5_sghbs"]
-[ext_resource type="Texture2D" uid="uid://5xikqlcmv2i5" path="res://tilemaps/furniture/treees.png" id="6_i5qyr"]
+[ext_resource type="Texture2D" uid="uid://5xikqlcmv2i5" path="res://tilemaps/furniture/cenário/treees.png" id="5_sghbs"]
+[ext_resource type="Texture2D" uid="uid://5xikqlcmv2i5" path="res://tilemaps/furniture/cenário/treees.png" id="6_i5qyr"]
 [ext_resource type="Texture2D" uid="uid://ddgx04kwfbk6n" path="res://tilemaps/terraim/2bakcground.png" id="6_y5q6m"]
 [ext_resource type="Texture2D" uid="uid://fb1x6yrjhbxh" path="res://tilemaps/terraim/sky.png" id="7_dgfoj"]
 [ext_resource type="Texture2D" uid="uid://mowwq7v4dyqk" path="res://tilemaps/terraim/montains.png" id="7_o0ofo"]
@@ -18,14 +18,14 @@
 [ext_resource type="PackedScene" uid="uid://bcbd6q0ocowjx" path="res://blueprints/tocha.tscn" id="9_o8ebv"]
 [ext_resource type="Texture2D" uid="uid://dhrbx8lpnfw8g" path="res://tilemaps/terraim/backnuvens.png" id="10_1fn0m"]
 [ext_resource type="Texture2D" uid="uid://bvca8f4veo0ng" path="res://tilemaps/terraim/àrvore 2.png" id="10_el8vr"]
-[ext_resource type="PackedScene" uid="uid://brd3tdtw4mbfb" path="res://mage/mage.tscn" id="10_h5j36"]
-[ext_resource type="PackedScene" uid="uid://bxvqh5ghjp3ge" path="res://blueprints/enemys/blue green zombie.tscn" id="11_1qjbr"]
+[ext_resource type="PackedScene" uid="uid://brd3tdtw4mbfb" path="res://mage/2d/mage.tscn" id="10_h5j36"]
+[ext_resource type="PackedScene" uid="uid://bxvqh5ghjp3ge" path="res://blueprints/enemys/blue green zombie/blue green zombie.tscn" id="11_1qjbr"]
 [ext_resource type="Script" uid="uid://ce4ydf2nb6sxp" path="res://scripts/backnuvens.gd" id="11_m038q"]
 [ext_resource type="Texture2D" uid="uid://c83uwumvs31kb" path="res://tilemaps/terraim/back trees.png" id="11_ocelq"]
 [ext_resource type="Texture2D" uid="uid://b4qagu8hn0qpi" path="res://tilemaps/terraim/nuvens.png" id="12_42ue5"]
-[ext_resource type="PackedScene" uid="uid://c6of0pir3bvlv" path="res://blueprints/enemys/red green zombie.tscn" id="12_clrsb"]
+[ext_resource type="PackedScene" uid="uid://c6of0pir3bvlv" path="res://blueprints/enemys/red green zombie/red green zombie.tscn" id="12_clrsb"]
 [ext_resource type="Script" uid="uid://bmvdgm6cpoctm" path="res://scripts/nuvens.gd" id="13_fb7lg"]
-[ext_resource type="PackedScene" uid="uid://chs0lffdypdqk" path="res://blueprints/enemys/slimes green.tscn" id="13_sfclv"]
+[ext_resource type="PackedScene" uid="uid://chs0lffdypdqk" path="res://blueprints/enemys/slimes green/slimes green.tscn" id="13_sfclv"]
 [ext_resource type="PackedScene" uid="uid://smave13k548a" path="res://blueprints/mana orb.tscn" id="14_84ywn"]
 [ext_resource type="Texture2D" uid="uid://chydiwm6mue24" path="res://tilemaps/sun shine.png" id="15_rbgyd"]
 [ext_resource type="PackedScene" uid="uid://dd6mwtwq7q5rw" path="res://blueprints/life orb.tscn" id="15_y5q6m"]
@@ -42,9 +42,9 @@
 [ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
 [ext_resource type="Texture2D" uid="uid://ctcgor8nkxe0t" path="res://tilemaps/bakc.png" id="39_ibctv"]
 [ext_resource type="Texture2D" uid="uid://h46swbeg70qy" path="res://tilemaps/particles/folhas.png" id="41_blywk"]
-[ext_resource type="Texture2D" uid="uid://bj2qxcj8uytwo" path="res://tilemaps/furniture/arbustos.png" id="42_8wvxy"]
-[ext_resource type="Texture2D" uid="uid://ikp1dk2vy3rb" path="res://tilemaps/furniture/flor.png" id="43_8wvxy"]
-[ext_resource type="Texture2D" uid="uid://u5ofvcx1cn02" path="res://tilemaps/furniture/front front tree.png" id="45_ocelq"]
+[ext_resource type="Texture2D" uid="uid://bj2qxcj8uytwo" path="res://tilemaps/furniture/cenário/arbustos.png" id="42_8wvxy"]
+[ext_resource type="Texture2D" uid="uid://ikp1dk2vy3rb" path="res://tilemaps/furniture/cenário/flor.png" id="43_8wvxy"]
+[ext_resource type="Texture2D" uid="uid://u5ofvcx1cn02" path="res://tilemaps/furniture/cenário/front front tree.png" id="45_ocelq"]
 
 [sub_resource type="Environment" id="Environment_rbgyd"]
 ssr_enabled = true
@@ -2827,48 +2827,6 @@ position = Vector2(1264, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
-[node name="Arbustos39" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1304, 646)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos40" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1328, 646)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos41" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1352, 646)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos42" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1416, 614)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos43" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1448, 614)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos44" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1496, 566)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos45" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1520, 566)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
 [node name="Arbustos46" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
 position = Vector2(1560, 566)
@@ -2902,24 +2860,6 @@ flip_h = true
 [node name="Arbustos51" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
 position = Vector2(1635, 566)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos52" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1708, 550)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos53" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1828, 518)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos54" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1876, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
@@ -2977,24 +2917,6 @@ position = Vector2(2232, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
-[node name="Arbustos64" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2576, 502)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos65" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2600, 502)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos66" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2632, 502)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
 [node name="Arbustos67" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
 position = Vector2(3152, 470)
@@ -3040,24 +2962,6 @@ flip_h = true
 [node name="Arbustos74" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
 position = Vector2(3264, 470)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos75" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3624, 518)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos76" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3600, 518)
-texture = ExtResource("42_8wvxy")
-flip_h = true
-
-[node name="Arbustos77" type="Sprite2D" parent="front camera/arbustos"]
-modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3592, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
@@ -3393,34 +3297,6 @@ texture = ExtResource("43_8wvxy")
 position = Vector2(1229, 669)
 texture = ExtResource("43_8wvxy")
 
-[node name="Flor44" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1309, 653)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor45" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1333, 653)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor46" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1413, 621)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor47" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1453, 621)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor48" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1448, 621)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor49" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1504, 573)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor50" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1512, 573)
-texture = ExtResource("43_8wvxy")
-
 [node name="Flor51" type="Sprite2D" parent="front camera/flores"]
 position = Vector2(1553, 573)
 texture = ExtResource("43_8wvxy")
@@ -3441,10 +3317,6 @@ texture = ExtResource("43_8wvxy")
 position = Vector2(1638, 574)
 texture = ExtResource("43_8wvxy")
 
-[node name="Flor56" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1879, 526)
-texture = ExtResource("43_8wvxy")
-
 [node name="Flor57" type="Sprite2D" parent="front camera/flores"]
 position = Vector2(2007, 526)
 texture = ExtResource("43_8wvxy")
@@ -3459,10 +3331,6 @@ texture = ExtResource("43_8wvxy")
 
 [node name="Flor60" type="Sprite2D" parent="front camera/flores"]
 position = Vector2(2110, 526)
-texture = ExtResource("43_8wvxy")
-
-[node name="Flor61" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(2614, 510)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor62" type="Sprite2D" parent="front camera/flores"]
