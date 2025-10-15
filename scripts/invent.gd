@@ -15,7 +15,7 @@ func _ready() -> void:
 func update_label() -> void:
 	life_potion_label.text = "Life Potions: " + str(Inventário.get_item_count("life_potion"))
 	mana_potion_label.text = "Mana Potions: " + str(Inventário.get_item_count("mana_potion"))
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Inventário.get_item_count("life_potion") >= 1:
 		poção_de_vida.visible = true
 		life_potion_label.visible = true

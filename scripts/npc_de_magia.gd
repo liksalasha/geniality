@@ -18,7 +18,7 @@ func _on_body_exited(body: Node) -> void:
 	if body is CharacterBody2D:
 		player_na_area = false
 		intrar.visible = false
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_na_area:
 		print("entrou")
 		loja_de_magia.visible = true

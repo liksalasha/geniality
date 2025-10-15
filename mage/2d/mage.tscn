@@ -1,11 +1,11 @@
 [gd_scene load_steps=31 format=3 uid="uid://brd3tdtw4mbfb"]
 
-[ext_resource type="Script" uid="uid://dwy8thxiieqkh" path="res://mage/mage.gd" id="1_q2v0x"]
+[ext_resource type="Script" uid="uid://dwy8thxiieqkh" path="res://mage/2d/mage.gd" id="1_q2v0x"]
 [ext_resource type="PackedScene" uid="uid://vgw4qvpp17pk" path="res://blueprints/enemys/Projectile.tscn" id="2_028vw"]
-[ext_resource type="PackedScene" uid="uid://dmvg15wwgi7nu" path="res://blueprints/enemys/magic.tscn" id="3_hwgiy"]
-[ext_resource type="Texture2D" uid="uid://cffcy58fhiyp7" path="res://mage/mage idle.png" id="4_hwgiy"]
-[ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Orb de Teleport.png" id="4_n2i8k"]
-[ext_resource type="PackedScene" uid="uid://dsyh6fiuyaa2" path="res://blueprints/change2d.tscn" id="8_timko"]
+[ext_resource type="PackedScene" uid="uid://dmvg15wwgi7nu" path="res://blueprints/enemys/magic.tscn" id="3_f2if0"]
+[ext_resource type="Texture2D" uid="uid://cffcy58fhiyp7" path="res://mage/animations/mage idle.png" id="4_hwgiy"]
+[ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Interactions/Orb de Teleport.png" id="4_n2i8k"]
+[ext_resource type="PackedScene" uid="uid://dsyh6fiuyaa2" path="res://mage/projéteis/ultra/change2d.tscn" id="8_timko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2d7i"]
 size = Vector2(19.3333, 29.3333)
@@ -176,14 +176,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2i8k"]
-size = Vector2(19.3333, 30.6667)
+size = Vector2(20.666668, 30.6667)
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
 collision_mask = 30
 script = ExtResource("1_q2v0x")
 projectile_scene = ExtResource("2_028vw")
-magic_scene = ExtResource("3_hwgiy")
+magic_scene = ExtResource("3_f2if0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.333333, -0.666667)
@@ -216,7 +216,7 @@ sprite_frames = SubResource("SpriteFrames_f2t7x")
 collision_mask = 10
 
 [node name="hurt" type="CollisionShape2D" parent="hurtarea"]
-position = Vector2(-0.333333, -0.666667)
+position = Vector2(-0.3333335, -0.666667)
 shape = SubResource("RectangleShape2D_n2i8k")
 debug_color = Color(0.812096, 0, 0.120126, 0.42)
 

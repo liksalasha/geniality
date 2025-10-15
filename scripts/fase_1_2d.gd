@@ -20,6 +20,6 @@ func _change_scene():
 	if next_scene:
 		get_tree().change_scene_to_packed(next_scene)
 		
-func _on_change_animation_finished(change) -> void:
+func _on_change_animation_finished(_change) -> void:
 	scene_changed = true  # evita loop
 	call_deferred("_change_scene")

@@ -15,7 +15,7 @@ func _ready() -> void:
 func update_label() -> void:
 	ice_projectile_label.text = "ice projectile: " + str(Inventário.get_item_count("ice_projectile"))
 	ice_magic_label.text = "ice magic: " + str(Inventário.get_item_count("ice_magic"))
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Inventário.get_item_count("ice_projectile") >= 1:
 		ice_projectile.visible = true
 		ice_projectile_label.visible = true

@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	if mover_nuvem and oh_native:
 		oh_native.position.x -= speed * delta
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	if ja_executou:
 		return  # já fez tudo uma vez, não executa mais
 
@@ -43,7 +43,7 @@ func _on_timer_timeout():
 	dialogue.visible = true
 	label.visible = true
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	if timer:
 		timer.stop()
 

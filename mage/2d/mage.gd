@@ -49,6 +49,8 @@ func _ready() -> void:
 	SaveManager.set_player_reference(self)
 	SaveManager.load_game()
 	modulate.a
+	print(SaveManager)
+	print(SaveManager.has_method("set_player_reference"))
 func _on_timer_timeout():
 	var pos_2d = global_position
 	#print("Salvando pos2D:", global_position)
@@ -220,7 +222,7 @@ func _physics_process(delta: float) -> void:
 	
 func _on_time_timeout():
 		playercam2d.make_current()
-func _on_hurtarea_body_entered(body: Node2D) -> void:
+func _on_hurtarea_body_entered(_body: Node2D) -> void:
 	modulate.r
 	Global.all_life -= 1
 	print("-hp")
@@ -231,7 +233,6 @@ func _on_hurtarea_body_entered(body: Node2D) -> void:
 		Global.mana = 5
 		update_life_label()
 		update_mana_label()
-
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite_2d.animation == "magic":
@@ -271,10 +272,10 @@ func set_magic(name: String, path: String) -> void:
 	current_magic_name = name
 
 
-func _on_rope_body_entered(body: Node2D) -> void:
+func _on_rope_body_entered(_body: Node2D) -> void:
 	#if Input.is_action_pressed("down"):
 		velocity -= get_gravity() * .2
 
 
-func _on_out_body_entered(body: Node2D) -> void:
+func _on_out_body_entered(_body: Node2D) -> void:
 	_on_death()

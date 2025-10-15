@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://cnb6tav0eiire"]
+[gd_scene load_steps=68 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_hc241"]
 [ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/Interactions/lapidi.png" id="1_qonpf"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://caa6inp0ftvcu" path="res://tilemaps/furniture/cenário/plants.png" id="4_gh0pe"]
 [ext_resource type="Texture2D" uid="uid://dvpy4etpl8psu" path="res://tilemaps/terraim/good background.png" id="4_sfclv"]
 [ext_resource type="Texture2D" uid="uid://y1tkm2slhc3p" path="res://tilemaps/terraim/esquerladoback.png" id="5_84ywn"]
-[ext_resource type="Texture2D" uid="uid://5xikqlcmv2i5" path="res://tilemaps/furniture/cenário/treees.png" id="5_sghbs"]
 [ext_resource type="Texture2D" uid="uid://5xikqlcmv2i5" path="res://tilemaps/furniture/cenário/treees.png" id="6_i5qyr"]
 [ext_resource type="Texture2D" uid="uid://ddgx04kwfbk6n" path="res://tilemaps/terraim/2bakcground.png" id="6_y5q6m"]
 [ext_resource type="Texture2D" uid="uid://fb1x6yrjhbxh" path="res://tilemaps/terraim/sky.png" id="7_dgfoj"]
@@ -587,7 +586,7 @@ texture = ExtResource("4_gh0pe")
 5:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkoi5"]
-texture = ExtResource("5_sghbs")
+texture = ExtResource("6_i5qyr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
