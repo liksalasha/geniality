@@ -5,10 +5,8 @@ const SPEED = 70.0
 const JUMP_VELOCITY = -400.0
 @export var player: Node3D  # arraste o player aqui no editor
 var life = 7
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var area_3d: Area3D = $Area3D
 const GRAVITY = Vector3.DOWN * 200.0  # Mais forte que o padrão
-@onready var raycast: RayCast3D = $RayCast3D
 @export var enemy_id: String = "rzombie_01"
 
 func _ready() -> void:

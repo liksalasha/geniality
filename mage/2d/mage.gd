@@ -4,7 +4,6 @@ extends CharacterBody2D
 @onready var raycast = $RayCast2D
 @onready var anim: AnimatedSprite2D = $anim
 @export var projectile_scene: PackedScene  # arraste a cena do projétil no editor
-@onready var animm: AnimatedSprite2D = $animm
 @onready var hurtarea: Area2D = $hurtarea
 @export var magic_scene: PackedScene
 @onready var life_label: Label = $"../CanvasLayer/LifeLabel"
@@ -226,10 +225,11 @@ func _on_hurtarea_body_entered(_body: Node2D) -> void:
 	modulate.r
 	Global.all_life -= 1
 	print("-hp")
+	print(Global.all_life)
 	update_life_label()
-	if Global.life == 0:
+	if Global.all_life == 0:
 		_on_death()
-		Global.life = Global.life
+		Global.all_life = Global.life
 		Global.mana = 5
 		update_life_label()
 		update_mana_label()

@@ -3,15 +3,13 @@ extends CharacterBody3D
 var SPEED = 50.0
 const JUMP_VELOCITY = -100.0
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var raycast: RayCast2D = $RayCast2D
+@onready var ray_cast_3d: RayCast3D = $RayCast3D
 @export var player: Node3D  # arraste o player aqui no editor
 var has_jumped = false
-@onready var jump_timer: Timer = $JumpTimer
+@onready var jump_timer: Timer = $Jump_timer
 var can_jump = true
 #@onready var anim: AnimatedSprite2D = $anim
 var life = 2
-@onready var area_2d: Area2D = $Area2D
 @export var enemy_id: String = "slime_01"
 
 func _ready() -> void:
@@ -21,7 +19,6 @@ func _ready() -> void:
 	#jump_timer.wait_time = 1.0  # tempo entre pulos (em segundos)
 	#anim.visible = false
 	#area_2d.area_entered.connect(_on_area_entered)
-	print(area_2d)
 	print(life)
 func _on_JumpTimer_timeout():
 	can_jump = true  # libera o próximo pulo

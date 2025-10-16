@@ -1,14 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmxglv7joyvgv"]
+[gd_scene load_steps=10 format=3 uid="uid://bmxglv7joyvgv"]
 
-[ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/mage_3d.gd" id="1_5hfrm"]
-[ext_resource type="ArrayMesh" uid="uid://cyyhrrxtgfub0" path="res://mage/mage-1-1.obj" id="1_ldsfo"]
+[ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/3d/mage_3d.gd" id="1_5hfrm"]
 [ext_resource type="PackedScene" uid="uid://eeny8fniisns" path="res://blueprints/enemys/projectile3d.tscn" id="2_krkmx"]
 [ext_resource type="ArrayMesh" uid="uid://bfd7bv7pbpucu" path="res://blueprints/3d/mira.obj" id="4_i104l"]
-[ext_resource type="ArrayMesh" uid="uid://wo4raqq1pns" path="res://mage/mini mage.obj" id="5_776fn"]
-[ext_resource type="PackedScene" uid="uid://dvsb4wh2oxnyn" path="res://blueprints/change.tscn" id="6_yk1qt"]
+[ext_resource type="PackedScene" uid="uid://dvsb4wh2oxnyn" path="res://mage/projéteis/ultra/change.tscn" id="6_yk1qt"]
+[ext_resource type="ArrayMesh" uid="uid://cydc86rm64txy" path="res://mage/3d/mage 3d.obj" id="7_ienge"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldsfo"]
-size = Vector3(13.763, 21.3472, 19.956)
+size = Vector3(13.763, 21.3472, 9.072252)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5hfrm"]
 
@@ -21,15 +20,10 @@ collision_mask = 26
 script = ExtResource("1_5hfrm")
 projectile_scene = ExtResource("2_krkmx")
 
-[node name="Mage3d" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.5, 0, 0, 0, 5.5, 0, 0, 0, 5.5, 0, -9.11767, 0)
-visible = false
-mesh = ExtResource("1_ldsfo")
-skeleton = NodePath("")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.269784, 1.5119, 1.03669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4823346, 1.5119, 0.35064816)
 shape = SubResource("BoxShape3D_ldsfo")
+debug_color = Color(0.22601473, 0.16783163, 0, 0.41960785)
 
 [node name="Pivot" type="Node3D" parent="."]
 
@@ -55,14 +49,14 @@ sprite_frames = SubResource("SpriteFrames_5hfrm")
 [node name="hurt" type="CollisionShape3D" parent="hurtarea"]
 shape = SubResource("BoxShape3D_krkmx")
 
-[node name="MiniMage" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.43094e-07, 0, 17, 0, 17, 0, -17, 0, -7.43094e-07, 0, -23.142, 0)
-mesh = ExtResource("5_776fn")
-
 [node name="change" parent="." instance=ExtResource("6_yk1qt")]
 
-[node name="Camera3D" parent="change" index="2"]
-transform = Transform3D(0.412454, 0, -0.910978, 0, 1, 0, 0.910978, 0, 0.412454, -2.50441, 2.09361, 1.19439)
+[node name="Camera3D" parent="change" index="1"]
+transform = Transform3D(0.85524726, 0, -0.5182195, 0, 1, 0, 0.5182195, 0, 0.85524726, 0.364034, 2.13635, 3.44173)
+
+[node name="Mage3d2" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -4.6015897, -10.898277, -0.7774401)
+mesh = ExtResource("7_ienge")
 
 [connection signal="body_entered" from="hurtarea" to="." method="_on_area_3d_body_entered"]
 

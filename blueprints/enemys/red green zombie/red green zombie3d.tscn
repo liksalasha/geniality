@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmrjrrmsvvbbb"]
 
 [ext_resource type="Script" uid="uid://d2fb1gitcs2m1" path="res://scripts/red_green_zombie_3d.gd" id="1_fa5on"]
-[ext_resource type="ArrayMesh" uid="uid://dq8p8bahpns2q" path="res://blueprints/3d/enemys/red green zombie/idle.obj" id="1_u4cwv"]
+[ext_resource type="ArrayMesh" uid="uid://dq8p8bahpns2q" path="res://blueprints/enemys/3d/red green zombie/idle.obj" id="1_u4cwv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fa5on"]
 size = Vector3(12.1854, 23.3359, 12.7701)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvvn2y355tjkp"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfcvm2o75bl7l" path="res://blueprints/3d/mana orb.obj" id="1_qm17b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_byv4s"]
+radius = 12.352529
+
+[node name="Area3D" type="Area3D" groups=["ManaOrb"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.738652, 19.766949, 0.301998)
+shape = SubResource("SphereShape3D_byv4s")
+
+[node name="ManaOrb" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = ExtResource("1_qm17b")

@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvsb4wh2oxnyn"]
+[gd_scene load_steps=8 format=3 uid="uid://dvsb4wh2oxnyn"]
 
-[ext_resource type="ArrayMesh" uid="uid://wo4raqq1pns" path="res://mage/mini mage.obj" id="1_44nx6"]
 [ext_resource type="Script" uid="uid://bhqrt3752hdx0" path="res://ui_u/forth_square.gd" id="2_8hcjo"]
 [ext_resource type="ArrayMesh" uid="uid://roq0tih33hp7" path="res://blueprints/3d/forth square.obj" id="3_175hf"]
 
@@ -101,10 +100,6 @@ height = 0.1
 libraries = {
 &"": SubResource("AnimationLibrary_44nx6")
 }
-
-[node name="MiniMage" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_44nx6")
-skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.412454, 0, -0.910978, 0, 1, 0, 0.910978, 0, 0.412454, -2.50441, 2.09361, 1.19439)

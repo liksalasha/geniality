@@ -14,25 +14,17 @@ res://blueprints/enemys/magic.tscn::4630c103e5f59bb7a9d9e6ccad0e3f6e::1753474125
 res://blueprints/enemys/projectile3d.tscn::c0cf671baffa951fb09fce444a9460f4::1753485000::res://.godot/exported/133200997/export-0a1842d4eb6553de54bb69742e37b251-projectile3d.scn
 res://blueprints/enemys/Projectile.tscn::4f57569e2fe1b0c263cb8d654a40001e::1753474125::res://.godot/exported/133200997/export-039bb102d45924d352ee1969b970e67f-Projectile.scn
 res://blueprints/baserope.tscn::cf5a72c472dff7bdf2087b0987ef0763::1754433039::res://.godot/exported/133200997/export-cf4654392ede03165b21b8a27012d3bd-baserope.scn
-res://blueprints/dialogue.tscn::0a38a0b729acf6c4cca6f26386e6d06e::1753544947::res://.godot/exported/133200997/export-76285301245512638a7a907ed4ac60c9-dialogue.scn
-res://blueprints/inventário.tscn::6b402775403ad71c60863359581eb5b3::1760467896::res://.godot/exported/133200997/export-9990ecaa154a5e66b0ee37226f28653a-inventário.scn
-res://blueprints/life orb3d.tscn::f38fb3704c1d4108bfc8f8d767afc553::1753543657::res://.godot/exported/133200997/export-01b2558c42a55de16cafa569d065a780-life orb3d.scn
-res://blueprints/life orb.tscn::5cfdf9b0e83095d3c74d37211ce17690::1753487335::res://.godot/exported/133200997/export-8247e305da86cbde162213eec3b66788-life orb.scn
-res://blueprints/loja de equipamentos.tscn::619266d31ee2ce0c65d058b2884b4264::1754353111::res://.godot/exported/133200997/export-7328772f13efebaeb9298ad7a9592984-loja de equipamentos.scn
-res://blueprints/loja de magia.tscn::e592499d47309a866982e330a117f2d2::1754353112::res://.godot/exported/133200997/export-3cccb2bfc20e8abd51199cb6f2264672-loja de magia.scn
 res://blueprints/magia.tscn::ceb13c0eabbc2f14c82fb32265ed1418::1754353392::res://.godot/exported/133200997/export-a3b390b728927e097616324e527fff05-magia.scn
-res://blueprints/mana orb.tscn::e1a395bb5fec296a61b400a50cf3956e::1753474125::res://.godot/exported/133200997/export-dee7613b59d8c525e1b130a051d223f3-mana orb.scn
-res://blueprints/map.tscn::0aa63150a9f784e340c622f7d8c31f0e::1754790146::res://.godot/exported/133200997/export-07975062531267a83f2e8dff0a8a3b82-map.scn
 res://blueprints/pomnte.tscn::3515dda7a02dfc65fc6d865e9ab775a2::1754434402::res://.godot/exported/133200997/export-fc82311a02b05835c685018c761b9458-pomnte.scn
 res://blueprints/rope3d.tscn::c86367995d8f3cfba0dce9de3696dc3f::1754433039::res://.godot/exported/133200997/export-4034d5544ce862f4d881c7285ffb6494-rope3d.scn
 res://blueprints/TeleportTarget.tscn::188d3938f1831e924ceb737689b68a7a::1753548371::res://.godot/exported/133200997/export-9b7a23f2dd1f54a4491538a7c0a6112e-TeleportTarget.scn
 res://blueprints/tocha.tscn::80463d82d9fb3d0cd4fa113d7ff67751::1753012027::res://.godot/exported/133200997/export-2e2f25e4c84649b0f428de36fa8505e7-tocha.scn
 res://maps/castleroom/castle.tscn::76e8c80909ed300b830fee1d74fc93a5::1760559426::res://.godot/exported/133200997/export-76dabedddddf83aa0fb9bf9ff942ab5b-castle.scn
 res://maps/city/crystal city.tscn::96e0507bbe1153aad2fdd99eac624aad::1760466519::res://.godot/exported/133200997/export-8ca83f306e456c4fabbb603a04582c98-crystal city.scn
-res://maps/experiments/fase1.tscn::5d0436e1e087d0f6ba57fff64f6633b7::1760546445::res://.godot/exported/133200997/export-1cbc772eb599addbd1c18150089f1223-fase1.scn
-res://maps/experiments/fase1d.tscn::be9bca1f2680ee6a5df161785dd4fa4e::1760466520::res://.godot/exported/133200997/export-0683b17df57718f9202d40ea398bd44d-fase1d.scn
-res://maps/experiments/fase2.tscn::ac729cfbeb1a127f0629e61b71d80de5::1760466519::res://.godot/exported/133200997/export-98152963ad559f57c336535e908d9f57-fase2.scn
-res://maps/experiments/fase2d.tscn::c3a81ae0617af32cef488ab88923f3a8::1760466520::res://.godot/exported/133200997/export-01beb5a69217018a195c450e92ec7655-fase2d.scn
+res://maps/experiments/fase1.tscn::25200e00c21e93861968e2e7d4fc772a::1760638902::res://.godot/exported/133200997/export-1cbc772eb599addbd1c18150089f1223-fase1.scn
+res://maps/experiments/fase1d.tscn::069106a9f2ad3935a5c1d989b22745f9::1760639214::res://.godot/exported/133200997/export-0683b17df57718f9202d40ea398bd44d-fase1d.scn
+res://maps/experiments/fase2.tscn::581aecb34bafc8a52008821400bef831::1760636543::res://.godot/exported/133200997/export-98152963ad559f57c336535e908d9f57-fase2.scn
+res://maps/experiments/fase2d.tscn::2ba9c9868642816d1a6662b970e1b054::1760636534::res://.godot/exported/133200997/export-01beb5a69217018a195c450e92ec7655-fase2d.scn
 res://ui_u/main menu.tres::a907c0522c87315f46811040d0f6f785::1754754781::res://.godot/exported/133200997/export-08db459957989e0517d0879aa43e0b1e-main menu.res
 res://ui_u/main menu.tscn::6ad8abad32f48454f3e39c41bcfec7fb::1760552957::res://.godot/exported/133200997/export-c7b394c41f4175e10b8e6c901b8d9f84-main menu.scn
 res://ui_u/pause.tscn::20cd429f9efa1cb5578b900862e317c8::1754353112::res://.godot/exported/133200997/export-8ff220b225dfa33265879a3808515f87-pause.scn
@@ -45,8 +37,23 @@ res://blueprints/enemys/red green zombie/red green zombie3d.tscn::1bafea4a127996
 res://blueprints/enemys/red green zombie/red green zombie.tscn::edb4fe2feb45faf955ee2394f544648e::1753024177::res://.godot/exported/133200997/export-7872bc141c994f70f8810c166ebd0072-red green zombie.scn
 res://blueprints/enemys/slimes green/slimes green3d.tscn::64bdd00cc0b125ed12eba4cbec33af37::1753543657::res://.godot/exported/133200997/export-c080bdb630e776415caa124e7ddb955e-slimes green3d.scn
 res://blueprints/enemys/slimes green/slimes green.tscn::c323c0f58de159ffd1de09be143f905d::1753486515::res://.godot/exported/133200997/export-06654b95fd4396158157dc4628a98b20-slimes green.scn
-res://mage/2d/mage.tscn::e8775915ca58f9efda572ad599401f39::1760542021::res://.godot/exported/133200997/export-1ed56f9a2ed7a7ec1f7cdd7679813566-mage.scn
-res://mage/3d/mage 3d.tscn::3236a806fbe9ee15beb904bd756b3492::1754753262::res://.godot/exported/133200997/export-180dc60b5c058a863d5f7f86483777b3-mage 3d.scn
+res://mage/2d/mage.tscn::58c06627c9864763647cd08b1aa1aa2d::1760636305::res://.godot/exported/133200997/export-1ed56f9a2ed7a7ec1f7cdd7679813566-mage.scn
+res://mage/3d/mage 3d.tscn::8bcb2df1826ee7f7fca7dc4efb5d4304::1760634941::res://.godot/exported/133200997/export-180dc60b5c058a863d5f7f86483777b3-mage 3d.scn
 res://mage/cutmage/cutscene_mage.tscn::c6bd8b6d66b2dbc0dfc36edc3f845183::1760549570::res://.godot/exported/133200997/export-b9bee0abd85a35a004776b6574937b3f-cutscene_mage.scn
 res://mage/projéteis/ultra/change2d.tscn::462a92358ff18c7b06af11133e147ee7::1760451822::res://.godot/exported/133200997/export-390c037c7e8e8da2066f7e669407d72a-change2d.scn
 res://mage/projéteis/ultra/change.tscn::b7c2d340404fa3f04fda491ea996373f::1754753262::res://.godot/exported/133200997/export-12204422fd15e54d19a10de2aa511e47-change.scn
+res://blueprints/display/dialogue.tscn::0a38a0b729acf6c4cca6f26386e6d06e::1753544947::res://.godot/exported/133200997/export-c5f8387fa6aecf093b2b4a50cc8cc7d4-dialogue.scn
+res://blueprints/display/inventário.tscn::6b402775403ad71c60863359581eb5b3::1760467896::res://.godot/exported/133200997/export-4056be9570935eef7fb6b90ea7f071bd-inventário.scn
+res://blueprints/display/loja de equipamentos.tscn::619266d31ee2ce0c65d058b2884b4264::1754353111::res://.godot/exported/133200997/export-0c08c86541be919827c42970365b0acf-loja de equipamentos.scn
+res://blueprints/display/loja de magia.tscn::e592499d47309a866982e330a117f2d2::1754353112::res://.godot/exported/133200997/export-37d160ce407291b287314f55cb216ea1-loja de magia.scn
+res://blueprints/display/map.tscn::0aa63150a9f784e340c622f7d8c31f0e::1754790146::res://.godot/exported/133200997/export-b28243c05a256427107c535bad146d2e-map.scn
+res://blueprints/intens/life_orb3d.tscn::c0afd736002f1ff9788530fa261a8dbd::1760637688::res://.godot/exported/133200997/export-fb66e219cd550e4aa5fd6cdf18cefd17-life_orb3d.scn
+res://blueprints/intens/life_orb.tscn::7f288ee4ac40c1acd19f755bd99ae843::1760636934::res://.godot/exported/133200997/export-aa073015ffab3e9fb850828f0c31fc50-life_orb.scn
+res://blueprints/intens/mana_orb.tscn::6719ac32d0efa7c635df35af04875d5a::1760636947::res://.godot/exported/133200997/export-324827565e1e5a0799350dfc2a19a3d3-mana_orb.scn
+res://blueprints/intens/mana_orb_3d.tscn::94202c6abb85002c1b2d8b0d70d9f07a::1760638250::res://.godot/exported/133200997/export-b305c36d0b34e824977dc725d3f9eade-mana_orb_3d.scn
+res://blueprints/intens/orbe_de_monstro_3d.tscn::f5d44803061f9735ae3f643f25c98bd3::1760636299::res://.godot/exported/133200997/export-ce3566a2d7f85aa3610331c52e88697b-orbe_de_monstro_3d.scn
+res://blueprints/checkpoint_3d.tscn::5edc64b1b4169daceb7aa9b32919c365::1760635470::res://.godot/exported/133200997/export-2bbf19d0dac5ffd057086327ffdc67a5-checkpoint_3d.scn
+res://blueprints/quebra.tscn::93db2a7131978c4329223c1622bc2af8::1760638925::res://.godot/exported/133200997/export-e35b996ea82f4bdca7b6d34fc05cdbb5-quebra.scn
+res://blueprints/quebra_3d.tscn::8f899b6f4c71f067459079c487d18db0::1760639139::res://.godot/exported/133200997/export-f504769c6a0b73612cc137e9839dd440-quebra_3d.scn
+res://maps/experiments/tiles/fase1d.tres::e364777123971a0a3559ae618aab534e::1760638631::res://.godot/exported/133200997/export-db8cf4cbca5ec6a5f2767b5834439b7c-fase1d.res
+res://chao3d.tscn::10c368c967d825baf0a95a78b733842b::1760629927::res://.godot/exported/133200997/export-029a133cad7977764e782cc20f14866e-chao3d.scn

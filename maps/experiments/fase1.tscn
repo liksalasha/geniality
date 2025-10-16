@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://cnb6tav0eiire"]
+[gd_scene load_steps=66 format=4 uid="uid://cnb6tav0eiire"]
 
 [ext_resource type="Script" uid="uid://h2e2tsgkdr87" path="res://scripts/fase_1_2d.gd" id="1_hc241"]
 [ext_resource type="Texture2D" uid="uid://el2v2pd5rsxq" path="res://tilemaps/furniture/Interactions/lapidi.png" id="1_qonpf"]
@@ -25,17 +25,15 @@
 [ext_resource type="PackedScene" uid="uid://c6of0pir3bvlv" path="res://blueprints/enemys/red green zombie/red green zombie.tscn" id="12_clrsb"]
 [ext_resource type="Script" uid="uid://bmvdgm6cpoctm" path="res://scripts/nuvens.gd" id="13_fb7lg"]
 [ext_resource type="PackedScene" uid="uid://chs0lffdypdqk" path="res://blueprints/enemys/slimes green/slimes green.tscn" id="13_sfclv"]
-[ext_resource type="PackedScene" uid="uid://smave13k548a" path="res://blueprints/mana orb.tscn" id="14_84ywn"]
+[ext_resource type="PackedScene" uid="uid://smave13k548a" path="res://blueprints/intens/mana_orb.tscn" id="14_84ywn"]
 [ext_resource type="Texture2D" uid="uid://chydiwm6mue24" path="res://tilemaps/sun shine.png" id="15_rbgyd"]
-[ext_resource type="PackedScene" uid="uid://dd6mwtwq7q5rw" path="res://blueprints/life orb.tscn" id="15_y5q6m"]
+[ext_resource type="PackedScene" uid="uid://dd6mwtwq7q5rw" path="res://blueprints/intens/life_orb.tscn" id="15_y5q6m"]
 [ext_resource type="Script" uid="uid://2qr773juifqo" path="res://scripts/waterfalling.gd" id="16_o0ofo"]
 [ext_resource type="Texture2D" uid="uid://c42sv1l4qjoma" path="res://tilemaps/dialogue.png" id="17_p25wj"]
 [ext_resource type="AudioStream" uid="uid://cbo10p0uey77v" path="res://sounds/song1 mp3.mp3" id="18_2f8hp"]
 [ext_resource type="PackedScene" uid="uid://bcyju62xmxvpu" path="res://ui_u/pause.tscn" id="19_1fn0m"]
-[ext_resource type="Texture2D" uid="uid://dgtjixdq78qtk" path="res://tilemaps/quebra.png" id="20_m038q"]
-[ext_resource type="Texture2D" uid="uid://bc77s58gp3n1o" path="res://tilemaps/light.png" id="21_42ue5"]
 [ext_resource type="PackedScene" uid="uid://c0jg8r4lt2tey" path="res://nextmap.tscn" id="22_fb7lg"]
-[ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/inventário.tscn" id="24_ilqnv"]
+[ext_resource type="PackedScene" uid="uid://du6ghyemyjnih" path="res://blueprints/display/inventário.tscn" id="24_ilqnv"]
 [ext_resource type="PackedScene" uid="uid://ptpjslk6ekqd" path="res://blueprints/magia.tscn" id="25_bjv68"]
 [ext_resource type="PackedScene" uid="uid://bhsqimsenubsc" path="res://maps/city/crystal city.tscn" id="35_hc241"]
 [ext_resource type="Script" uid="uid://b721xaphgu08x" path="res://scripts/tutorial2d.gd" id="37_cvinv"]
@@ -43,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://h46swbeg70qy" path="res://tilemaps/particles/folhas.png" id="41_blywk"]
 [ext_resource type="Texture2D" uid="uid://bj2qxcj8uytwo" path="res://tilemaps/furniture/cenário/arbustos.png" id="42_8wvxy"]
 [ext_resource type="Texture2D" uid="uid://ikp1dk2vy3rb" path="res://tilemaps/furniture/cenário/flor.png" id="43_8wvxy"]
+[ext_resource type="PackedScene" uid="uid://c85c4svaukbjh" path="res://blueprints/quebra.tscn" id="43_el8vr"]
 [ext_resource type="Texture2D" uid="uid://u5ofvcx1cn02" path="res://tilemaps/furniture/cenário/front front tree.png" id="45_ocelq"]
 
 [sub_resource type="Environment" id="Environment_rbgyd"]
@@ -672,9 +671,6 @@ polygon = PackedVector2Array(-1224, 670, 1280, 670, 1280, 669, 1281.1613, 669.00
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75l1h"]
 size = Vector2(88.5, 691)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_505bf"]
-size = Vector2(899.999, 913.333)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hc241"]
 size = Vector2(8282, 4342.5)
 
@@ -700,8 +696,8 @@ camera_attributes = SubResource("CameraAttributesPractical_rbgyd")
 [node name="sky" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 
 [node name="Parallax2D_ParallaxBackground_back#Sky" type="Sprite2D" parent="paralaxes/ParallaxBackground/sky"]
-position = Vector2(586.5, 258.5)
-scale = Vector2(53.5938, 28.9062)
+position = Vector2(2112.5, -392.00037)
+scale = Vector2(180.96875, 69.56248)
 texture = ExtResource("7_dgfoj")
 
 [node name="bakc" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
@@ -1018,6 +1014,87 @@ texture = ExtResource("11_ocelq")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees4"]
 occluder = SubResource("OccluderPolygon2D_iudqq")
 
+[node name="BackTrees5" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(789, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees5"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees6" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(1141, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees6"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees7" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(2093, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees7"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees8" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(1909, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees8"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees9" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(1685, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees9"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees10" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(1438, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees10"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees11" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(1206, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees11"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees12" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(2230, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees12"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
+[node name="BackTrees13" type="Sprite2D" parent="paralaxes/ParallaxBackground/back treees"]
+modulate = Color(0.7246431, 0.72464246, 0.7246426, 1)
+position = Vector2(2358, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ocelq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/back treees/BackTrees13"]
+occluder = SubResource("OccluderPolygon2D_iudqq")
+
 [node name="front trees" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 position = Vector2(1, 1)
 motion_scale = Vector2(0.5, 1)
@@ -1093,6 +1170,402 @@ texture = ExtResource("10_el8vr")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore3"]
 occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore6" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1041, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore6"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore7" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(937, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore7"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore8" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(985, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore8"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore9" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(817, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore9"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore10" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(721, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore10"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore4" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1123, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore4"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore5" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(771, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore5"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore6" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(667, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore6"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore7" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1763, 516)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore7"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore8" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1187, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore8"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="Àrvore9" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1083, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore9"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore11" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1681, 513)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore11"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore12" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1577, 513)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore12"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore13" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1625, 585)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore13"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore14" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1233, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore14"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore15" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1137, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore15"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore16" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2025, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore16"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore17" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1921, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore17"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore10" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1883, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore10"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore18" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1969, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore18"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore19" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2257, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore19"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore20" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2153, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore20"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore11" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2115, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore11"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore21" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2201, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore21"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore22" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2377, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore22"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore23" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2273, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore23"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore12" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2235, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore12"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore24" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2321, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore24"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore25" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2545, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore25"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore26" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2441, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore26"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore13" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2403, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore13"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore27" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(2489, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore27"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore28" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1801, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore28"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore29" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1697, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore29"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore14" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1659, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore14"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore30" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1745, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore30"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore31" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1617, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore31"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore32" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1513, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore32"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore15" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1475, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore15"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore33" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1561, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore33"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore34" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1401, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore34"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="árvore35" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1297, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore35"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
+
+[node name="Àrvore16" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1259, 612)
+scale = Vector2(4, 4)
+texture = ExtResource("10_el8vr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/Àrvore16"]
+occluder = SubResource("OccluderPolygon2D_wg575")
+
+[node name="árvore36" type="Sprite2D" parent="paralaxes/ParallaxBackground/front trees"]
+modulate = Color(0.75686276, 0.75686276, 0.75686276, 1)
+position = Vector2(1345, 609)
+scale = Vector2(4, 4)
+texture = ExtResource("9_8wvxy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="paralaxes/ParallaxBackground/front trees/árvore36"]
+occluder = SubResource("OccluderPolygon2D_rbgyd")
 
 [node name="nuvem 1" type="ParallaxLayer" parent="paralaxes/ParallaxBackground"]
 position = Vector2(1, 1)
@@ -2470,34 +2943,6 @@ parameters/looping = true
 [node name="Control" parent="pause" instance=ExtResource("19_1fn0m")]
 visible = false
 
-[node name="Quebra" type="Sprite2D" parent="."]
-position = Vector2(689, 610)
-scale = Vector2(0.03, 0.15)
-texture = ExtResource("20_m038q")
-
-[node name="PointLight2D" type="PointLight2D" parent="Quebra"]
-position = Vector2(-0.00170898, -0.000290871)
-scale = Vector2(3.46102, 1)
-energy = 0.7
-blend_mode = 1
-texture = ExtResource("21_42ue5")
-texture_scale = 2.48
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Quebra"]
-position = Vector2(-6.6665, -57.6189)
-amount = 15
-emission_shape = 1
-emission_sphere_radius = 128.0
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Quebra"]
-disable_mode = 2
-collision_layer = 16
-collision_mask = 13
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebra/StaticBody2D"]
-position = Vector2(-83.3359, -30.0005)
-shape = SubResource("RectangleShape2D_505bf")
-
 [node name="nestmap" parent="." instance=ExtResource("22_fb7lg")]
 position = Vector2(4598, 660)
 fase = ExtResource("35_hc241")
@@ -2589,7 +3034,7 @@ mesh = SubResource("QuadMesh_rbgyd")
 texture = ExtResource("39_ibctv")
 
 [node name="shadow" type="PointLight2D" parent="."]
-position = Vector2(1146, 556)
+position = Vector2(1473, 566)
 energy = 0.3
 blend_mode = 1
 texture = ExtResource("15_rbgyd")
@@ -3416,6 +3861,9 @@ modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
 position = Vector2(874, 649)
 scale = Vector2(2, 2)
 texture = ExtResource("45_ocelq")
+
+[node name="quebra" parent="." instance=ExtResource("43_el8vr")]
+position = Vector2(688, 549)
 
 [connection signal="animation_finished" from="player/change" to="." method="_on_change_animation_finished"]
 [connection signal="body_entered" from="waterfalling" to="waterfalling" method="_on_body_entered"]

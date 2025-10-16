@@ -1,15 +1,14 @@
-CollisionShape3D
-StaticBody3D
 MeshInstance3D
-TileMap
-Button
-RichTextLabel
-Sprite2D
-AnimatedSprite2D
-AnimationPlayer
+CollisionShape3D
+Area3D
+OmniLight3D
+SpotLight3D
 Sprite3D
-CPUParticles3D
-GPUParticles3D
-Node
+PointLight2D
+CollisionShape2D
+StaticBody2D
 Node2D
-ParallaxLayer
+GridMap      - Matches the "tilemap" keyword.
+StaticBody3D
+SimpleGrassTextured
+FogVolume

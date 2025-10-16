@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://smave13k548a"]
 
-[ext_resource type="Texture2D" uid="uid://dbkoosac2cf8s" path="res://tilemaps/furniture/mana orb.png" id="1_exvk5"]
+[ext_resource type="Texture2D" uid="uid://dbkoosac2cf8s" path="res://tilemaps/furniture/Interactions/mana orb.png" id="1_exvk5"]
 [ext_resource type="Script" uid="uid://dokn4y10evkxn" path="res://scripts/mana_orb.gd" id="1_fekm2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nm1mv"]
@@ -90,7 +90,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Area2D" type="Area2D" groups=["ManaOrb"]]
+[node name="mana orb" type="Area2D" groups=["ManaOrb"]]
 collision_layer = 2
 script = ExtResource("1_fekm2")
 

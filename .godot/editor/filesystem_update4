@@ -1,5 +1,3 @@
-res://maps/experiments/fase1d.tscn
+res://blueprints/quebra_3d.tscn
 res://maps/experiments/tiles/fase1d.tres
-res://scripts/fase_1_3d.gd
-res://maps/experiments/fase1.tscn
-res://chao3d.tscn
+res://maps/experiments/fase1d.tscn

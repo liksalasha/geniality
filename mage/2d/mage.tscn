@@ -199,7 +199,7 @@ offset = Vector2(0, -119)
 zoom = Vector2(4.9, 4.9)
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 1.5
+position_smoothing_speed = 4.0
 drag_vertical_offset = 1.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
