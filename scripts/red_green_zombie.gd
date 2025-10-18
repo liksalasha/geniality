@@ -19,12 +19,19 @@ func _ready() -> void:
 func _on_area_entered(area):
 	if area.is_in_group("projects"):
 		life -= Global.damage
+		flash_red()
 	if area.is_in_group("magics"):
 		life -= Global.super_damage
+		flash_red()
 	print("zumbi vermelho levou dano! Vida: ", life)
 	if life <= 0:
 		Global.defeated_enemies.append(enemy_id)  # Use um ID único
 		queue_free()
+
+func flash_red() -> void:
+	modulate = Color(1, 0, 0)
+	await get_tree().create_timer(0.2).timeout
+	modulate = Color(1, 1, 1)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

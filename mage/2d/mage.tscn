@@ -1,14 +1,19 @@
-[gd_scene load_steps=31 format=3 uid="uid://brd3tdtw4mbfb"]
+[gd_scene load_steps=29 format=3 uid="uid://brd3tdtw4mbfb"]
 
 [ext_resource type="Script" uid="uid://dwy8thxiieqkh" path="res://mage/2d/mage.gd" id="1_q2v0x"]
 [ext_resource type="PackedScene" uid="uid://vgw4qvpp17pk" path="res://blueprints/enemys/Projectile.tscn" id="2_028vw"]
 [ext_resource type="PackedScene" uid="uid://dmvg15wwgi7nu" path="res://blueprints/enemys/magic.tscn" id="3_f2if0"]
+[ext_resource type="Texture2D" uid="uid://nccwy8a58cgo" path="res://mage/animations/mage dash.png" id="4_4tqjx"]
 [ext_resource type="Texture2D" uid="uid://cffcy58fhiyp7" path="res://mage/animations/mage idle.png" id="4_hwgiy"]
 [ext_resource type="Texture2D" uid="uid://bpai44w2b1pu0" path="res://tilemaps/furniture/Interactions/Orb de Teleport.png" id="4_n2i8k"]
 [ext_resource type="PackedScene" uid="uid://dsyh6fiuyaa2" path="res://mage/projéteis/ultra/change2d.tscn" id="8_timko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2d7i"]
 size = Vector2(19.3333, 29.3333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqh5p"]
+atlas = ExtResource("4_4tqjx")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q61s0"]
 atlas = ExtResource("4_hwgiy")
@@ -26,23 +31,13 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("4_hwgiy")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2t7x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2if0"]
+atlas = ExtResource("4_hwgiy")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8vd1u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tqjx"]
+atlas = ExtResource("4_hwgiy")
 region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s6pa5"]
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1kcsd"]
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2vpb3"]
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hruyj"]
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_co78r"]
 atlas = ExtResource("4_hwgiy")
@@ -54,6 +49,14 @@ region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n2i8k"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqh5p")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q61s0")
@@ -78,22 +81,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f2t7x")
+"texture": SubResource("AtlasTexture_f2if0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8vd1u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s6pa5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1kcsd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2vpb3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hruyj")
+"texture": SubResource("AtlasTexture_4tqjx")
 }],
 "loop": false,
 "name": &"magic",
@@ -191,12 +182,12 @@ shape = SubResource("RectangleShape2D_q2d7i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n2i8k")
-animation = &"run"
+animation = &"dash"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -119)
-zoom = Vector2(4.9, 4.9)
+zoom = Vector2(4, 4)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0

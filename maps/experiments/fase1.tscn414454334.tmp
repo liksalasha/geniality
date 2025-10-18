@@ -3061,925 +3061,773 @@ angle_max = 30.0
 
 [node name="Arbustos" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(160, 664)
-scale = Vector2(2, 2)
+position = Vector2(156, 664)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos2" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(212, 662)
-scale = Vector2(2, 2)
+position = Vector2(208, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos3" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(228, 662)
-scale = Vector2(2, 2)
+position = Vector2(224, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos4" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(252, 662)
-scale = Vector2(2, 2)
+position = Vector2(248, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos5" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(24, 660)
-scale = Vector2(2, 2)
+position = Vector2(20, 660)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos6" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(76, 662)
-scale = Vector2(2, 2)
+position = Vector2(72, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos7" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(92, 662)
-scale = Vector2(2, 2)
+position = Vector2(88, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos8" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(116, 662)
-scale = Vector2(2, 2)
+position = Vector2(112, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos9" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-40, 663)
-scale = Vector2(2, 2)
+position = Vector2(-44, 663)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos10" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(12, 662)
-scale = Vector2(2, 2)
+position = Vector2(8, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos11" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(28, 662)
-scale = Vector2(2, 2)
+position = Vector2(24, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos12" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(52, 662)
-scale = Vector2(2, 2)
+position = Vector2(48, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos13" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-192, 664)
-scale = Vector2(2, 2)
+position = Vector2(-196, 664)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos14" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-140, 662)
-scale = Vector2(2, 2)
+position = Vector2(-144, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos15" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-124, 662)
-scale = Vector2(2, 2)
+position = Vector2(-128, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos16" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(-100, 662)
-scale = Vector2(2, 2)
+position = Vector2(-104, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos17" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(280, 663)
-scale = Vector2(2, 2)
+position = Vector2(276, 663)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos18" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(332, 662)
-scale = Vector2(2, 2)
+position = Vector2(328, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos19" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(348, 662)
-scale = Vector2(2, 2)
+position = Vector2(344, 662)
 texture = ExtResource("42_8wvxy")
 
 [node name="Arbustos20" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(372, 662)
-scale = Vector2(2, 2)
+position = Vector2(368, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos21" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(404, 662)
-scale = Vector2(2, 2)
+position = Vector2(400, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos22" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(484, 662)
-scale = Vector2(2, 2)
+position = Vector2(480, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos23" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(500, 662)
-scale = Vector2(2, 2)
+position = Vector2(496, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos24" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(524, 662)
-scale = Vector2(2, 2)
+position = Vector2(520, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos25" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(580, 662)
-scale = Vector2(2, 2)
+position = Vector2(576, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos26" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(620, 662)
-scale = Vector2(2, 2)
+position = Vector2(616, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos27" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(780, 662)
-scale = Vector2(2, 2)
+position = Vector2(776, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos28" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(812, 662)
-scale = Vector2(2, 2)
+position = Vector2(808, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos29" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(820, 662)
-scale = Vector2(2, 2)
+position = Vector2(816, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos30" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(924, 662)
-scale = Vector2(2, 2)
+position = Vector2(920, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos31" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(987, 662)
-scale = Vector2(2, 2)
+position = Vector2(983, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos32" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(964, 662)
-scale = Vector2(2, 2)
+position = Vector2(960, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos33" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1036, 662)
-scale = Vector2(2, 2)
+position = Vector2(1032, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos34" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1100, 662)
-scale = Vector2(2, 2)
+position = Vector2(1096, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos35" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1108, 662)
-scale = Vector2(2, 2)
+position = Vector2(1104, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos36" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1164, 662)
-scale = Vector2(2, 2)
+position = Vector2(1160, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos37" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1244, 662)
-scale = Vector2(2, 2)
+position = Vector2(1240, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos38" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1268, 662)
-scale = Vector2(2, 2)
+position = Vector2(1264, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos46" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1564, 566)
-scale = Vector2(2, 2)
+position = Vector2(1560, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos47" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1572, 566)
-scale = Vector2(2, 2)
+position = Vector2(1568, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos48" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1596, 566)
-scale = Vector2(2, 2)
+position = Vector2(1592, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos49" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1612, 566)
-scale = Vector2(2, 2)
+position = Vector2(1608, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos50" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1663, 566)
-scale = Vector2(2, 2)
+position = Vector2(1659, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos51" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1639, 566)
-scale = Vector2(2, 2)
+position = Vector2(1635, 566)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos55" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1904, 518)
-scale = Vector2(2, 2)
+position = Vector2(1900, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos56" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1929, 518)
-scale = Vector2(2, 2)
+position = Vector2(1925, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos57" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(1953, 518)
-scale = Vector2(2, 2)
+position = Vector2(1949, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos58" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2010, 518)
-scale = Vector2(2, 2)
+position = Vector2(2006, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos59" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2051, 518)
-scale = Vector2(2, 2)
+position = Vector2(2047, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos60" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2067, 518)
-scale = Vector2(2, 2)
+position = Vector2(2063, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos61" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2100, 518)
-scale = Vector2(2, 2)
+position = Vector2(2096, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos62" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2212, 518)
-scale = Vector2(2, 2)
+position = Vector2(2208, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos63" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(2236, 518)
-scale = Vector2(2, 2)
+position = Vector2(2232, 518)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos67" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3156, 470)
-scale = Vector2(2, 2)
+position = Vector2(3152, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos68" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3132, 470)
-scale = Vector2(2, 2)
+position = Vector2(3128, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos69" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3116, 470)
-scale = Vector2(2, 2)
+position = Vector2(3112, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos70" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3172, 470)
-scale = Vector2(2, 2)
+position = Vector2(3168, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos71" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3196, 470)
-scale = Vector2(2, 2)
+position = Vector2(3192, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos72" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3236, 470)
-scale = Vector2(2, 2)
+position = Vector2(3232, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos73" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3252, 470)
-scale = Vector2(2, 2)
+position = Vector2(3248, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos74" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3268, 470)
-scale = Vector2(2, 2)
+position = Vector2(3264, 470)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos78" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3934, 582)
-scale = Vector2(2, 2)
+position = Vector2(3930, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos79" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3958, 582)
-scale = Vector2(2, 2)
+position = Vector2(3954, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos80" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(3998, 582)
-scale = Vector2(2, 2)
+position = Vector2(3994, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos81" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4022, 582)
-scale = Vector2(2, 2)
+position = Vector2(4018, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos82" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4046, 582)
-scale = Vector2(2, 2)
+position = Vector2(4042, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos83" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4086, 582)
-scale = Vector2(2, 2)
+position = Vector2(4082, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos84" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4103, 582)
-scale = Vector2(2, 2)
+position = Vector2(4099, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos85" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4128, 582)
-scale = Vector2(2, 2)
+position = Vector2(4124, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos86" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4161, 582)
-scale = Vector2(2, 2)
+position = Vector2(4157, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos87" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4161, 582)
-scale = Vector2(2, 2)
+position = Vector2(4157, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos88" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4137, 582)
-scale = Vector2(2, 2)
+position = Vector2(4133, 582)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos89" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4417, 662)
-scale = Vector2(2, 2)
+position = Vector2(4413, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos90" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4441, 662)
-scale = Vector2(2, 2)
+position = Vector2(4437, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos91" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4473, 662)
-scale = Vector2(2, 2)
+position = Vector2(4469, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos92" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4522, 662)
-scale = Vector2(2, 2)
+position = Vector2(4518, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos93" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4531, 662)
-scale = Vector2(2, 2)
+position = Vector2(4527, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos94" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4579, 662)
-scale = Vector2(2, 2)
+position = Vector2(4575, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos95" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4612, 662)
-scale = Vector2(2, 2)
+position = Vector2(4608, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos96" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4629, 662)
-scale = Vector2(2, 2)
+position = Vector2(4625, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos97" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4661, 662)
-scale = Vector2(2, 2)
+position = Vector2(4657, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos98" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4686, 662)
-scale = Vector2(2, 2)
+position = Vector2(4682, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos99" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4727, 662)
-scale = Vector2(2, 2)
+position = Vector2(4723, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos100" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4752, 662)
-scale = Vector2(2, 2)
+position = Vector2(4748, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos101" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4778, 662)
-scale = Vector2(2, 2)
+position = Vector2(4774, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos102" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4805, 662)
-scale = Vector2(2, 2)
+position = Vector2(4801, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="Arbustos103" type="Sprite2D" parent="front camera/arbustos"]
 modulate = Color(0.485703, 0.485704, 0.485703, 1)
-position = Vector2(4838, 662)
-scale = Vector2(2, 2)
+position = Vector2(4834, 662)
 texture = ExtResource("42_8wvxy")
 flip_h = true
 
 [node name="flores" type="Node2D" parent="front camera"]
 
 [node name="Flor" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-70, 663)
-scale = Vector2(2, 2)
+position = Vector2(-70, 662)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor2" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-66, 669)
-scale = Vector2(2, 2)
+position = Vector2(-66, 668)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor3" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-77, 669)
-scale = Vector2(2, 2)
+position = Vector2(-77, 668)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor4" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-140, 661)
-scale = Vector2(2, 2)
+position = Vector2(-140, 660)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor5" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-204, 661)
-scale = Vector2(2, 2)
+position = Vector2(-204, 660)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor6" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(-209, 664)
-scale = Vector2(2, 2)
+position = Vector2(-209, 663)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor7" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(183, 664)
-scale = Vector2(2, 2)
+position = Vector2(183, 663)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor8" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(186, 669)
-scale = Vector2(2, 2)
+position = Vector2(186, 668)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor9" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(191, 667)
-scale = Vector2(2, 2)
+position = Vector2(191, 666)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor10" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(176, 668)
-scale = Vector2(2, 2)
+position = Vector2(176, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor11" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(232, 668)
-scale = Vector2(2, 2)
+position = Vector2(232, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor12" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(240, 668)
-scale = Vector2(2, 2)
+position = Vector2(240, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor13" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(257, 668)
-scale = Vector2(2, 2)
+position = Vector2(257, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor14" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(263, 668)
-scale = Vector2(2, 2)
+position = Vector2(263, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor15" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(261, 667)
-scale = Vector2(2, 2)
+position = Vector2(261, 666)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor16" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(266, 671)
-scale = Vector2(2, 2)
+position = Vector2(266, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor17" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(291, 671)
-scale = Vector2(2, 2)
+position = Vector2(291, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor18" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(294, 670)
-scale = Vector2(2, 2)
+position = Vector2(294, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor19" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(297, 673)
-scale = Vector2(2, 2)
+position = Vector2(297, 672)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor20" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(321, 670)
-scale = Vector2(2, 2)
+position = Vector2(321, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor21" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(323, 672)
-scale = Vector2(2, 2)
+position = Vector2(323, 671)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor22" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(328, 670)
-scale = Vector2(2, 2)
+position = Vector2(328, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor23" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(334, 673)
-scale = Vector2(2, 2)
+position = Vector2(334, 672)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor24" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(339, 671)
-scale = Vector2(2, 2)
+position = Vector2(339, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor25" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(363, 671)
-scale = Vector2(2, 2)
+position = Vector2(363, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor26" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(387, 671)
-scale = Vector2(2, 2)
+position = Vector2(387, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor27" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(392, 673)
-scale = Vector2(2, 2)
+position = Vector2(392, 672)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor28" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(424, 673)
-scale = Vector2(2, 2)
+position = Vector2(424, 672)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor29" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(430, 671)
-scale = Vector2(2, 2)
+position = Vector2(430, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor30" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(446, 671)
-scale = Vector2(2, 2)
+position = Vector2(446, 670)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor31" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(452, 673)
-scale = Vector2(2, 2)
+position = Vector2(452, 672)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor32" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(492, 668)
-scale = Vector2(2, 2)
+position = Vector2(492, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor33" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(500, 668)
-scale = Vector2(2, 2)
+position = Vector2(500, 667)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor34" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(507, 670)
-scale = Vector2(2, 2)
+position = Vector2(507, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor35" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(563, 670)
-scale = Vector2(2, 2)
+position = Vector2(563, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor36" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(891, 670)
-scale = Vector2(2, 2)
+position = Vector2(891, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor38" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(915, 670)
-scale = Vector2(2, 2)
+position = Vector2(915, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor39" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1003, 670)
-scale = Vector2(2, 2)
+position = Vector2(1003, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor40" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1006, 670)
-scale = Vector2(2, 2)
+position = Vector2(1006, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor41" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1029, 670)
-scale = Vector2(2, 2)
+position = Vector2(1029, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor42" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1125, 670)
-scale = Vector2(2, 2)
+position = Vector2(1125, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor43" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1229, 670)
-scale = Vector2(2, 2)
+position = Vector2(1229, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor51" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1553, 574)
-scale = Vector2(2, 2)
+position = Vector2(1553, 573)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor52" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1557, 574)
-scale = Vector2(2, 2)
+position = Vector2(1557, 573)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor53" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1561, 577)
-scale = Vector2(2, 2)
+position = Vector2(1561, 576)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor54" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1566, 574)
-scale = Vector2(2, 2)
+position = Vector2(1566, 573)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor55" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(1638, 575)
-scale = Vector2(2, 2)
+position = Vector2(1638, 574)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor57" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(2007, 527)
-scale = Vector2(2, 2)
+position = Vector2(2007, 526)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor58" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(2047, 527)
-scale = Vector2(2, 2)
+position = Vector2(2047, 526)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor59" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(2054, 527)
-scale = Vector2(2, 2)
+position = Vector2(2054, 526)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor60" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(2110, 527)
-scale = Vector2(2, 2)
+position = Vector2(2110, 526)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor62" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3150, 479)
-scale = Vector2(2, 2)
+position = Vector2(3150, 478)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor63" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3155, 479)
-scale = Vector2(2, 2)
+position = Vector2(3155, 478)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor64" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3160, 478)
-scale = Vector2(2, 2)
+position = Vector2(3160, 477)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor65" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3164, 481)
-scale = Vector2(2, 2)
+position = Vector2(3164, 480)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor66" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3196, 481)
-scale = Vector2(2, 2)
+position = Vector2(3196, 480)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor67" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3212, 479)
-scale = Vector2(2, 2)
+position = Vector2(3212, 478)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor68" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3244, 479)
-scale = Vector2(2, 2)
+position = Vector2(3244, 478)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor69" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3250, 479)
-scale = Vector2(2, 2)
+position = Vector2(3250, 478)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor70" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3986, 591)
-scale = Vector2(2, 2)
+position = Vector2(3986, 590)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor71" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(3992, 591)
-scale = Vector2(2, 2)
+position = Vector2(3992, 590)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor73" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(4104, 591)
-scale = Vector2(2, 2)
+position = Vector2(4104, 590)
 texture = ExtResource("43_8wvxy")
 
 [node name="Flor74" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(4104, 591)
-scale = Vector2(2, 2)
+position = Vector2(4104, 590)
 texture = ExtResource("43_8wvxy")
 flip_h = true
 
 [node name="Flor72" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(4008, 591)
-scale = Vector2(2, 2)
+position = Vector2(4008, 590)
 texture = ExtResource("43_8wvxy")
 flip_h = true
 
 [node name="Flor37" type="Sprite2D" parent="front camera/flores"]
-position = Vector2(795, 670)
-scale = Vector2(2, 2)
+position = Vector2(795, 669)
 texture = ExtResource("43_8wvxy")
 
 [node name="trees" type="Node2D" parent="front camera"]
@@ -3987,26 +3835,26 @@ texture = ExtResource("43_8wvxy")
 [node name="FrontFrontTree" type="Sprite2D" parent="front camera/trees"]
 modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
 position = Vector2(194, 649)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("45_ocelq")
 
 [node name="FrontFrontTree2" type="Sprite2D" parent="front camera/trees"]
 modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
 position = Vector2(514, 649)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("45_ocelq")
 
 [node name="FrontFrontTree3" type="Sprite2D" parent="front camera/trees"]
 modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
 position = Vector2(778, 649)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("45_ocelq")
 flip_h = true
 
 [node name="FrontFrontTree4" type="Sprite2D" parent="front camera/trees"]
 modulate = Color(0.4862745, 0.4862745, 0.4862745, 1)
 position = Vector2(874, 649)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("45_ocelq")
 
 [node name="quebra" parent="." instance=ExtResource("43_el8vr")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://10n266kxri4j"]
 
-[ext_resource type="Texture2D" uid="uid://dhxsnn44xnwro" path="res://blueprints/enemys/anim/gieantgolblin.png" id="1_6b2ow"]
+[ext_resource type="Texture2D" uid="uid://dhxsnn44xnwro" path="res://blueprints/enemys/2d/giantgoblin/gieantgolblin.png" id="1_6b2ow"]
 [ext_resource type="Script" uid="uid://qgpnxpq6xtrd" path="res://scripts/giant_goblin.gd" id="1_f1ffx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ffx"]
@@ -73,7 +73,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70e7d"]
 size = Vector2(35, 46)
 
-[node name="giant goblin" type="CharacterBody2D"]
+[node name="giant goblin" type="CharacterBody2D" groups=["Enemys"]]
 collision_layer = 8
 collision_mask = 21
 script = ExtResource("1_f1ffx")

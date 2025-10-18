@@ -23,7 +23,7 @@ var projectile_path: String = ""
 var magic_path: String = ""
 var current_projectile_name := ""
 var current_magic_name := ""
-
+var noclip := false
 
 const JUMP_VELOCITY = -500.0
 
@@ -47,7 +47,6 @@ func _ready() -> void:
 	magia.visible = false
 	SaveManager.set_player_reference(self)
 	SaveManager.load_game()
-	modulate.a
 	print(SaveManager)
 	print(SaveManager.has_method("set_player_reference"))
 func _on_timer_timeout():
@@ -59,7 +58,7 @@ func _on_timer_timeout():
 		update_mana_label()
 
 func update_life_label():
-	life_label.text = "Vida: %d" % Global.life
+	life_label.text = "Vida: %d" % Global.all_life
 
 func update_mana_label():
 	mana_label.text = "mana: %d" % Global.mana
@@ -114,7 +113,37 @@ func magic():
 		magic.direction = dir
 		
 func _physics_process(delta: float) -> void:
+	#noclip___________________________________________________________________
+	if Input.is_action_just_pressed("no"):
+		if Input.is_action_just_pressed("clip"):
+			noclip = !noclip
+			$CollisionShape2D.disabled = noclip
+			print("NoClip:", noclip)
 	
+	if noclip:
+		velocity -= get_gravity() * delta
+		var dir = Vector2.ZERO
+		if Input.is_action_pressed("ui_up"):
+			dir.y -= 1
+		if Input.is_action_pressed("ui_down"):
+			dir.y += 1
+		if Input.is_action_pressed("ui_left"):
+			dir.x -= 1
+		if Input.is_action_pressed("ui_right"):
+			dir.x += 1
+
+		global_position += dir.normalized() * SPEED * delta
+	
+	if Input.is_action_just_pressed("no"):
+		if Input.is_action_just_pressed("clip"):
+			if noclip:
+				noclip = noclip
+				$CollisionShape2D.disabled = !noclip
+				print("NoClip:", !noclip)
+				
+	#---------------------------------------------------------------------
+	if Input.is_action_just_pressed("dash"):
+		dash()
 	if Global.xp >= Global.necessary_xp:
 		Global._on_level_up()
 	
@@ -222,17 +251,23 @@ func _physics_process(delta: float) -> void:
 func _on_time_timeout():
 		playercam2d.make_current()
 func _on_hurtarea_body_entered(_body: Node2D) -> void:
-	modulate.r
-	Global.all_life -= 1
-	print("-hp")
-	print(Global.all_life)
-	update_life_label()
+	if _body.is_in_group("Enemys"):
+		Global.all_life -= 1
+		print("-hp")
+		print(Global.all_life)
+		update_life_label()
+		flash_red()
 	if Global.all_life == 0:
 		_on_death()
 		Global.all_life = Global.life
 		Global.mana = 5
 		update_life_label()
 		update_mana_label()
+
+func flash_red() -> void:
+	modulate = Color(1, 0, 0)
+	await get_tree().create_timer(0.2).timeout
+	modulate = Color(1, 1, 1)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite_2d.animation == "magic":
@@ -279,3 +314,17 @@ func _on_rope_body_entered(_body: Node2D) -> void:
 
 func _on_out_body_entered(_body: Node2D) -> void:
 	_on_death()
+
+func dash():
+	animated_sprite_2d.play("dash")
+	SPEED = 500
+	var tempo = Timer.new()
+	tempo.wait_time = 4
+	tempo.one_shot = false
+	tempo.autostart = false
+	tempo.timeout.connect(_on_tempo_timeout)
+	add_child(tempo)
+
+func _on_tempo_timeout():
+		playercam2d.make_current()
+		SPEED = 200

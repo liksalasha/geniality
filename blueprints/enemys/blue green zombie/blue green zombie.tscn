@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bxvqh5ghjp3ge"]
 
-[ext_resource type="Texture2D" uid="uid://cxi8slmr80iv1" path="res://blueprints/enemys/anim/blue green zombie.png" id="1_bf2dj"]
+[ext_resource type="Texture2D" uid="uid://cxi8slmr80iv1" path="res://blueprints/enemys/2d/blue green zombie/blue green zombie.png" id="1_bf2dj"]
 [ext_resource type="Script" uid="uid://dsvittjbef4rw" path="res://scripts/blue_green_zombie.gd" id="1_iwtxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ty4cj"]
@@ -66,7 +66,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf2dj"]
 size = Vector2(28, 44)
 
-[node name="blue green zombie" type="CharacterBody2D"]
+[node name="blue green zombie" type="CharacterBody2D" groups=["Enemys"]]
 collision_layer = 8
 collision_mask = 21
 script = ExtResource("1_iwtxo")

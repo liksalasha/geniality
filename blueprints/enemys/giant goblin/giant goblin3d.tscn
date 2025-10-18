@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbgnom7bswcia"]
 
-[ext_resource type="ArrayMesh" uid="uid://dwj6ccgp1e7wd" path="res://blueprints/3d/enemys/giant goblin/idle.obj" id="1_870cp"]
+[ext_resource type="ArrayMesh" uid="uid://dwj6ccgp1e7wd" path="res://blueprints/enemys/3d/giant goblin/idle.obj" id="1_870cp"]
 [ext_resource type="Script" uid="uid://ewailqfq2t1p" path="res://scripts/giant_goblin_3d.gd" id="1_n5x2f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_870cp"]
@@ -9,7 +9,7 @@ size = Vector3(18.9711, 40.7801, 21.5135)
 [sub_resource type="BoxShape3D" id="BoxShape3D_n5x2f"]
 size = Vector3(19.3108, 40.2482, 22.3975)
 
-[node name="giant goblin" type="CharacterBody3D"]
+[node name="giant goblin" type="CharacterBody3D" groups=["Enemys"]]
 collision_layer = 8
 collision_mask = 21
 script = ExtResource("1_n5x2f")

@@ -31,37 +31,46 @@ func _ready() -> void:
 func _on_area_entered(area):
 	if area.is_in_group("projects"):
 		life -= Global.damage
-		animated_sprite_2d.play("hurt")
+		flash_red()
 	if area.is_in_group("magics"):
 		life -= Global.super_damage
-		animated_sprite_2d.play("hurt")
+		flash_red()
 	print("Slime levou dano! Vida: ", life)
 	if life <= 0:
 		Global.defeated_enemies.append(enemy_id)  # Use um ID único
 		queue_free()
+
+func flash_red() -> void:
+	modulate = Color(1, 0, 0)
+	await get_tree().create_timer(0.2).timeout
+	modulate = Color(1, 1, 1)
+		
 func _physics_process(delta: float) -> void:
 	# Gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	else:
+		SPEED = BASE_SPEED
+		anim.visible = false
 
 	# Só pula se puder, e se o raycast detectar chão
 	if raycast.is_colliding() and can_jump:
-		velocity.y = JUMP_FORCE
-		SPEED = JUMP_SPEED
 		can_jump = false
+		has_jumped = true
 		anim.visible = true
 		anim.play("Oh")
+
+		# Aplica impulso vertical
+		velocity.y = JUMP_FORCE  # força pra cima
+		SPEED = BASE_SPEED * 1.5  # move mais rápido no pulo, se quiser
 		jump_timer.start()
+		var direction_to_player = sign(player.global_position.x - global_position.x)
+		velocity.x = direction_to_player * 100  # impulso pra frente no pulo
 
 	# Detecta direção do player DEPOIS de mudar o SPEED
 	if player:
 		var direction_to_player = sign(player.global_position.x - global_position.x)
 		velocity.x = direction_to_player * SPEED
-
-	# Libera movimento normal após pulo
-	if is_on_floor():
-		SPEED = BASE_SPEED
-		anim.visible = false
 
 	if velocity.x != 0:
 		animated_sprite_2d.flip_h = velocity.x < 0

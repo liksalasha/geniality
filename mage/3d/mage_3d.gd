@@ -88,6 +88,8 @@ func _process(delta):
 	pivot.rotation.x = lerp_angle(pivot.rotation.x, rotation_input_x, delta * ROTATION_LERP_SPEED)
 
 func _physics_process(delta: float) -> void:
+	Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
 	if not is_on_floor():
 		velocity += GRAVITY * delta
 	#if Input.is_action_just_pressed("ui_end"):
