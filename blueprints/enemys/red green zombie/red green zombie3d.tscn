@@ -23,8 +23,12 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.0549804, 1.19209e-07, 0.03
 mesh = ExtResource("1_u4cwv")
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00500488, 11.2139, -1.89915)
 shape = SubResource("BoxShape3D_p5s3e")
 debug_color = Color(0.672399, 0, 0.164095, 0.42)
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

@@ -7,7 +7,6 @@
 radius = 12.352529
 
 [node name="Area3D" type="Area3D" groups=["LifeOrb"]]
-collision_layer = 2
 script = ExtResource("1_2n25t")
 
 [node name="LifeOrb" type="MeshInstance3D" parent="."]

@@ -182,8 +182,7 @@ shape = SubResource("RectangleShape2D_q2d7i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n2i8k")
-animation = &"dash"
-autoplay = "idle"
+animation = &"run"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -119)
@@ -194,7 +193,7 @@ position_smoothing_speed = 4.0
 drag_vertical_offset = 1.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(160, 0)
+target_position = Vector2(300, 0)
 collision_mask = 2
 collide_with_areas = true
 

@@ -1,0 +1,18 @@
+res://maps/experiments/fase1.tscn
+res://mage/2d/mage.gd
+res://mage/2d/mage.tscn
+res://maps/experiments/fase1d.tscn
+res://maps/experiments/tiles/fase1d.tres
+res://mage/3d/mage_3d.gd
+res://mage/3d/mage 3d.tscn
+res://blueprints/enemys/blue green zombie/blue green zombie3d.tscn
+res://blueprints/intens/life_orb3d.tscn
+res://scripts/life_orb_3d.gd
+res://scripts/life_orb.gd
+res://scripts/mana_orb_3d.gd
+res://blueprints/intens/mana_orb_3d.tscn
+res://scripts/blue_green_zombie_3d.gd
+res://scripts/red_green_zombie_3d.gd
+res://blueprints/enemys/red green zombie/red green zombie3d.tscn
+res://maps/experiments/fase2d.tscn
+res://maps/experiments/fase2.tscn

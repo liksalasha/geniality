@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmxglv7joyvgv"]
+[gd_scene load_steps=11 format=3 uid="uid://bmxglv7joyvgv"]
 
 [ext_resource type="Script" uid="uid://bs0m71rvgktt" path="res://mage/3d/mage_3d.gd" id="1_5hfrm"]
 [ext_resource type="PackedScene" uid="uid://eeny8fniisns" path="res://blueprints/enemys/projectile3d.tscn" id="2_krkmx"]
@@ -14,6 +14,10 @@ size = Vector3(13.763, 21.3472, 9.072252)
 [sub_resource type="SpriteFrames" id="SpriteFrames_5hfrm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_krkmx"]
+size = Vector3(14.603638, 22.03122, 10.219116)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5xut"]
+size = Vector3(16.47461, 22.939774, 10.602173)
 
 [node name="player3d" type="CharacterBody3D"]
 collision_mask = 26
@@ -45,19 +49,30 @@ mesh = SubResource("BoxMesh_5hfrm")
 sprite_frames = SubResource("SpriteFrames_5hfrm")
 
 [node name="hurtarea" type="Area3D" parent="."]
+collision_mask = 8
 
 [node name="hurt" type="CollisionShape3D" parent="hurtarea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.396179, 1.6991119, 0.364563)
 shape = SubResource("BoxShape3D_krkmx")
+debug_color = Color(0.9604005, 0, 0.5189599, 0.41960785)
 
 [node name="change" parent="." instance=ExtResource("6_yk1qt")]
 
-[node name="Camera3D" parent="change" index="1"]
+[node name="Camera3D" parent="change" index="0"]
 transform = Transform3D(0.85524726, 0, -0.5182195, 0, 1, 0, 0.5182195, 0, 0.85524726, 0.364034, 2.13635, 3.44173)
 
 [node name="Mage3d2" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -4.6015897, -10.898277, -0.7774401)
 mesh = ExtResource("7_ienge")
 
-[connection signal="body_entered" from="hurtarea" to="." method="_on_area_3d_body_entered"]
+[node name="itens" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="itens"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8203125, 1.791069, 0.5404663)
+shape = SubResource("BoxShape3D_n5xut")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[connection signal="body_entered" from="hurtarea" to="." method="_on_hurtarea_body_entered"]
+[connection signal="area_entered" from="itens" to="." method="_on_itens_area_entered"]
 
 [editable path="change"]

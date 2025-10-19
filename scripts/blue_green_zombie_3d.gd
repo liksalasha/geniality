@@ -18,6 +18,7 @@ func _ready() -> void:
 	
 	
 func _on_area_entered(area):
+	print("pego")
 	if area.is_in_group("projects"):
 		life -= Global.damage
 	if area.is_in_group("magics"):
@@ -45,11 +46,10 @@ func _physics_process(delta: float) -> void:
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("projects"):
 		life -= 1
-		#animated_sprite_2d.play("hurt")
+		print("blue green zombie3d levou dano! Vida: ", life)
 	if area.is_in_group("magics"):
 		life -= 4
-		#animated_sprite_2d.play("hurt")
-	print("blue green zombie3d levou dano! Vida: ", life)
+		print("blue green zombie3d levou dano! Vida: ", life)
 	if life <= 0:
 		Global.defeated_enemies.append(enemy_id)  # Use um ID único
 		queue_free()

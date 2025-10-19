@@ -1,15 +1,14 @@
-AnimationPlayer
 Node2D
-MeshInstance3D
+Node3D
+TileMap
+TileMapLayer
 CollisionShape3D
 Area3D
+StaticBody3D
+StaticBody2D
+AnimationPlayer
+MeshInstance3D
 OmniLight3D
 SpotLight3D
 Sprite3D
 PointLight2D
-CollisionShape2D
-StaticBody2D
-GridMap      - Matches the "tilemap" keyword.
-StaticBody3D
-SimpleGrassTextured
-FogVolume

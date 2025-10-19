@@ -1,21 +1,31 @@
 extends CharacterBody3D
 
+# === Constantes ===
+const DASH_SPEED = 400
+const DASH_TIME = 0.2  # segundos
+const DASH_COOLDOWN = 1.0  # segundos
 const SPEED = 130
 const JUMP_VELOCITY = 150
-const GRAVITY = Vector3.DOWN * 200.0  # Mais forte que o padrão
+const GRAVITY = Vector3.DOWN * 200.0
 const MOUSE_SENSITIVITY = 0.002
 const ROTATION_LERP_SPEED = 8.0
 
-var rotation_input_x := 0.0  # vertical (cima/baixo)
-var rotation_input_y := 0.0  # horizontal (esquerda/direita)
-var pos3d = Global.last_player_position
+# === Variáveis ===
+var rotation_input_x := 0.0
+var rotation_input_y := 0.0
 var is_playing_magic_animation: bool = false
+var is_dashing: bool = false
+var dash_timer := 0.0
+var dash_cooldown_timer := 0.0
+var dash_direction: Vector3 = Vector3.ZERO
 
+# === Exportados ===
 @export var magic_scene: PackedScene
-@export var projectile_scene: PackedScene  # arraste a cena do projétil no editor
+@export var projectile_scene: PackedScene
 
+# === Nodes ===
 @onready var pivot = $Pivot
-@onready var camera: Camera3D = $Pivot/Camera3D  # ou $Pivot/CameraBoom/Camera3D
+@onready var camera: Camera3D = $Pivot/Camera3D
 @onready var life_label: Label = $"../CanvasLayer/LifeLabel"
 @onready var mana_label: Label = $"../CanvasLayer/mana label"
 @onready var anim: AnimatedSprite3D = $anim
@@ -26,183 +36,211 @@ var is_playing_magic_animation: bool = false
 @onready var camera_3d: Camera3D = $change/Camera3D
 @onready var playercam3ed: Camera3D = $Pivot/Camera3D
 
+# === Ready ===
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	print("Carregando pos3D:", Global.last_player_position)
 	global_position = Global.get_position_3d()
 	anim.visible = false
-	hurtarea.area_entered.connect(_on_area_entered)
 	update_life_label()
 	update_mana_label()
-	
-		# Timer automático a cada 2 segundos (ajuste como quiser)
+
 	var timer = Timer.new()
 	timer.wait_time = 0.3
 	timer.one_shot = false
 	timer.autostart = true
 	timer.timeout.connect(_on_timer_timeout)
 	add_child(timer)
+
 	inventário.visible = false
 	magia.visible = false
-	
+
+# === Timer ===
 func _on_timer_timeout():
 	Global.set_position_from_3d(global_position)
 	if Global.mana < Global.max_mana:
 		update_mana_label()
 
+# === Labels ===
 func update_life_label():
-	life_label.text = "Vida: %d" % Global.life
+	life_label.text = "Vida: %d" % Global.all_life
 
 func update_mana_label():
 	mana_label.text = "mana: %d" % Global.mana
-	
-func _on_area_entered(area):
-	print("Colidiu com:", area)
-	if area and area.is_in_group("LifeOrb"):
-		Global.life += 1
-		print("Pegou orb de vida:", Global.life)
-		update_life_label()
-	if area and area.is_in_group("ManaOrb"):
-		Global.mana += 4
-		print("Pegou orb de mana:", Global.mana)
-		update_mana_label()
-func respawn():
-	pass
-	#position = checkpoint_position
-	
+
+# === Morte ===
 func _on_death():
-	respawn() # Isso vai levar ele para o último checkpoint salvo
+	Global.life = 3
+	Global.mana = 5
+	update_life_label()
+	update_mana_label()
+	respawn()
 
+func respawn():
+	global_position = Global.get_position_3d()
 
+# === Input do Mouse ===
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		# Rotação do mouse
 		rotation_input_y -= event.relative.x * MOUSE_SENSITIVITY
 		rotation_input_x = clamp(rotation_input_x - event.relative.y * MOUSE_SENSITIVITY, deg_to_rad(-40), deg_to_rad(40))
 
 func _process(delta):
-	# Suaviza rotação horizontal (Y) do corpo
+	# Leitura do analógico direito
+	var look_x := Input.get_action_strength("look_right") - Input.get_action_strength("look_left") # só se quiser esquerda-direita analógico
+	var look_y := Input.get_action_strength("look_down") - Input.get_action_strength("look_up") # se tiver ações
+
+	# Melhor mesmo é pegar diretamente os eixos do joystick (mais preciso):
+	# Aqui exemplo com o primeiro joystick (ID 0)
+	var joy_id = 0
+	var axis_right_x = Input.get_joy_axis(joy_id, JOY_AXIS_RIGHT_X) # eixo horizontal do analógico direito
+	var axis_right_y = Input.get_joy_axis(joy_id, JOY_AXIS_RIGHT_Y) # eixo vertical do analógico direito
+
+	# Ajusta a rotação da câmera com o joystick
+	rotation_input_y -= axis_right_x * MOUSE_SENSITIVITY * 15 # multiplicador para ficar legal
+	rotation_input_x = clamp(rotation_input_x - axis_right_y * MOUSE_SENSITIVITY * 15, deg_to_rad(-40), deg_to_rad(40))
+
+	# Aplica suavização da rotação
 	rotation.y = lerp_angle(rotation.y, rotation_input_y, delta * ROTATION_LERP_SPEED)
-	
-	# Suaviza rotação vertical (X) da câmera
 	pivot.rotation.x = lerp_angle(pivot.rotation.x, rotation_input_x, delta * ROTATION_LERP_SPEED)
 
+# === Física ===
 func _physics_process(delta: float) -> void:
-	Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
-	Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
-	if not is_on_floor():
-		velocity += GRAVITY * delta
-	#if Input.is_action_just_pressed("ui_end"):
-		#Global.last_player_position = Vector3(global_position.x, 0, global_position.z)
-		
-	if Input.is_action_just_pressed("shoot") and Global.mana >=1:
-		shoot_projectile()
+	# Cooldown do dash
+	if dash_cooldown_timer > 0:
+		dash_cooldown_timer -= delta
 
-	if Input.is_action_just_pressed("magic") and Global.mana >=2 and not is_playing_magic_animation:
-		#animated_sprite_2d.play("magic")
-		is_playing_magic_animation = true
-		
-	if is_playing_magic_animation:
-		velocity.x = 0
+	# Início do dash
+	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0 and not is_dashing:
+		var input_dir := Input.get_vector("left", "right", "down", "up")
+		var cam_basis = pivot.global_transform.basis
+		var cam_forward = -cam_basis.z
+		var cam_right = cam_basis.x
+		dash_direction = (cam_right * input_dir.x + cam_forward * input_dir.y).normalized()
+
+		if dash_direction != Vector3.ZERO:
+			is_dashing = true
+			dash_timer = DASH_TIME
+			dash_cooldown_timer = DASH_COOLDOWN
+
+	# Se estiver dashando, executa o dash
+	if is_dashing:
+		dash_timer -= delta
+		velocity = dash_direction * DASH_SPEED
 		move_and_slide()
-		return
-		
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	var input_dir := Input.get_vector("left", "right", "down", "up")
-	
-	# Movimenta na direção da câmera (ignora inclinação vertical)
-	var cam_basis = pivot.global_transform.basis
-	var cam_forward = -cam_basis.z
-	var cam_right = cam_basis.x
-
-	var direction = (cam_right * input_dir.x + cam_forward * input_dir.y).normalized()
-	if direction != Vector3.ZERO:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-
+		if dash_timer <= 0:
+			is_dashing = false
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-		
-			 #Solta o mouse com ESC
-	#if control.visible == true:
-		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	if Input.is_action_just_pressed("inventario"):
-		inventário.visible = !inventário.visible
+		# Aplica gravidade
+		if not is_on_floor():
+			velocity += GRAVITY * delta
 
-	if Input.is_action_just_pressed("magias"):
-		magia.visible = !magia.visible
-	
-	if Input.is_action_just_pressed("change"):
-		camera_3d.current = true
-		playercam3ed.current = false
-		var time = Timer.new()
-		time.wait_time = 4
-		time.one_shot = false
-		time.autostart = true
-		time.timeout.connect(_on_time_timeout)
-		add_child(time)
-	
-	move_and_slide()
-	
+		# Atira projétil
+		if Input.is_action_just_pressed("shoot") and Global.mana >= 1:
+			shoot_projectile()
+
+		# Animação de magia
+		if Input.is_action_just_pressed("magic") and Global.mana >= 3 and not is_playing_magic_animation:
+			is_playing_magic_animation = true
+			anim.play("magic")
+
+		if is_playing_magic_animation:
+			velocity.x = 0
+			velocity.z = 0
+			move_and_slide()
+			return
+
+		# Pulo
+		if Input.is_action_just_pressed("pulo") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+
+		# Movimento normal
+		var input_dir := Input.get_vector("left", "right", "down", "up")
+		var cam_basis = pivot.global_transform.basis
+		var cam_forward = -cam_basis.z
+		var cam_right = cam_basis.x
+
+		var direction = (cam_right * input_dir.x + cam_forward * input_dir.y).normalized()
+
+		if direction != Vector3.ZERO:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
+
+		# Menus e câmera
+		if Input.is_action_just_pressed("inventario"):
+			inventário.visible = !inventário.visible
+
+		if Input.is_action_just_pressed("magias"):
+			magia.visible = !magia.visible
+
+		if Input.is_action_just_pressed("change"):
+			camera_3d.current = true
+			playercam3ed.current = false
+			var time = Timer.new()
+			time.wait_time = 4
+			time.one_shot = true
+			time.timeout.connect(_on_time_timeout)
+			add_child(time)
+			time.start()
+
+		move_and_slide()
+
+
 func _on_time_timeout():
-		camera_3d.current = false
-		playercam3ed.current = true
+	camera_3d.current = false
+	playercam3ed.current = true
 
+# === Magia & Projétil ===
 func shoot_projectile():
 	if projectile_scene:
 		var projectile = projectile_scene.instantiate()
 		get_parent().add_child(projectile)
-		
-		# Define direção e posição do projétil
-		var dir: Vector3 = -camera.global_transform.basis.z  # Frente da câmera
-		projectile.global_transform.origin = global_transform.origin + dir * 50.0  # Na frente do personagem
 
-		# Define a direção se ela existir no script
+		var dir: Vector3 = -camera.global_transform.basis.z
+		projectile.global_transform.origin = global_transform.origin + dir * 2.0
+
 		if "direction" in projectile:
 			projectile.direction = dir
 
 		Global.mana -= 1
 		update_mana_label()
 
-	
 func magic():
 	if magic_scene:
 		var magic = magic_scene.instantiate()
 		get_parent().add_child(magic)
-		Global.mana -=3
+
+		var dir: Vector3 = -camera.global_transform.basis.z
+		magic.global_transform.origin = global_transform.origin + dir * 2.0
+
+		if "direction" in magic:
+			magic.direction = dir
+
+		Global.mana -= 3
 		update_mana_label()
-		# Define a posição do projétil na frente do player
-		var dir: Vector2
-		magic.direction = dir
-		
 
+# === Animação Finalizada ===
+func _on_anim_animation_finished():
+	if anim.animation == "magic":
+		magic()
+		is_playing_magic_animation = false
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	Global.life -= 1
-	print("-hp")
-	update_life_label()
-	if Global.life == 0:
-		_on_death()
-		Global.life = 3
-		Global.mana = 5
+func _on_itens_area_entered(area: Area3D) -> void:
+	if area.is_in_group("LifeOrb"):
+		Global.all_life += 1
 		update_life_label()
+	if area.is_in_group("ManaOrb"):
+		Global.mana += 4
 		update_mana_label()
-		
+
 func _on_hurtarea_body_entered(body: Node3D) -> void:
-	Global.life -= 1
-	print("-hp")
-	update_life_label()
-	if Global.life == 0:
-		_on_death()
-		Global.life = 3
-		Global.mana = 5
+	print("E body o inimimimim")
+	if body.is_in_group("Enemys"):
+		print("Dano recebido de:", body.name)
+		Global.all_life -= 1
 		update_life_label()
-		update_mana_label()
 
-func _input(event):
-	if event is InputEventJoypadButton:
-		print("Botão pressionado: ", event.button_index, " | Controle ID: ", event.device, " | Nome: ", Input.get_joy_name(event.device))
+	if Global.all_life == 0:
+		_on_death()
